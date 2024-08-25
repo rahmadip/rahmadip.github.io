@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rahmadip portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="index">
+    <nav>
+        <button class="ButtonNav">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fafafa" class="ArrowIcon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0z"/>
+            </svg>
+        </button>
+        <div class="Logo">PORTFOLIO</div>
+        <button class="ButtonNav"></button>
+    </nav>
+    <header>
+        <div class="profile">
+            <div class="PhotoProfile">
+                <img src="https://images.pexels.com/photos/209084/pexels-photo-209084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+            </div>
+            <div class="NameTitleContact">
+                <div class="name">Fauzi Rahmadi Primanto</div>
+                <div class="title">Graphic Designer</div>
+                <div class="contact">
+                    <a href="https://wa.me/+6281945902145"><button class="ButtonContact">Number</button></a>
+                    <a href="mailto:frahmadip@gmail.com"><button class="ButtonContact">Email</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="bio">Lorem ipsum dulur sit amet, consectur tempor do Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol.</div>
+    </header>
+    <div class="tab">
+        <button class="ButtonTab" onclick="showIframe('iframe1')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fafafa" class="GridIcon" viewBox="0 0 16 16">
+                <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
+            </svg>
+        </button>
+        <button class="ButtonTab" onclick="showIframe('iframe2')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fafafa" class="CameraIcon" viewBox="0 0 16 16">
+                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"/>
+            </svg>
+        </button>
+        <button class="ButtonTab" onclick="showIframe('iframe3')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fafafa" class="CamIcon" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2z"/>
+              </svg>
+        </button>
+    </div>
+    <main>
+        <iframe id="iframe1" src="gallery1.html" scrolling="no"></iframe>
+        <iframe id="iframe2" src="gallery2.html" scrolling="no" style="display:none;"></iframe>
+        <iframe id="iframe3" src="gallery3.html" scrolling="no" style="display:none;"></iframe>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

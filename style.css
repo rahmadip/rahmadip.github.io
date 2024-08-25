@@ -1,0 +1,236 @@
+html {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+}
+
+.index {
+    background-color: beige;
+    margin: 0;
+    padding: 0;
+    width: 375px;
+    display: grid;
+    grid-template-areas: "nav nav nav"
+                         "header header header"
+                         "header header header"
+                         "tab tab tab "
+                         "main main main"
+                         "main main main"
+                         "main main main"
+                         "main main main"
+                         "main main main";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 42px 125px 83px 42px 125px 125px 125px 125px 125px;
+}
+
+nav {
+    grid-area: nav;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ButtonNav {
+    background-color: #050505;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #fafafa;
+    width: 42px;
+}
+
+.Logo {
+    background-color: #050505;
+    margin: 0;
+    padding: 0;
+    padding-left: 8px;
+    border: 0;
+    border-bottom: 1px solid #fafafa;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 291px;
+    color: #fafafa;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    letter-spacing: 0.1em;
+}
+
+.Logo:hover {
+    color: #ffa200;
+}
+
+header {
+    grid-area: header;
+    background-color: #050505;
+    margin: 0;
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.profile {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.PhotoProfile {
+    background-color: transparent;
+    width: 102px;
+    height: 102px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.PhotoProfile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.NameTitleContact{
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.name {
+    background-color: transparent;
+    color: #fafafa;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.title {
+    background-color: transparent;
+    color: #fafafa;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.contact {
+    background-color: transparent;
+    margin: 0;
+    margin-top: 12px;
+    padding: 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.ButtonContact {
+    background-color: #fafafa;
+    margin: 0;
+    padding: 9px 0;
+    border: none;
+    border-radius: 6px;
+    width: 107px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+.ButtonContact:hover {
+    background-color: #ffa200;
+}
+
+.bio {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    color: #fafafa;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.tab {
+    grid-area: tab;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.ButtonTab {
+    background-color: #050505;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 125px;
+}
+
+.ButtonTab:hover {
+    border-bottom: 6px #fafafa solid;
+}
+
+main {
+    grid-area: main;
+    background-color: transparent;
+}
+
+iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Gallery1 {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 375px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+}
+
+.Gallery1-1 {
+    background-color: #ffa200;
+    color: #fafafa;
+    aspect-ratio: 1/1;
+}
+
+.Gallery2 {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 375px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+}
+
+.Gallery2-1 {
+    background-color: maroon;
+    color: #fafafa;
+    aspect-ratio: 1/1;
+}
+
+.Gallery3 {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    width: 375px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2px;
+}
+
+.Gallery3-1 {
+    background-color: orangered;
+    color: #fafafa;
+    aspect-ratio: 1/1;
+}
