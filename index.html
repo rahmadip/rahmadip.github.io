@@ -8,13 +8,13 @@
 </head>
 <body class="index">
     <nav>
-        <button class="ButtonNav">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fafafa" class="ArrowIcon" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0z"/>
+        <button id="refresh" class="ButtonNav">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="IconLogo" viewBox="0 0 1080 1080">
+                <circle class="cls-1" cx="525" cy="105" r="105"/>
+                <path class="cls-1" d="M818.66,566.83c-14.82,29.64-50.86,41.65-80.5,26.83l-120-60c-11.62-5.81-21.04-15.23-26.84-26.83l-66.32-132.67-112.92,225.84h262.92c19.28,0,37.39,9.26,48.67,24.91,11.28,15.65,14.34,35.76,8.24,54.06l-120,360c-8.38,25.14-31.79,41.04-56.92,41.04-6.29,0-12.68-1-18.98-3.1-31.43-10.48-48.42-44.46-37.94-75.9l93.67-281.01h-276.74c-20.8,0-40.12-10.78-51.05-28.46-10.93-17.69-11.92-39.78-2.62-58.37l180-360c10.16-20.33,30.94-33.17,53.66-33.17h60c22.72,0,43.5,12.84,53.66,33.17l81.05,162.11,102.12,51.06c29.64,14.81,41.65,50.86,26.83,80.5Z"/>
             </svg>
         </button>
         <div class="Logo">PORTFOLIO</div>
-        <button class="ButtonNav"></button>
     </nav>
     <header>
         <div class="profile">
@@ -25,8 +25,12 @@
                 <div class="name">Fauzi Rahmadi Primanto</div>
                 <div class="title">Graphic Designer</div>
                 <div class="contact">
-                    <a href="https://wa.me/+6281945902145"><button class="ButtonContact">Number</button></a>
-                    <a href="mailto:frahmadip@gmail.com"><button class="ButtonContact">Email</button></a>
+                    <a href="https://wa.me/+6281945902145">
+                        <button class="ButtonContact">Number</button>
+                    </a>
+                    <a href="mailto:frahmadip@gmail.com">
+                        <button class="ButtonContact">Email</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -34,18 +38,18 @@
     </header>
     <div class="tab">
         <button class="ButtonTab" onclick="showIframe('iframe1')">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fafafa" class="GridIcon" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="IconTab" viewBox="0 0 16 16">
                 <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/>
             </svg>
         </button>
         <button class="ButtonTab" onclick="showIframe('iframe2')">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fafafa" class="CameraIcon" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="IconTab" viewBox="0 0 16 16">
                 <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
                 <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"/>
             </svg>
         </button>
         <button class="ButtonTab" onclick="showIframe('iframe3')">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fafafa" class="CamIcon" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="IconTab" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2z"/>
               </svg>
         </button>

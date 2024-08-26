@@ -12,3 +12,12 @@ function showIframe(iframeId) {
 document.addEventListener('DOMContentLoaded', () => {
     showIframe('iframe1');
 });
+
+document.getElementById('refresh').addEventListener('click', function() {
+    const IconLogo = this.querySelector('.IconLogo');
+    IconLogo.classList.add('spin');
+  
+    setTimeout(() => {
+      location.reload();
+    }, 1000);
+  });
