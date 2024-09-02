@@ -236,9 +236,17 @@ iframe {
     gap: 2px;
 }
 
-.Gallery1-1 {
+#gallery1-1 {
+    cursor: pointer;
+}
+
+.gallery1-1 {
     background-color: #fafafa;
     aspect-ratio: 1/1;
+}
+
+.BodyGallery1-1 {
+    color: #fafafa;
 }
 
 .Gallery2 {
@@ -269,4 +277,104 @@ iframe {
 .Gallery3-1 {
     background-color: #777;
     aspect-ratio: 1/1;
+}
+
+.BodyPin {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.PinContainer {
+    background-color: transparent;
+    text-align: center;
+}
+
+#PinInput {
+    width: 300px;
+    padding: 20px;
+    padding-bottom: 18px;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    text-align-last: center;
+    margin-bottom: 30px;
+    color: #ffa200;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #ffa200 ;
+    letter-spacing: 10px;
+}
+
+#PinInput::placeholder {
+    color: #ffa200;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    opacity: 1;
+}
+
+#Numpad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: transparent;
+    justify-content: center;
+}
+
+#Numpad button {
+    width: 96px;
+    height: 96px;
+    padding: 0px;
+    font-size: 3em;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 4px solid #ffa200;
+    background-color: #050505;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffa200;
+    fill: #ffa200;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ButtonEnter:active {
+    transform: rotate(1440deg);
+}
+
+#Numpad button:hover {
+    background-color: #ffa200;
+    color: #050505;
+    fill: #050505;
+}
+
+.IconEnter {
+    width: 54px;
+    height: 54px;
+}
+
+.IconDelete {
+    width: 60px;
+    height: 60px;
+}
+
+#ErrorMessage {
+    color: #ffa200;
+    margin-top: 20px;
+}
+
+.Hidden {
+    display: none;
+}
+
+h1 {
+    color: #fafafa;
 }

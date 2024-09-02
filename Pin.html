@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rahmadip portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="BodyPin">
+    <div class="PinContainer">
+        <input type="password" id="PinInput" maxlength="4" readonly placeholder="PIN">
+        <div id="Numpad">
+            <button onclick="AppendNumber(1)">1</button>
+            <button onclick="AppendNumber(2)">2</button>
+            <button onclick="AppendNumber(3)">3</button>
+            <button onclick="AppendNumber(4)">4</button>
+            <button onclick="AppendNumber(5)">5</button>
+            <button onclick="AppendNumber(6)">6</button>
+            <button onclick="AppendNumber(7)">7</button>
+            <button onclick="AppendNumber(8)">8</button>
+            <button onclick="AppendNumber(9)">9</button>
+            <button onclick="DeleteNumber()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="IconDelete" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+            </button>
+            <button onclick="AppendNumber(0)">0</button>
+            <button class="ButtonEnter" onclick="CheckPin()">
+                <svg xmlns="http://www.w3.org/2000/svg" class="IconEnter" viewBox="0 0 1080 1080">
+                    <circle class="cls-1" cx="525" cy="105" r="105"/>
+                    <path class="cls-1" d="M818.66,566.83c-14.82,29.64-50.86,41.65-80.5,26.83l-120-60c-11.62-5.81-21.04-15.23-26.84-26.83l-66.32-132.67-112.92,225.84h262.92c19.28,0,37.39,9.26,48.67,24.91,11.28,15.65,14.34,35.76,8.24,54.06l-120,360c-8.38,25.14-31.79,41.04-56.92,41.04-6.29,0-12.68-1-18.98-3.1-31.43-10.48-48.42-44.46-37.94-75.9l93.67-281.01h-276.74c-20.8,0-40.12-10.78-51.05-28.46-10.93-17.69-11.92-39.78-2.62-58.37l180-360c10.16-20.33,30.94-33.17,53.66-33.17h60c22.72,0,43.5,12.84,53.66,33.17l81.05,162.11,102.12,51.06c29.64,14.81,41.65,50.86,26.83,80.5Z"/>
+                </svg>
+            </button>
+        </div>
+        <p id="ErrorMessage" class="Hidden">Invalid PIN</p>
+    </div>
+    <script src="Pin.js"></script>
+</body>
+</html>

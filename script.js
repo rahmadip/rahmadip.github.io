@@ -21,3 +21,7 @@ document.getElementById('refresh').addEventListener('click', function() {
       location.reload();
     }, 1000);
   });
+
+document.getElementById('gallery1-1').onclick = function() {
+    window.top.location.href = 'gallery1-1.html';
+};
