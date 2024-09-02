@@ -91,6 +91,18 @@ nav {
     letter-spacing: 0.1em;
 }
 
+.ButtonSetting {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 42px;
+    fill: #050505;
+}
+
+.ButtonSetting:hover {
+    fill: #ffa200;
+}
 
 header {
     grid-area: header;
