@@ -297,7 +297,7 @@ iframe {
 }
 
 #PinInput {
-    width: 300px;
+    width: 240px;
     padding: 20px;
     padding-bottom: 18px;
     font-size: 2em;
@@ -329,10 +329,10 @@ iframe {
 }
 
 #Numpad button {
-    width: 96px;
-    height: 96px;
+    width: 72px;
+    height: 72px;
     padding: 0px;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 600;
     cursor: pointer;
     border-radius: 50%;
@@ -357,13 +357,13 @@ iframe {
 }
 
 .IconEnter {
-    width: 54px;
-    height: 54px;
+    width: 36px;
+    height: 36px;
 }
 
 .IconDelete {
-    width: 60px;
-    height: 60px;
+    width: 36px;
+    height: 36px;
 }
 
 #ErrorMessage {
