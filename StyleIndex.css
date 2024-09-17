@@ -57,7 +57,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 2vh 4vw;
+    padding: 2vh 2vw;
 }
 
 .LogoContainer {
@@ -87,8 +87,8 @@ nav {
 }
 
 .CircleWrapper {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -175,6 +175,7 @@ main {
     outline: none;
     border: 1px solid #050505;
     border-radius: 100px;
+    color: #050505;
     cursor: pointer;
 }
 
@@ -249,6 +250,12 @@ main {
     cursor: pointer;
 }
 
+.TabContent > div.active {
+    border-bottom: 2px solid #050505;
+    color: #050505;
+    font-weight: 600;
+}
+
 .TabContent > div:hover {
     border-bottom: 2px solid #050505;
     color: #050505;
@@ -258,7 +265,7 @@ main {
 .GalleryContainer {
     width: 100%;
     display: flex;
-    transition: transform 1s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .GalleryProject1, .GalleryProject2, .GalleryProject3 {
@@ -391,7 +398,7 @@ main {
 
 @media (max-width: 768px) {
     .GalleryProject1, .GalleryProject2, .GalleryProject3 {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
     }
 }
 
@@ -423,9 +430,9 @@ main {
         flex-direction: column;
     }
     .ButtonContainer > button {
-        height: 5vh;
+        height: 6vh;
     }
     .GalleryProject1, .GalleryProject2, .GalleryProject3 {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(3,1fr);
     }
 }
