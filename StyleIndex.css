@@ -1,0 +1,431 @@
+body {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    cursor: default;
+    font-weight: 600;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    cursor: default;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: default;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    cursor: default;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    background-color: #050505;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 2vh 4vw;
+}
+
+.LogoContainer {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 9px;
+}
+
+@keyframes moveIcon {
+    0% {
+        transform: translate(0,0);
+    }
+    50% {
+        transform: translate(36px,36px);
+    }
+    51% {
+        transform: translate(-36px,-36px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+.animate .LogoIcon {
+    animation: moveIcon 0.4s ease-in-out
+}
+
+.CircleWrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.LogoType {
+    fill: #fafafa;
+    height: 3vh;
+}
+
+/* HEADER */
+
+header {
+    background-color: #fd7c0f;
+    display: flex;
+    height: 20vh;
+}
+
+.PhotoProfile {
+    width: 15vh;
+    height: 15vh;
+    border: 4px solid #fafafa;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(12vh);
+}
+
+.PhotoProfile > img {
+    /* width: 100%; */
+    height: 100%;
+    height: auto;
+}
+
+/* MAIN */
+
+main {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    width: 96vw;
+    margin: 30px 2vw;
+    gap: 3vw;
+    transform: translateY(8vh);
+}
+
+.Profile {
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 6px;
+    margin-top: 30px;
+}
+
+.Title > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ButtonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ButtonContainer > button {
+    height: 4.5vh;
+    background-color: #fd7c0f;
+    outline: none;
+    border: 1px solid #050505;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.ButtonContainer > button:hover {
+    background-color: #050505;
+    color: #fd7c0f;
+}
+
+.SocialMediaContainer {
+    margin-top: 30px;
+}
+
+.SocialMediaContainer > p {
+    font-weight: 600;
+}
+
+.SocialMedia {
+    margin-top: 6px;
+    border: 1px solid #050505;
+    border-radius: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.SocialMedia > a {
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 15px;
+    gap: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    fill: #050505;
+    color: #050505;
+    text-decoration: none;
+}
+
+.SocialMedia > a > p {
+    cursor: pointer;
+}
+
+.SocialMedia > a:hover {
+    fill: #fd7c0f;
+    color: #fd7c0f;
+}
+
+.Content {
+    width: 80vw;
+    height: 100%;
+    overflow: hidden;
+}
+
+.TabContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #05050560;
+    height: 4vh;
+}
+
+.TabContent > div {
+    width: 100%;
+    color: #05050560;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.TabContent > div:hover {
+    border-bottom: 2px solid #050505;
+    color: #050505;
+    font-weight: 600;
+}
+
+.GalleryContainer {
+    width: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.GalleryProject1, .GalleryProject2, .GalleryProject3 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    min-width: 100%;
+    margin-top: 4px;
+}
+
+.GalleryProject1 article, .GalleryProject2 article, .GalleryProject3 article {
+    background-color: #050505;
+    width: 1fr;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1781px) {
+    .Profile {
+        width: 17vw;
+    }
+    .Content {
+        width: 79vw;
+    }
+}
+
+@media (max-width: 1667px) {
+    .Profile {
+        width: 18vw;
+    }
+    .Content {
+        width: 78vw;
+    }
+}
+
+@media (max-width: 1574px) {
+    .Profile {
+        width: 19vw;
+    }
+    .Content {
+        width: 77vw;
+    }
+}
+
+@media (max-width: 1492px) {
+    .Profile {
+        width: 20vw;
+    }
+    .Content {
+        width: 76vw;
+    }
+}
+
+@media (max-width: 1417px) {
+    .Profile {
+        width: 21vw;
+    }
+    .Content {
+        width: 75vw;
+    }
+}
+
+@media (max-width: 1349px) {
+    .Profile {
+        width: 22vw;
+    }
+    .Content {
+        width: 74vw;
+    }
+}
+
+@media (max-width: 1288px) {
+    .Profile {
+        width: 23vw;
+    }
+    .Content {
+        width: 73vw;
+    }
+}
+
+@media (max-width: 1232px) {
+    .Profile {
+        width: 24vw;
+    }
+    .Content {
+        width: 72vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .Profile {
+        flex-direction: row;
+        width: 96vw;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .ButtonSocialMedia {
+        width: 40vw;
+    }
+    .ButtonContainer {
+        flex-direction: row;
+    }
+    .ButtonContainer > button {
+        width: 100%;
+        height: 3.5vh;
+    }
+    .SocialMediaContainer {
+        display: none;
+    }
+    .Content {
+        width:100vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .GalleryProject1, .GalleryProject2, .GalleryProject3 {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        justify-content: center;
+    }
+    main {
+        transform: translateY(6vh);
+    }
+    .Profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .NameTitle > h1 {
+        text-align: center;
+    }
+    .Title {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6px;
+        gap: 6px;
+    }
+    .ButtonSocialMedia {
+        width: 100%;
+    }
+    .ButtonContainer {
+        flex-direction: column;
+    }
+    .ButtonContainer > button {
+        height: 5vh;
+    }
+    .GalleryProject1, .GalleryProject2, .GalleryProject3 {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
