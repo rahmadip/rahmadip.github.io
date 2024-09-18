@@ -95,6 +95,7 @@ nav {
     align-items: center;
     justify-content: center;
     position: relative;
+    background-color: #fd7c0f;
 }
 
 .LogoType {
@@ -272,7 +273,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     min-width: 100%;
-    margin-top: 4px;
+    margin-top: 2px;
 }
 
 .GalleryProject1 article, .GalleryProject2 article, .GalleryProject3 article {
@@ -282,8 +283,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2px;
+    overflow: hidden;
+    margin: 1px;
     cursor: pointer;
+}
+
+.GalleryProject2 > article > img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
 }
 
 /* FOOTER */

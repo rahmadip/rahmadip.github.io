@@ -12,7 +12,6 @@ logoContainer.addEventListener('click', function() {
 });
 
 // SLIDE GALLERY
-// TANDA
 
 const Tab1 = document.querySelector('.Tab1');
 const Tab2 = document.querySelector('.Tab2');
