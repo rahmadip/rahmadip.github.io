@@ -52,19 +52,19 @@ p {
 nav {
     background-color: #050505;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 2vh 2vw;
+    padding: 0 2vw;
+    height: 60px;
 }
 
 .LogoContainer {
     display: flex;
     cursor: pointer;
     align-items: center;
-    gap: 9px;
+    gap: 7px;
 }
 
 @keyframes moveIcon {
@@ -100,7 +100,9 @@ nav {
 
 .LogoType {
     fill: #fafafa;
-    height: 3vh;
+    width: auto;
+    height: 24px;
+    transform: translateY(1px);
 }
 
 /* HEADER */
@@ -126,9 +128,8 @@ header {
 }
 
 .PhotoProfile > img {
-    /* width: 100%; */
+    width: auto;
     height: 100%;
-    height: auto;
 }
 
 /* MAIN */
@@ -170,8 +171,18 @@ main {
     gap: 15px;
 }
 
-.ButtonContainer > button {
-    height: 4.5vh;
+.Button1 {
+    height: 42px;
+    background-color: #050505;
+    outline: none;
+    border: 1px solid #050505;
+    border-radius: 100px;
+    color: #fd7c0f;
+    cursor: pointer;
+}
+
+.Button2 {
+    height: 42px;
     background-color: #fd7c0f;
     outline: none;
     border: 1px solid #050505;
@@ -180,7 +191,12 @@ main {
     cursor: pointer;
 }
 
-.ButtonContainer > button:hover {
+.Button1:hover {
+    background-color: #fd7c0f;
+    color: #050505;
+}
+
+.Button2:hover {
     background-color: #050505;
     color: #fd7c0f;
 }
@@ -273,22 +289,22 @@ main {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     min-width: 100%;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 .GalleryProject1 article, .GalleryProject2 article, .GalleryProject3 article {
-    background-color: #050505;
+    background-color: transparent;
     width: 1fr;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     margin: 1px;
+    overflow: hidden;
     cursor: pointer;
 }
 
-.GalleryProject2 > article > img {
+.GalleryProject1 > article > img, .GalleryProject2 > article > img,.GalleryProject3 > article > img {
     height: 100%;
     width: auto;
     object-fit: cover;
@@ -394,7 +410,6 @@ main {
     }
     .ButtonContainer > button {
         width: 100%;
-        height: 3.5vh;
     }
     .SocialMediaContainer {
         display: none;
@@ -432,15 +447,9 @@ main {
         gap: 6px;
     }
     .ButtonSocialMedia {
-        width: 100%;
+        width: 90%;
     }
     .ButtonContainer {
         flex-direction: column;
-    }
-    .ButtonContainer > button {
-        height: 6vh;
-    }
-    .GalleryProject1, .GalleryProject2, .GalleryProject3 {
-        grid-template-columns: repeat(3,1fr);
     }
 }
