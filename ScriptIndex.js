@@ -85,3 +85,34 @@ document.addEventListener('DOMContentLoaded', function() {
     showGallery(0);
     activateTab(Tab1);
 });
+
+// MODAL
+
+const Modal = document.getElementById('Modal');
+const ModalImage = document.getElementById('ModalImage');
+const CloseModal = document.getElementById('CloseModal');
+const GalleryArticles = document.querySelectorAll('.GalleryProject1 article, .GalleryProject2 article, .GalleryProject3 article');
+
+GalleryArticles.forEach(article => {
+    article.addEventListener('click', function() {
+        const imgSrc = article.querySelector('img').src;
+        ModalImage.src = imgSrc;
+        Modal.classList.add('show');
+        Modal.style.display = 'flex';
+        CloseModal.style.display = 'flex';
+    });
+});
+
+CloseModal.addEventListener('click', function() {
+    Modal.classList.remove('show');
+    Modal.style.display = 'none';
+    CloseModal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target === Modal) {
+        Modal.classList.remove('show');
+        Modal.style.display = 'none';
+        CloseModal.style.display = 'none';
+    }
+});
