@@ -134,6 +134,7 @@ header {
 .PhotoProfile {
     width: 15vh;
     height: 15vh;
+    background-color: #fafafa;
     border: 4px solid #fafafa;
     border-radius: 50%;
     overflow: hidden;
