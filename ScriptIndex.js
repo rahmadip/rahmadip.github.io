@@ -115,7 +115,7 @@ GalleryArticles.forEach(article => {
         ModalImage.src = imgSrc;
         Modal.classList.add('show');
         Modal.style.display = 'flex';
-        Modal.style.justifyContent = 'flex-start';
+        Modal.style.justifyContent = 'center';
         Modal.style.backgroundColor = '#050505';
         ModalImage.style.display = 'block';
         MessageBox.style.display = 'none';

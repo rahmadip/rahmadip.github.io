@@ -1,0 +1,154 @@
+body {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    cursor: default;
+    font-weight: 600;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-weight: 400;
+    cursor: default;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+    background-color: #050505;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0 2vw;
+    height: 60px;
+}
+
+.Close {
+    display: none;
+    cursor: pointer;
+    height: 100%;
+    aspect-ratio: 1/1;
+    justify-content: end;
+    align-items: center;
+}
+
+.Close > svg {
+    stroke: #fafafa;
+}
+
+.LogoContainer {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    gap: 7px;
+}
+
+@keyframes moveIcon {
+    0% {
+        transform: translate(0,0);
+    }
+    50% {
+        transform: translate(36px,36px);
+    }
+    51% {
+        transform: translate(-36px,-36px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+.animate .LogoIcon {
+    animation: moveIcon 0.4s ease-in-out
+}
+
+.CircleWrapper {
+    width: 30px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #fd7c0f;
+}
+
+.LogoType {
+    fill: #fafafa;
+    width: auto;
+    height: 24px;
+    transform: translateY(1px);
+}
+
+/* DOWNLOAD CONTAINER */
+
+.DownloadContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 2vw;
+    gap: 10px;
+}
+
+.DownloadContainer > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fd7c0f;
+    height: 84px;
+    border: 1px solid #050505;
+    border-radius: 9px;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.DownloadContainer > div > p {
+    color: #fd7c0f;
+}
+
+.DownloadContainer > div:hover {
+    background-color: #050505;
+    color: #fd7c0f;
+}
