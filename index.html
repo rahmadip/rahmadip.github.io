@@ -33,15 +33,19 @@
             </svg>
         </span>
     </nav>
-    <header>
-        <div class="PhotoProfile">
-            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzcxaW1jMnA4MTdjNnFndzFveHN3bjUyMHY3YmtpbXhmNDJnM2tpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26FmQdOfaDqljMDXa/giphy.webp">
-        </div>
+    <header class="banner">
+        <h1>Lorem ipsum</h1>
+        <canvas id="dotsCanvas"></canvas>
     </header>
+    <div class="PhotoProfileContainer">
+        <div class="PhotoProfile">
+            <img src="https://i.giphy.com/3o84TT8Npa2uRGpjFe.webp">
+        </div>
+    </div>
     <main>
         <div class="Profile">
             <div class="NameTitle">
-                <h1>Fauzi Rahmadi Primanto</h1>
+                <h1>Full Name</h1>
                 <div class="Title">
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#050505" class="bi bi-briefcase" viewBox="0 0 16 16">
@@ -185,7 +189,7 @@
                 </div>
             </div>
         </div>
-    </main> 
+    </main>
     <div id="Modal" class="Modal">
         <div class="GhostNav"></div>
         <img class="ModalContent" id="ModalImage">
@@ -203,9 +207,7 @@
             </button>
         </form>
     </div>    
-
     <script src="ScriptIndex.js"></script>
-
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxSzWF7bIFZUgmjwo1T7bO3fVRlJd-Rd8QWMfKaamCdZZeDt8r76B-wDMoRgTfb3fSmIA/exec'
         const form = document.forms['PortfolioMessage']

@@ -125,15 +125,42 @@ nav {
 
 /* HEADER */
 
-header {
+.banner {
     background-color: #fd7c0f;
     display: flex;
-    height: 20vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 30vh;
+    font-size: 2em;
+    position: relative;
+}
+
+.banner #dotsCanvas {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* PHOTO PROFILE */
+
+.PhotoProfileContainer {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 0;
+    position: relative;
 }
 
 .PhotoProfile {
-    width: 15vh;
-    height: 15vh;
+    width: 132px;
+    height: 132px;
     background-color: #fafafa;
     border: 4px solid #fafafa;
     border-radius: 50%;
@@ -143,7 +170,6 @@ header {
     margin-right: 2vw;
     justify-content: center;
     align-items: center;
-    transform: translateY(12vh);
 }
 
 .PhotoProfile > img {
@@ -158,9 +184,9 @@ main {
     display: flex;
     justify-content: center;
     width: 96vw;
-    margin: 30px 2vw;
+    margin: 96px 2vw;
+    margin-bottom: 0;
     gap: 3vw;
-    transform: translateY(8vh);
 }
 
 .Profile {
@@ -595,21 +621,22 @@ main {
     }
 }
 
-@media (max-width: 768px) {
-    .GalleryProject1, .GalleryProject2, .GalleryProject3 {
-        grid-template-columns: repeat(3,1fr);
-    }
-}
-
 @media (max-width: 600px) {
     nav {
         padding: 0 4vw;
     }
     header {
+        font-size: 1em;
+    }
+    .PhotoProfileContainer{
         justify-content: center;
     }
+    .PhotoProfile {
+        width: 96px;
+        height: 96px;
+    }
     main {
-        transform: translateY(6vh);
+        margin-top: 72px;
     }
     .Profile {
         flex-direction: column;
