@@ -137,6 +137,10 @@ nav {
     position: relative;
 }
 
+.banner > svg:hover {
+    fill: #050505;
+}
+
 .banner #dotsCanvas {
     position: absolute;
     background-color: transparent;
@@ -150,7 +154,6 @@ nav {
 /* PHOTO PROFILE */
 
 .PhotoProfileContainer {
-    background-color: aqua;
     display: flex;
     align-items: center;
     width: 100vw;
@@ -332,6 +335,7 @@ main {
 
 .GalleryProject1, .GalleryProject2, .GalleryProject3 {
     display: grid;
+    height: fit-content;
     grid-template-columns: repeat(3,1fr);
     min-width: 100%;
     margin-top: 1px;

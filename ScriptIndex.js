@@ -24,8 +24,8 @@ for (let index = 0; index < 50; index++) {
     dots.push({
         x:  Math.floor(Math.random() * canvas.width),
         y:  Math.floor(Math.random() * canvas.height),
-        size: Math.random() * 2 + 5,
-        color: '#fafafa77'
+        size: Math.random() * 2 + 2,
+        color: '#050505'
     });
 }
 const drawDots = () => {
