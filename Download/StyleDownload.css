@@ -120,35 +120,47 @@ nav {
     fill: #fafafa;
     width: auto;
     height: 24px;
-    transform: translateY(1px);
+    transform: translateY(2px);
 }
 
 /* DOWNLOAD CONTAINER */
 
-.DownloadContainer {
+.ContentContainer {
     display: flex;
     flex-direction: column;
     padding: 10px 2vw;
-    gap: 10px;
+    justify-content: center;
+    cursor: pointer;
+    gap: 3px;
 }
 
-.DownloadContainer > div {
-    display: flex;
+.Content {
+    display: none;
     flex-direction: column;
     justify-content: center;
     background-color: #fd7c0f;
     height: 84px;
     border: 1px solid #050505;
-    border-radius: 9px;
     cursor: pointer;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
-.DownloadContainer > div > p {
-    color: #fd7c0f;
-}
-
-.DownloadContainer > div:hover {
+.Content:hover {
     background-color: #050505;
     color: #fd7c0f;
 }
+
+.toggleLabel {
+    cursor: pointer;
+    display: flex;
+    background-color: #050505;
+    color: #fd7c0f;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  #toggleDiv:checked ~ .Content {
+    display: flex;
+  }

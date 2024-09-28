@@ -20,11 +20,11 @@ canvas.height = canvas.offsetHeight;
 let ctx = canvas.getContext('2d');
 
 let dots =[];
-for (let index = 0; index < 50; index++) {
+for (let index = 0; index < 100; index++) {
     dots.push({
         x:  Math.floor(Math.random() * canvas.width),
         y:  Math.floor(Math.random() * canvas.height),
-        size: Math.random() * 2 + 2,
+        size: Math.random() * 1 + 2,
         color: '#050505'
     });
 }
@@ -139,11 +139,46 @@ document.addEventListener('DOMContentLoaded', function() {
 // MODAL CONST
 
 const Modal = document.getElementById('Modal');
+const ModalDownload = document.getElementById('ModalDownload')
 const ModalImage = document.getElementById('ModalImage');
 const MessageBox = document.getElementById('MessageBox');
 const CloseModal = document.getElementById('CloseModal');
-const Button1 = document. getElementById('Button1')
+const ButtonDownload = document.getElementById('ButtonDownload')
+const Button1 = document.getElementById('Button1');
 const GalleryArticles = document.querySelectorAll('.GalleryProject1 article, .GalleryProject2 article, .GalleryProject3 article');
+
+// MODAL DOWNLOAD
+
+ButtonDownload.addEventListener('click', function() {
+    Modal.classList.add('show');
+    Modal.style.display = 'flex';
+    Modal.style.justifyContent = 'center';
+    Modal.style.backgroundColor = '#fd7c0f';
+    ModalDownload.style.display = 'flex';
+    MessageBox.style.display = 'none';
+    ModalImage.style.display = 'none';
+    CloseModal.style.display = 'flex';
+});
+
+document.getElementById("PasswordInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        checkPassword();
+    }
+});
+
+function checkPassword() {
+    const password = document.getElementById('PasswordInput').value;
+    const PasswordInput = document.getElementById('PasswordInput');
+    if (password === 'NawacitaTV2023') {
+        PasswordInput.value = "";
+        PasswordInput.placeholder = "Enter password"
+        window.open('/Download/Download.html', '_blank');
+    } else {
+        PasswordInput.value = "";
+        PasswordInput.placeholder = "Wrong password!";
+    }
+};
 
 // MODAL MESSAGE
 
@@ -152,8 +187,9 @@ Button1.addEventListener('click', function() {
     Modal.style.display = 'flex';
     Modal.style.justifyContent = 'center';
     Modal.style.backgroundColor = '#050505ee';
-    ModalImage.style.display = 'none';
+    ModalDownload.style.display = 'none';
     MessageBox.style.display = 'flex';
+    ModalImage.style.display = 'none';
     CloseModal.style.display = 'flex';
 });
 
@@ -167,8 +203,9 @@ GalleryArticles.forEach(article => {
         Modal.style.display = 'flex';
         Modal.style.justifyContent = 'center';
         Modal.style.backgroundColor = '#050505';
-        ModalImage.style.display = 'block';
+        ModalDownload.style.display = 'none';
         MessageBox.style.display = 'none';
+        ModalImage.style.display = 'block';
         CloseModal.style.display = 'flex';
     });
 });

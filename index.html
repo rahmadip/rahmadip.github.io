@@ -34,7 +34,7 @@
         </span>
     </nav>
     <header class="banner">
-        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#fd7c0f" class="bi bi-folder2" viewBox="0 0 16 16" onclick="window.open('/Download/Download.html');">
+        <svg id="ButtonDownload" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#fd7c0f" class="bi bi-folder2" viewBox="0 0 16 16">
             <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5z"/>
         </svg>
         <canvas id="dotsCanvas"></canvas>
@@ -134,6 +134,15 @@
                     <article>
                         <img src="https://i.giphy.com/hM4OekkycahSas09bD.webp" alt="gif">
                     </article>
+                    <article>
+                        <img src="https://i.giphy.com/2Fazad9Hs5xPAF6iQ.webp" alt="gif">
+                    </article>
+                    <article>
+                        <img src="https://i.giphy.com/hM4OekkycahSas09bD.webp" alt="gif">
+                    </article>
+                    <article>
+                        <img src="https://i.giphy.com/26gs8AAiJg3Xq1irS.webp" alt="gif">
+                    </article>
                 </div>
                 <div class="GalleryProject2">
                     <article data-src="Project2/IMG_3075.jpg">
@@ -152,6 +161,9 @@
     <div id="Modal" class="Modal">
         <div class="GhostNav"></div>
         <img class="ModalContent" id="ModalImage">
+        <div class="ModalDownload" id="ModalDownload">
+            <input type="password" id="PasswordInput" placeholder="Enter password">
+        </div>
         <form name="PortfolioMessage" class="MessageBox" id="MessageBox">
             <p>From</p>
             <input type="text" name="Name" class="InputSubject" placeholder="Name or anonymous">

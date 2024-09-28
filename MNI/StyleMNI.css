@@ -55,7 +55,7 @@ p {
 /* NAVIGATION BAR */
 
 nav {
-    background-color: #050505;
+    background-color: aquamarine;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,7 +64,7 @@ nav {
     z-index: 1000;
     padding: 0 2vw;
     height: 60px;
-    width: 100vw;
+    width: 96vw;
 }
 
 .Close {
@@ -125,35 +125,44 @@ nav {
     transform: translateY(1px);
 }
 
+/* COVER */
+
+.Cover {
+    background-color: #003366;
+    width: 100vw;
+    aspect-ratio: 21/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* COLOR */
 
 .ColorContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1px;
     margin-top: 100px;
-    border: 1px solid #050505;
+    margin-bottom: 100px;
+    border-radius: 20px;
     width: 1200px;
     height: 200px;
+    overflow: hidden;
 }
 
 .ColorContainer > div {
-    background-color: #050505;
     width: 200px;
     height: 100%;
     flex: 1;
-    transition: flex 0.3s ease-in-out;
+    transition: flex 0.5s ease-in-out;
 }
 
 .ColorContainer > div > p {
     color: #fafafa;
-    /* transform-origin: right bottom; */
-    /* transform: rotate(-90deg); */
 }
 
 .ColorContainer >div:hover {
-    flex: 3;
+    flex: 5;
 }
 
 /* RESPONSIVE */
