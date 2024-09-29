@@ -123,19 +123,54 @@ nav {
     transform: translateY(2px);
 }
 
+/* MODAL PASSWORD */
+
+.modal-content {
+    background-color: #fd7c0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.modal-content > input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #050505;
+    border-radius: 6px;
+    height: 1.2em;
+    color: #050505;
+    font-size: 1.2em;
+    padding: 6px;
+    transform: translateY(-60px);
+}
+
+.modal-content > input::placeholder {
+    color: #050505;
+    font-size: 0.9em;
+}
+
 /* DOWNLOAD CONTAINER */
 
 .ContentContainer {
     display: flex;
     flex-direction: column;
-    padding: 10px 2vw;
-    justify-content: center;
+    margin: 10px 2vw;
     cursor: pointer;
     gap: 3px;
 }
 
+.ContentContainer > h3 {
+    background-color: #050505;
+    color: #fd7c0f;
+    padding: 10px;
+}
+
 .Content {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: #fd7c0f;
@@ -144,6 +179,7 @@ nav {
     cursor: pointer;
     padding-left: 20px;
     padding-right: 20px;
+    color: #050505;
 }
 
 .Content:hover {
@@ -151,16 +187,6 @@ nav {
     color: #fd7c0f;
 }
 
-.toggleLabel {
-    cursor: pointer;
-    display: flex;
-    background-color: #050505;
-    color: #fd7c0f;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    font-weight: 600;
-  }
-
-  #toggleDiv:checked ~ .Content {
-    display: flex;
-  }
+.hidden {
+    display: none;
+}
