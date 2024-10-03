@@ -1,8 +1,9 @@
 body {
-    background-color: #fafafa;
+    background-color: #050505;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    height: 100vh;
 }
 
 .no-scroll {
@@ -26,309 +28,48 @@ h1 {
     padding: 0;
     font-size: 1.5em;
     cursor: default;
-    font-weight: 600;
 }
 
 h2 {
     margin: 0;
     padding: 0;
     font-size: 1.2em;
-    font-weight: 400;
-    cursor: default;
-}
-
-h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 1.2em;
-    font-weight: 600;
     cursor: default;
 }
 
 p {
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     font-size: 0.9em;
     cursor: default;
 }
 
-/* NAVIGATION BAR */
+/* CONTENT */
 
-nav {
+.ContentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.HeaderContent {
+    background-color: #fafafa;
+    width: 90vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.Content {
     background-color: aquamarine;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 0 2vw;
-    height: 60px;
-    width: 96vw;
+    width: 90vw;
+    height: 90vw;
 }
 
-.Close {
-    display: none;
-    cursor: pointer;
-    height: 100%;
-    aspect-ratio: 1/1;
-    justify-content: end;
-    align-items: center;
-}
-
-.Close > svg {
-    stroke: #fafafa;
-}
-
-.LogoContainer {
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    gap: 7px;
-}
-
-@keyframes moveIcon {
-    0% {
-        transform: translate(0,0);
-    }
-    50% {
-        transform: translate(36px,36px);
-    }
-    51% {
-        transform: translate(-36px,-36px);
-    }
-    100% {
-        transform: translate(0,0);
-    }
-}
-
-.animate .LogoIcon {
-    animation: moveIcon 0.4s ease-in-out
-}
-
-.CircleWrapper {
-    width: 30px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background-color: #fd7c0f;
-}
-
-.LogoType {
-    fill: #fafafa;
-    width: auto;
-    height: 24px;
-    transform: translateY(1px);
-}
-
-/* COVER */
-
-.Cover {
-    background-color: #003366;
-    width: 100vw;
-    aspect-ratio: 21/9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* COLOR */
-
-.ColorContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border-radius: 20px;
-    width: 1200px;
-    height: 200px;
-    overflow: hidden;
-}
-
-.ColorContainer > div {
-    width: 200px;
-    height: 100%;
-    flex: 1;
-    transition: flex 0.5s ease-in-out;
-}
-
-.ColorContainer > div > p {
-    color: #fafafa;
-}
-
-.ColorContainer >div:hover {
-    flex: 5;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 1781px) {
-    .Profile {
-        width: 17vw;
-    }
-    .Content {
-        width: 79vw;
-    }
-}
-
-@media (max-width: 1667px) {
-    .Profile {
-        width: 18vw;
-    }
-    .Content {
-        width: 78vw;
-    }
-}
-
-@media (max-width: 1574px) {
-    .Profile {
-        width: 19vw;
-    }
-    .Content {
-        width: 77vw;
-    }
-}
-
-@media (max-width: 1492px) {
-    .Profile {
-        width: 20vw;
-    }
-    .Content {
-        width: 76vw;
-    }
-}
-
-@media (max-width: 1417px) {
-    .Profile {
-        width: 21vw;
-    }
-    .Content {
-        width: 75vw;
-    }
-}
-
-@media (max-width: 1349px) {
-    .Profile {
-        width: 22vw;
-    }
-    .Content {
-        width: 74vw;
-    }
-}
-
-@media (max-width: 1288px) {
-    .Profile {
-        width: 23vw;
-    }
-    .Content {
-        width: 73vw;
-    }
-}
-
-@media (max-width: 1232px) {
-    .Profile {
-        width: 24vw;
-    }
-    .Content {
-        width: 72vw;
-    }
-}
-
-@media (max-width: 1200px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    .Profile {
-        flex-direction: row;
-        width: 96vw;
-        justify-content: space-between;
-        gap: 0;
-    }
-    .ButtonSocialMedia {
-        width: 40vw;
-    }
-    .ButtonContainer {
-        flex-direction: row;
-    }
-    .SocialMediaContainer {
-        margin: 0;
-        margin-top: 30px;
-    }
-    .SocialMediaContainer > p {
-        display: none;
-    }
-    .ButtonContainer > button {
-        width: 100%;
-    }
-    .SocialMedia {
-        flex-direction: row;
-        justify-content: end;
-        align-items: center;
-        border: none;
-        padding: 0;
-        margin-top: 0;
-        gap: 30px;
-    }
-    .SocialMedia > a {
-        display: flex;
-        padding: 0px;
-    }
-    .ArrowWebsite {
-        display: none;
-    }
-    .SocialMedia p {
-        display: none;
-    }
-    .Content {
-        width:100vw;
-    }
-}
-
-@media (max-width: 600px) {
-    nav {
-        padding: 0 4vw;
-    }
-    header {
-        font-size: 1em;
-    }
-    .PhotoProfileContainer{
-        justify-content: center;
-    }
-    .PhotoProfile {
-        width: 96px;
-        height: 96px;
-    }
-    main {
-        margin-top: 72px;
-    }
-    .Profile {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    .NameTitle > h1 {
-        text-align: center;
-    }
-    .Title {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 6px;
-        gap: 6px;
-    }
-    .ButtonSocialMedia {
-        width: 90%;
-    }
-    .ButtonContainer {
-        flex-direction: column;
-    }
-    .SocialMedia {
-        justify-content: center;
-    }
+.CaptionContent {
+    background-color: #fafafa;
+    padding: 15px 0;
+    width: 90vw;
 }

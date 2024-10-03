@@ -11,7 +11,7 @@ logoContainer.addEventListener('click', function() {
     }, { once: true });
 });
 
-// MODAL PASSWORD
+// // MODAL PASSWORD
 
 document.getElementById("PasswordInput").addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
