@@ -28,21 +28,22 @@ function checkPassword() {
 
     if (password === 'NawacitaTV2023') {
         PasswordModal.style.display = 'none';
-        MainContent.style.display = 'block';
+        MainContent.style.display = 'flex';
     } else {
         PasswordInput.value = "";
         PasswordInput.placeholder = "Wrong password!";
     }
 };
 
-// CONTENT ANIMATE
+// FOLDER
 
-document.querySelectorAll('.toggleHeader').forEach(header => {
-    header.addEventListener('click', function() {
-        const contentDivs = this.parentElement.querySelectorAll('.Content');
+function toggleVisibility(...ids) {
+    event.stopPropagation();
 
-        contentDivs.forEach(contentDiv => {
-            contentDiv.classList.toggle('hidden');
-        });
+    ids.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.style.display = element.style.display === "block" ? "none" : "block";
+        }
     });
-});
+}

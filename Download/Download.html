@@ -27,84 +27,112 @@
                 <path class="cls-1" d="m943.9,243.2V56.9h27.5l2.8,18.8c2.9-3.9,6.3-7.5,10.2-10.8,3.9-3.3,8.5-5.9,13.9-8,5.4-2.1,11.9-3.1,19.4-3.1,12.4,0,23.2,3,32.4,8.9,9.3,5.9,16.6,14,21.9,24.2,5.3,10.2,8,21.9,8,35.1s-2.7,24.7-8.1,34.9c-5.4,10.2-12.8,18.2-22.1,24.1-9.4,5.8-20,8.7-32,8.7s-18.6-1.8-25.9-5.5c-7.3-3.7-13-9-17.1-15.8v74.9h-30.9Zm67.4-80.3c7.2,0,13.6-1.8,19.2-5.3,5.6-3.5,9.9-8.3,13.1-14.4,3.2-6.1,4.8-13.2,4.8-21.2s-1.6-15.2-4.8-21.5c-3.2-6.3-7.5-11.1-13.1-14.7-5.6-3.5-12-5.3-19.2-5.3s-14.1,1.8-19.7,5.3c-5.6,3.5-9.9,8.4-13,14.5s-4.6,13.4-4.6,21.6,1.5,14.9,4.6,21.1,7.4,11,13,14.5c5.6,3.5,12.1,5.3,19.7,5.3Z"/>
             </svg>
         </div>
-        <span id="CloseModal" class="Close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-            </svg>
-        </span>
     </nav>
     <div id="PasswordModal" class="modal">
         <div class="modal-content">
             <input type="password" id="PasswordInput" placeholder="Enter password">
+            <p>Powered by <b>rahmadip</b></p>
         </div>
     </div>
-    <div id="MainContent" class="MainContent" style="display: none;">
-        <div id="ContentContainer" class="ContentContainer">
-            <h3 class="toggleHeader">Company Assets</h3>
-            <div id="Content" class="Content hidden">
-                <h3>Media Nawacita Indonesia (MNI)</h3>
-                <p>Lorem Ipsum</p>
+
+    <div id="MainContent" class="MainContent hidden">
+        <div class="folder" id="folderAssets" onclick="toggleVisibility('subfolderLogo', 'subfolderIcon')">
+            <h1>Assets</h1>
+            <div class="subfolder sub1 hidden" id="subfolderLogo" onclick="toggleVisibility('subfolderMNI', 'subfolderNawacitapost', 'subfolderNawacitatv')">
+                <h2>Logo</h2>
+                <div class="subfolder sub2 hidden" id="subfolderMNI"onclick="toggleVisibility('subfolderMNI1', 'subfolderMNI2', 'subfolderMNI3', 'subfolderMNI4', 'subfolderMNI5', 'subfolderMNI6')">
+                    <h2>MNI</h2>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI1" onclick="window.open('https://drive.google.com/uc?export=download&id=1CH0CGuwhGpCKdvVycs2njwqvjuVYc8md');">
+                        <h3>1. [ICON] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi) or Print (300ppi)
+                            <br>format      :   Vecktor (.svg)
+                            <br>color       :   Editable
+                        </p>
+                    </div>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI2" onclick="window.open('https://drive.google.com/uc?export=download&id=1gyI82uvwuWK91iGSIqe4kwbhz6SJ3DEm');">
+                        <h3>2. [ICON] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi)
+                            <br>format      :   Raster (.png)
+                            <br>color       :   Colored
+                        </p>
+                    </div>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI3" onclick="window.open('https://drive.google.com/uc?export=download&id=1genuL_By4TGOEU7tQBeEsyKtm5960YmX');">
+                        <h3>3. [ICON] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi)
+                            <br>format      :   Raster (.png)
+                            <br>color       :   White (#fafafa)
+                        </p>
+                    </div>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI4" onclick="window.open('https://drive.google.com/uc?export=download&id=1GcsbkIEs2veZhGxUiwZM_alZQN7PSfvh');">
+                        <h3>4. [MAIN] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi) or Print (300ppi)
+                            <br>format      :   Vector (.svg)
+                            <br>color       :   Editable
+                        </p>
+                    </div>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI5" onclick="window.open('https://drive.google.com/uc?export=download&id=1vkNB4FBwdwAKd7p5xHV6aRr4ma12O_M7');">
+                        <h3>5. [MAIN] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi)
+                            <br>format      :   Raster (.png)
+                            <br>color       :   Colored
+                        </p>
+                    </div>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI6" onclick="window.open('https://drive.google.com/uc?export=download&id=1Wdfrc01RH9G_sRNCXW-GXHx2TqEDjtXm');">
+                        <h3>6. [MAIN] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi)
+                            <br>format      :   Raster (.png)
+                            <br>color       :   White (#fafafa)
+                        </p>
+                    </div>
+                </div>
+                <div class="subfolder sub2 hidden" id="subfolderNawacitapost" onclick="toggleVisibility('')"><h2>Nawacitapost.com</h2></div>
+                <div class="subfolder sub2 hidden" id="subfolderNawacitatv" onclick="toggleVisibility('')"><h2>Nawacita TV</h2></div>
             </div>
-            <div id="Content" class="Content hidden">
-                <h3>Nawacitapost.com</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-            <div id="Content" class="Content hidden">
-                <h3>Nawacita TV</h3>
-                <p>Lorem Ipsum</p>
+
+            <div class="subfolder sub1 hidden" id="subfolderIcon" onclick="toggleVisibility('')"><h2>Icon</h2></div>
+        </div>
+
+        <div class="folder" id="folderSosmed" onclick="toggleVisibility('subfolderProgram')">
+            <h1>Program Assets</h1>
+            <div class="subfolder sub4 hidden" id="subfolderProgram" onclick="window.open('https://drive.google.com/uc?export=download&id=1EnE38UJAy9fWwQtQ6k04xgEMDmcCwlOr');">
+                <h3>[THUMBNAIL] Nawacita News</h3>
+                <p><b>details</b>
+                    <br>used for    :   Digital (72ppi)
+                    <br>format      :   Raster (.psd)
+                    <br>size        :   1920x1080px (16:9)
+                </p>
             </div>
         </div>
-        <div id="ContentContainer" class="ContentContainer">
-            <h3 class="toggleHeader">Product Assets</h3>
-            <div id="Content" class="Content hidden">
-                <h3>Nawacita Awards</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-            <div id="Content" class="Content hidden">
-                <h3>Nusantara Awards</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-        </div>
-        <div id="ContentContainer" class="ContentContainer">
-            <h3 class="toggleHeader">Program Assets</h3>
-            <div id="Content" class="Content hidden" onclick="window.open('https://drive.google.com/uc?export=download&id=1EnE38UJAy9fWwQtQ6k04xgEMDmcCwlOr');">
-                <h3>Template Nawacita News</h3>
-                <p>1920x1080 RGB 72ppi.psd</p>
-            </div>
-            <div id="Content" class="Content hidden">
-                <h3>Template Sekaranglah Waktunya</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-            <div id="Content" class="Content hidden">
-                <h3>Template Sosok</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-            <div id="Content" class="Content hidden">
-                <h3>Template TipisTipis</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-        </div>
-        <div id="ContentContainer" class="ContentContainer">
-            <h3 class="toggleHeader">Social Media Kit</h3>
-            <div id="Content" class="Content hidden" onclick="window.open('https://drive.google.com/uc?export=download&id=1dHrN6kFikwsgOz3I993xxWfRmUrNlRrb');">
-                <h3>Template Social Media</h3>
-                <p>1080x1080 RGB 72ppi.psd</p>
-            </div>
-            <div id="Content" class="Content hidden" onclick="window.open('https://drive.google.com/uc?export=download&id=1VHfISfHkvkUW3p-xmXqJ5ScO1IP2UHj-');">
-                <h3>Template Social Media</h3>
-                <p>1080x1350 RGB 72ppi.psd</p>
-            </div>
-            <div id="Content" class="Content hidden" onclick="window.open('https://drive.google.com/uc?export=download&id=14mh1R6-rsV0XLMzkKT4wqAg-52fvlYHU');">
-                <h3>Template Social Media</h3>
-                <p>1080x1920 RGB 72ppi.psd</p>
-            </div>
-            <div id="Content" class="Content hidden">
-                <h3>Thumbnail Sekaranglah Waktunya</h3>
-                <p>Lorem Ipsum</p>
-            </div>
-            <div id="Content" class="Content hidden">
-                <h3>Thumbnail Sosok</h3>
-                <p>Lorem Ipsum</p>
+    
+        <div class="folder" id="folderSosmed" onclick="toggleVisibility('subfolderSosmed1', 'subfolderSosmed2', 'subfolderSosmed3')">
+            <h1>Social Media Kit</h1>
+            <div class="subfolder sub4 hidden" id="subfolderSosmed1" onclick="window.open('https://drive.google.com/uc?export=download&id=1dHrN6kFikwsgOz3I993xxWfRmUrNlRrb');">
+                <h3>[FEED] Social Media</h3>
+                <p><b>details</b>
+                    <br>used for    :   Digital (72ppi)
+                    <br>format      :   Raster (.psd)
+                    <br>size        :   1080x1080px (1:1)
+                </p>
+            <div class="subfolder sub4 hidden" id="subfolderSosmed2" onclick="window.open('https://drive.google.com/uc?export=download&id=1VHfISfHkvkUW3p-xmXqJ5ScO1IP2UHj-');">
+                <h3>[FEED] Social Media</h3>
+                <p><b>details</b>
+                    <br>used for    :   Digital (72ppi)
+                    <br>format      :   Raster (.psd)
+                    <br>size        :   1080x1350px (4:5)
+                </p>
+            <div class="subfolder sub4 hidden" id="subfolderSosmed3" onclick="window.open('https://drive.google.com/uc?export=download&id=14mh1R6-rsV0XLMzkKT4wqAg-52fvlYHU');">
+                <h3>[THUMBNAIL/REELS] Social Media</h3>
+                <p><b>details</b>
+                    <br>used for    :   Digital (72ppi)
+                    <br>format      :   Raster (.psd)
+                    <br>size        :   1080x1920px (9:16)
+                </p>
             </div>
         </div>
     </div>

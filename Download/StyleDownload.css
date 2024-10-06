@@ -1,6 +1,7 @@
 body {
     background-color: #fafafa;
     display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100vw;
     margin: 0;
@@ -22,32 +23,34 @@ body::-webkit-scrollbar {
 
 h1 {
     margin: 0;
-    padding: 0;
-    font-size: 1.5em;
-    cursor: default;
+    padding: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
     font-weight: 600;
 }
 
 h2 {
     margin: 0;
-    padding: 0;
+    padding: 16px 20px;
     font-size: 1.2em;
-    font-weight: 400;
-    cursor: default;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 h3 {
     margin: 0;
-    padding: 0;
-    font-size: 1em;
+    padding: 16px 20px;
+    padding-bottom: 0;
+    font-size: 1.2em;
     font-weight: 600;
     cursor: pointer;
 }
 
 p {
     margin: 0;
-    padding: 0;
-    font-size: 0.9em;
+    padding: 8px 20px;
+    padding-bottom: 16px;
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -56,26 +59,12 @@ p {
 nav {
     background-color: #050505;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 0 2vw;
     height: 60px;
-}
-
-.Close {
-    display: none;
-    cursor: pointer;
-    height: 100%;
-    aspect-ratio: 1/1;
-    justify-content: end;
-    align-items: center;
-}
-
-.Close > svg {
-    stroke: #fafafa;
+    width: 100vw;
 }
 
 .LogoContainer {
@@ -83,6 +72,7 @@ nav {
     cursor: pointer;
     align-items: center;
     gap: 7px;
+    margin-left: 2vw;
 }
 
 @keyframes moveIcon {
@@ -128,8 +118,10 @@ nav {
 .modal-content {
     background-color: #fd7c0f;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
     height: calc(100vh - 60px);
 }
 
@@ -145,7 +137,8 @@ nav {
     color: #050505;
     font-size: 1.2em;
     padding: 6px;
-    transform: translateY(-60px);
+    transform: translateY(-30px);
+    width: 300px;
 }
 
 .modal-content > input::placeholder {
@@ -153,39 +146,53 @@ nav {
     font-size: 0.9em;
 }
 
-/* DOWNLOAD CONTAINER */
+.modal-content > p {
+    transform: translateY(36vh);
+}
 
-.ContentContainer {
+/* FOLDER */
+
+.MainContent {
     display: flex;
     flex-direction: column;
-    margin: 10px 2vw;
-    cursor: pointer;
+    gap: 14px;
+    margin-top: 14px;
+    width: 94vw;
+}
+
+.folder {
     background-color: #050505;
-    border: 2px solid #050505;
-    border-radius: 9px;
+    color: #fafafa;
+    cursor: pointer;
+    border-radius: 12px;
     overflow: hidden;
-    gap: 2px;
 }
 
-.ContentContainer > h3 {
-    background-color: #050505;
-    color: #fd7c0f;
-    padding: 10px;
-}
-
-.Content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #fd7c0f;
-    cursor: pointer;
-    padding: 20px 10px;
+.subfolder, .content {
+    background-color: #f0f0f0;
     color: #050505;
+    cursor: pointer;
+    border-top: 1px solid #050505;
 }
 
-.Content:hover {
-    background-color: #050505;
-    color: #fd7c0f;
+.subfolder > div :hover {
+    filter: brightness(80%);
+}
+
+.sub1 {
+    background-color: #7D3C07;
+}
+
+.sub2 {
+    background-color: #B0550B;
+}
+
+.sub3 {
+    background-color: #E36E0E;
+}
+
+.sub4 {
+    background-color: #FD7C0F;
 }
 
 .hidden {
