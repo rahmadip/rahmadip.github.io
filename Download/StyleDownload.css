@@ -155,8 +155,9 @@ nav {
 .MainContent {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 14px;
+    gap: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     width: 94vw;
 }
 
