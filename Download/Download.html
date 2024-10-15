@@ -31,16 +31,42 @@
     <div id="PasswordModal" class="modal">
         <div class="modal-content">
             <input type="password" id="PasswordInput" placeholder="Enter password">
+            <button id="ButtonPassword" class="ButtonPassword" type="submit">Submit</button>
             <p>Powered by <b>rahmadip</b></p>
         </div>
     </div>
 
     <div id="MainContent" class="MainContent hidden">
+        <div class="folder" id="folderFont" onclick="toggleVisibility('subfolderFont1', 'subfolderFont2', 'subfolderFont3')">
+            <h1>Font</h1>
+            <div class="subfolder sub4 hidden" id="subfolderFont1" onclick="window.open('https://fonts.google.com/specimen/Poppins');">
+                <h3>[MAIN FONT] Media Nawacita Indonesia</h3>
+                <p><b>details</b>
+                    <br>Font    :   Poppins Family
+                    <br>Type    :   Sans-Serif
+                </p>
+            </div>
+            <div class="subfolder sub4 hidden" id="subfolderFont2" onclick="window.open('https://fonts.google.com/specimen/STIX+Two+Text?query=stix');">
+                <h3>[SECONDARY FONT] Media Nawacita Indonesia</h3>
+                <p><b>details</b>
+                    <br>Font    :   STIX Two Text Family
+                    <br>Type    :   Serif
+                </p>
+            </div>
+            <div class="subfolder sub4 hidden" id="subfolderFont3" onclick="window.open('https://fonts.google.com/specimen/Slackey');">
+                <h3>[MAIN FONT] Tamasya</h3>
+                <p><b>details</b>
+                    <br>Font    :   Slackey
+                    <br>Type    :   Display
+                </p>
+            </div>
+        </div>
+
         <div class="folder" id="folderAssets" onclick="toggleVisibility('subfolderLogo', 'subfolderIcon')">
-            <h1>Assets</h1>
+            <h1>Assets Logo Company</h1>
             <div class="subfolder sub1 hidden" id="subfolderLogo" onclick="toggleVisibility('subfolderMNI', 'subfolderNpost', 'subfolderNtv', 'subfolderNins', 'subfolderNsur', 'subfolderNorg', 'subfolderNaman')">
                 <h2>Logo</h2>
-                <div class="subfolder sub2 hidden" id="subfolderMNI"onclick="toggleVisibility('subfolderMNI1', 'subfolderMNI2', 'subfolderMNI3', 'subfolderMNI4', 'subfolderMNI5', 'subfolderMNI6')">
+                <div class="subfolder sub2 hidden" id="subfolderMNI"onclick="toggleVisibility('subfolderMNI1', 'subfolderMNI2', 'subfolderMNI3', 'subfolderMNI4', 'subfolderMNI5', 'subfolderMNI6', 'subfolderMNI7', 'subfolderMNI8', 'subfolderMNI9')">
                     <h2>Media Nawacita Indonesia [MNI]</h2>
                     <div class="subfolder sub4 hidden" id="subfolderMNI1" onclick="window.open('https://drive.google.com/uc?export=download&id=1CH0CGuwhGpCKdvVycs2njwqvjuVYc8md');">
                         <h3>1. [ICON] Logo MNI</h3>
@@ -84,6 +110,30 @@
                     </div>
                     <div class="subfolder sub4 hidden" id="subfolderMNI6" onclick="window.open('https://drive.google.com/uc?export=download&id=1Wdfrc01RH9G_sRNCXW-GXHx2TqEDjtXm');">
                         <h3>6. [MAIN] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi)
+                            <br>format      :   Raster (.png)
+                            <br>color       :   White (#fafafa)
+                        </p>
+                    </div>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI7" onclick="window.open('https://drive.google.com/uc?export=download&id=1ndc1aO9h6nAYmq2ZUgy999NO6NSEN9uA');">
+                        <h3>7. [ALTERNATIVE] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi) or Print (300ppi)
+                            <br>format      :   Vector (.svg)
+                            <br>color       :   Editable
+                        </p>
+                    </div>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI8" onclick="window.open('https://drive.google.com/uc?export=download&id=1MIlci9WHUjeai1ixwvCmCDx7eaweD9iv');">
+                        <h3>8. [ALTERNATIVE] Logo MNI</h3>
+                        <p><b>details</b>
+                            <br>used for    :   Digital (72ppi)
+                            <br>format      :   Raster (.png)
+                            <br>color       :   Colored
+                        </p>
+                    </div>
+                    <div class="subfolder sub4 hidden" id="subfolderMNI9" onclick="window.open('https://drive.google.com/uc?export=download&id=12BDecsejYR36YXowwoAIX8nwfqa15aVV');">
+                        <h3>9. [ALTERNATIVE] Logo MNI</h3>
                         <p><b>details</b>
                             <br>used for    :   Digital (72ppi)
                             <br>format      :   Raster (.png)
@@ -232,10 +282,34 @@
             <div class="subfolder sub1 hidden" id="subfolderIcon" onclick="toggleVisibility('')"><h2>Icon</h2></div>
         </div>
 
-        <div class="folder" id="folderProgram" onclick="toggleVisibility('subfolderProgram')">
-            <h1>Program Assets</h1>
-            <div class="subfolder sub4 hidden" id="subfolderProgram" onclick="window.open('https://drive.google.com/uc?export=download&id=1EnE38UJAy9fWwQtQ6k04xgEMDmcCwlOr');">
+        <div class="folder" id="folderProgram" onclick="toggleVisibility('subfolderProgramnews', 'subfolderProgramsw', 'subfolderProgramsosok', 'subfolderProgramtipis')">
+            <h1>Assets Product/Program</h1>
+            <div class="subfolder sub4 hidden" id="subfolderProgramnews" onclick="window.open('https://drive.google.com/uc?export=download&id=1EnE38UJAy9fWwQtQ6k04xgEMDmcCwlOr');">
                 <h3>[THUMBNAIL] Nawacita News</h3>
+                <p><b>details</b>
+                    <br>used for    :   Digital (72ppi)
+                    <br>format      :   Raster (.psd)
+                    <br>size        :   1920x1080px (16:9)
+                </p>
+            </div>
+            <div class="subfolder sub4 hidden" id="subfolderProgramsw" onclick="window.open();">
+                <h3>[THUMBNAIL] Podcast Sekaranglah Waktunya</h3>
+                <p><b>details</b>
+                    <br>used for    :   Digital (72ppi)
+                    <br>format      :   Raster (.psd)
+                    <br>size        :   1920x1080px (16:9)
+                </p>
+            </div>
+            <div class="subfolder sub4 hidden" id="subfolderProgramsosok" onclick="window.open('https://drive.google.com/uc?export=download&id=1V1cGJ1fBL4zIClbaNE4ivCgPfqAhwo8P');">
+                <h3>[THUMBNAIL] Podcast Sosok</h3>
+                <p><b>details</b>
+                    <br>used for    :   Digital (72ppi)
+                    <br>format      :   Raster (.psd)
+                    <br>size        :   1920x1080px (16:9)
+                </p>
+            </div>
+            <div class="subfolder sub4 hidden" id="subfolderProgramtipis" onclick="window.open();">
+                <h3>[THUMBNAIL] Podcast TipisTipis</h3>
                 <p><b>details</b>
                     <br>used for    :   Digital (72ppi)
                     <br>format      :   Raster (.psd)
@@ -244,7 +318,7 @@
             </div>
         </div>
     
-        <div class="folder" id="folderSosmed" onclick="toggleVisibility('subfolderSosmed1', 'subfolderSosmed2', 'subfolderSosmed3')">
+        <div class="folder" id="folderSosmed" onclick="toggleVisibility('subfolderSosmed1', 'subfolderSosmed2', 'subfolderSosmed3', 'subfolderSosmed4')">
             <h1>Social Media Kit</h1>
             <div class="subfolder sub4 hidden" id="subfolderSosmed1" onclick="window.open('https://drive.google.com/uc?export=download&id=1dHrN6kFikwsgOz3I993xxWfRmUrNlRrb');">
                 <h3>[FEED] Social Media</h3>
@@ -253,6 +327,7 @@
                     <br>format      :   Raster (.psd)
                     <br>size        :   1080x1080px (1:1)
                 </p>
+            </div>
             <div class="subfolder sub4 hidden" id="subfolderSosmed2" onclick="window.open('https://drive.google.com/uc?export=download&id=1VHfISfHkvkUW3p-xmXqJ5ScO1IP2UHj-');">
                 <h3>[FEED] Social Media</h3>
                 <p><b>details</b>
@@ -260,8 +335,17 @@
                     <br>format      :   Raster (.psd)
                     <br>size        :   1080x1350px (4:5)
                 </p>
+            </div>
             <div class="subfolder sub4 hidden" id="subfolderSosmed3" onclick="window.open('https://drive.google.com/uc?export=download&id=14mh1R6-rsV0XLMzkKT4wqAg-52fvlYHU');">
                 <h3>[THUMBNAIL/REELS] Social Media</h3>
+                <p><b>details</b>
+                    <br>used for    :   Digital (72ppi)
+                    <br>format      :   Raster (.psd)
+                    <br>size        :   1080x1920px (9:16)
+                </p>
+            </div>
+            <div class="subfolder sub4 hidden" id="subfolderSosmed4" onclick="window.open();">
+                <h3>[THUMBNAIL/REELS] Tamasya</h3>
                 <p><b>details</b>
                     <br>used for    :   Digital (72ppi)
                     <br>format      :   Raster (.psd)

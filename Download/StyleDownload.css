@@ -146,6 +146,21 @@ nav {
     font-size: 0.9em;
 }
 
+.ButtonPassword {
+    width: 314px;
+    height: 42px;
+    background-color: #050505;
+    outline: none;
+    border: 1px solid #050505;
+    border-radius: 6px;
+    color: #fd7c0f;
+    cursor: pointer;
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    transform: translateY(-18px);
+}
+
 .modal-content > p {
     transform: translateY(36vh);
 }

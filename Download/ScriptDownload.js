@@ -35,6 +35,8 @@ function checkPassword() {
     }
 };
 
+document.getElementById('ButtonPassword').addEventListener('click', checkPassword);
+
 // FOLDER
 
 function toggleVisibility(...ids) {
