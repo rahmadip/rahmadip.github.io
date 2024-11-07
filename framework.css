@@ -19,7 +19,6 @@ img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    filter: grayscale(100%);
 }
 
 .noScroll {overflow: hidden}
@@ -32,7 +31,7 @@ h1 {
     margin: 0;
     font-family: "DM Sans", sans-serif;
     font-weight: 600;
-    font-size: 1.2em;
+    font-size: 1em;
     text-transform: uppercase;
 }
 
@@ -52,12 +51,28 @@ h3 {
     font-size: 0.8em;
 }
 
+h4 {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 3em;
+}
+
 p {
     padding: 0;
     margin: 0;
     font-family: "DM Sans", sans-serif;
     font-weight: 400;
     font-size: 0.8em;
+}
+
+td {
+    padding: 0;
+    margin: 0;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 0.6em;
+    transform: translateX(-2px);
 }
 
 .underline {
@@ -97,6 +112,8 @@ p {
 
 .gap {gap: 30px;}
 .padding {padding: 30px;}
+.padding15 {padding: 15px;}
+.paddingLR {padding: 0 15px}
 
 .border {
     border: 1px solid #050505;
@@ -104,22 +121,47 @@ p {
     overflow: hidden;
 }
 
-.flexC {
+.border:hover{
+    box-shadow: 2px 2px #050505;
+}
+
+.overflow {overflow: hidden;}
+
+.flex {display: flex;}
+
+.flexColumn {
     display: flex;
+    flex-direction: column;
+}
+
+.flex1 {
+    flex: 1;
+    transition: flex 0.5s ease-in-out;
+}
+
+.flex1:Hover {
+    flex: 2;
+}
+
+.flat {
+    justify-content: space-between;
+}
+
+.center {
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .grid6 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr 15fr 12fr 12fr 15fr 30fr;
+    /* grid-template-rows: 1fr 15fr 12fr 12fr 15fr 30fr; */
     grid-template-areas:
-    "   cover   cover   cover   cover   cover   cover   "
     "   logoA   logoA   logoB   logoB   logoC   logoC   "
     "   colorH  color   color   color   color   color   "
-    "   assetH  asset   asset   asset   asset   asset   "
-    "   fontA   fontA   fontA   fontB   fontB   fontB   "
+    "   assetH  asset   asset   asset   asset2  asset2   "
+    "   fontA   fontA   font   fontB   fontB   fontB   "
     "   imagery imagery imagery imagery imagery imagery "
     ;
 }
@@ -132,6 +174,17 @@ p {
 .color  {grid-area: color;}
 .assetH {grid-area: assetH;}
 .asset {grid-area: asset;}
+.asset2 {grid-area: asset2;}
 .fontA {grid-area: fontA;}
 .fontB {grid-area: fontB;}
 .imagery {grid-area: imagery;}
+
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid3 > div {
+    aspect-ratio: 21/9;
+}
