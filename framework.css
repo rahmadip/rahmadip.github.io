@@ -55,7 +55,7 @@ h4 {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 p {
@@ -78,14 +78,6 @@ td {
 .underline {
     border-bottom: 1px solid #050505;
 }
-
-.white {color: #fafafa}
-.cream {color: #F2E6C2}
-.yellow {color: #F2B749}
-.orange {color: #F27405}
-.red {color: #D92B2B}
-.smoky {color: #0B0C0D}
-.black {color: #050505}
 
 .bWhite {background-color: #fafafa}
 .bCream {background-color: #F2E6C2}
@@ -111,6 +103,7 @@ td {
 .ratio219 {aspect-ratio: 21/9;}
 
 .gap {gap: 30px;}
+.gap15 {gap: 15px;}
 .padding {padding: 30px;}
 .padding15 {padding: 15px;}
 .paddingLR {padding: 0 15px}
@@ -156,13 +149,13 @@ td {
 .grid6 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* grid-template-rows: 1fr 15fr 12fr 12fr 15fr 30fr; */
+    grid-template-rows: 420px 240px 180px 180fr 20px;
     grid-template-areas:
     "   logoA   logoA   logoB   logoB   logoC   logoC   "
-    "   colorH  color   color   color   color   color   "
-    "   assetH  asset   asset   asset   asset2  asset2   "
-    "   fontA   fontA   font   fontB   fontB   fontB   "
-    "   imagery imagery imagery imagery imagery imagery "
+    "   color   color   color   color   color   color   "
+    "   assetH  asset   asset   asset   asset   asset   "
+    "   icon    icon    icon    icon    icon    icon    "
+    "   sample  sample  sample  sample  sample  sample  "
     ;
 }
 
@@ -170,15 +163,13 @@ td {
 .logoA  {grid-area: logoA;}
 .logoB  {grid-area: logoB;}
 .logoC  {grid-area: logoC;}
-.colorH {grid-area: colorH;}
 .color  {grid-area: color;}
 .assetH {grid-area: assetH;}
 .asset {grid-area: asset;}
-.asset2 {grid-area: asset2;}
-.fontA {grid-area: fontA;}
-.fontB {grid-area: fontB;}
-.imagery {grid-area: imagery;}
-
+.fontP {grid-area: fontP;}
+.fontS {grid-area: fontS;}
+.icon {grid-area: icon;}
+.sample {grid-area: sample;}
 
 .grid3 {
     display: grid;
