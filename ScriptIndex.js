@@ -189,7 +189,7 @@ GalleryArticles.forEach(article => {
 
 GalleryArticles.forEach(article => {
     article.addEventListener('click', function() {
-        const imgSrc = article.querySelector('img').src;
+        const imgSrc = article.querySelector('imgP').src;
         ModalImage.src = imgSrc;
         Modal.classList.add('show');
         Modal.style.display = 'flex';
