@@ -27,6 +27,12 @@ img {
     object-fit: cover;
 }
 
+.imgIa {
+    height: 60%;
+    width: auto;
+    object-fit: cover;
+}
+
 .imgI2 {
     height: 36%;
     width: auto;
@@ -99,11 +105,13 @@ td {
 
 .bWhite {background-color: #fafafa}
 .bCream {background-color: #F2E6C2}
-.bYellow {background-color: #F2B749}
+.bYellow {background-color: #FFA200}
 .bOrange {background-color: #F27405}
 .bRed {background-color: #D92B2B}
 .bSmoky {background-color: #0B0C0D}
 .bBlack {background-color: #050505}
+.bBlue {background-color: #003366}
+.bGradientgreenyellow {background-image: linear-gradient(to right, #146653, #FFA200);}
 
 /* CONST */
 
@@ -180,8 +188,9 @@ td {
     "   sketch  sketch  sketch  motion  motion  motion  "
     "   fontP  fontP   colorP  colorP  colorP  colorP "
     "   fontP  fontP   colorS  colorS  colorS  colorS "
-    "   assetH  asset   asset   asset   asset   asset   "
+    "   assetH  assetH   asset   asset   asset   asset   "
     "   icon    icon    icon    icon    icon    icon    "
+    "   iconP   iconP   iconP   iconP   iconP   iconP   "
     "   sample  sample  sample  sample  sample  sample  "
     ;
 }
@@ -200,12 +209,14 @@ td {
 .sample {grid-area: sample;}
 .motion {grid-area: motion;}
 .sketch {grid-area: sketch;}
+.iconP {grid-area: iconP;}
+
+.grid5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
 
 .grid3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
-
-.grid3 > div {
-    aspect-ratio: 21/9;
 }
