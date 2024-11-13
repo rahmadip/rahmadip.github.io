@@ -126,27 +126,18 @@ nav {
 .banner {
     background-color: #fd7c0f;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 30vh;
-    font-size: 2em;
-    position: relative;
+    overflow: hidden;
 }
 
-.banner > svg:hover {
-    fill: #050505;
-}
-
-.banner #dotsCanvas {
-    position: absolute;
-    background-color: transparent;
-    top: 0;
-    left: 0;
-    width: 100%;
+.banner > img {
     height: 100%;
-    pointer-events: none;
+    width: 100%;
+    object-fit: cover;
+    /* transform: translateY(40px); */
 }
 
 /* PHOTO PROFILE */
