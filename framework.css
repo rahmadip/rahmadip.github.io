@@ -21,23 +21,12 @@ img {
     object-fit: cover;
 }
 
-.imgI {
-    height: 30%;
-    width: auto;
-    object-fit: cover;
-}
-
 .imgIa {
     height: 60%;
     width: auto;
     object-fit: cover;
 }
 
-.imgI2 {
-    height: 36%;
-    width: auto;
-    object-fit: cover;
-}
 
 video {
     height: 100%;
@@ -45,34 +34,13 @@ video {
     object-fit: cover;
 }
 
-.noScroll {overflow: hidden}
-
-.sansSerif {font-family: "DM Sans", sans-serif}
-.semibold {font-weight: 600;}
-
 h1 {
     padding: 0;
     margin: 0;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 1em;
     text-transform: uppercase;
-}
-
-h2 {
-    padding: 0;
-    margin: 0;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 600;
-    font-size: 1em;
-}
-
-h3 {
-    padding: 0;
-    margin: 0;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 600;
-    font-size: 0.8em;
 }
 
 h4 {
@@ -85,7 +53,7 @@ h4 {
 p {
     padding: 0;
     margin: 0;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 0.8em;
 }
@@ -93,46 +61,51 @@ p {
 td {
     padding: 0;
     margin: 0;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 0.6em;
     transform: translateX(-2px);
 }
 
-.underline {
-    border-bottom: 1px solid #050505;
-}
-
 .bWhite {background-color: #fafafa}
 .bCream {background-color: #F2E6C2}
 .bYellow {background-color: #FFA200}
-.bOrange {background-color: #F27405}
-.bRed {background-color: #D92B2B}
-.bSmoky {background-color: #0B0C0D}
-.bBlack {background-color: #050505}
-.bBlue {background-color: #003366}
+.bBlue {background-color: var(--blue)}
+.bPeach {background-color: #FFCC99;}
 .bGradientgreenyellow {background-image: linear-gradient(to right, #146653, #FFA200);}
 
 /* CONST */
 
 :root {
     --container-width: 80vw;
+
+    /* COLOR PALETTE */
+    --blue: #003366;
+    --orange: #FF6633;
+    --white: #FAFAFA;
+    --black: #050505;
+    --green: #146653;
+    --yellow: #FFA200;
+    --red: #970000;
+    --peach: #FFCC99;
+    --brown: #663300;
+
+    /* RULES */
+    --border: 1px solid #050505;
+    --border-radius: 12px;
+    --gap: 42px;
 }
 
 .canvas {width: calc(var(--container-width) + 60px);}
 .container {width: var(--container-width)}
 .ratio1 {aspect-ratio: 1/1;}
-.ratio45 {aspect-ratio: 4/5;}
-.ratio54 {aspect-ratio: 5/4;}
 .ratio169 {aspect-ratio: 16/9;}
-.ratio916 {aspect-ratio: 9/16;}
 .ratio219 {aspect-ratio: 21/9;}
 
-.gap {gap: 30px;}
+.gap {gap: var(--gap);}
 .gap15 {gap: 15px;}
 .padding {padding: 30px;}
 .padding15 {padding: 15px;}
-.paddingLR {padding: 0 15px}
 
 .border {
     border: 1px solid #050505;
@@ -140,18 +113,11 @@ td {
     overflow: hidden;
 }
 
-.borderH {
-    border-bottom: 1px solid #050505;
-    border-top: 1px solid #050505;
-}
-
 .border:hover{
     box-shadow: 2px 2px #050505;
 }
 
 .overflow {overflow: hidden;}
-.hidden {display: none;}
-.hidden:hover {display: block;}
 
 .flex {display: flex;}
 
@@ -182,10 +148,9 @@ td {
 .grid6 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* grid-template-rows: 420px 240px 240px 180px 180fr 20px; */
     grid-template-areas:
-    "   logoA   logoA   logoB   logoB   logoC   logoC   "
-    "   sketch  sketch  sketch  motion  motion  motion  "
+    "   logoH   logo   logo   logo   logo   logo   "
+    "   logoH   logo2  logo2  logo2  logo2  logo2  "
     "   fontP  fontP   colorP  colorP  colorP  colorP "
     "   fontP  fontP   colorS  colorS  colorS  colorS "
     "   assetH  assetH   asset   asset   asset   asset   "
@@ -195,20 +160,14 @@ td {
     ;
 }
 
-.cover  {grid-area: cover;}
-.logoA  {grid-area: logoA;}
-.logoB  {grid-area: logoB;}
-.logoC  {grid-area: logoC;}
 .colorP  {grid-area: colorP;}
 .colorS  {grid-area: colorS;}
 .assetH {grid-area: assetH;}
 .asset {grid-area: asset;}
 .fontP {grid-area: fontP;}
-.fontS {grid-area: fontS;}
 .icon {grid-area: icon;}
 .sample {grid-area: sample;}
-.motion {grid-area: motion;}
-.sketch {grid-area: sketch;}
+
 .iconP {grid-area: iconP;}
 
 .grid5 {
@@ -220,3 +179,61 @@ td {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+/* ------------------------------------------------------------------ */
+
+.logoH {grid-area: logoH;}
+.logoP {grid-area: logoP;}
+.logoS {grid-area: logoS;}
+.logoM {grid-area: logoM;}
+
+.logo {
+    grid-area: logo;
+    columns: 3;
+    gap: var(--gap);
+}
+
+.logo > div > p {margin-bottom: 15px;}
+
+.logoP > div, .logoS > div, .logoM > div {
+    background-color: var(--white);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px #050505;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoP > div > img, .logoS > div > img, .logoM > div > img {
+    height: 36%;
+    width: auto;
+}
+
+/* ------------------------------------------------------------------ */
+
+.sketch {grid-area: sketch;}
+.motion {grid-area: motion;}
+
+.logo2 {
+    grid-area: logo2;
+    columns: 2;
+    gap: var(--gap);
+}
+
+.logo2 > div > p {margin-bottom: 15px;}
+
+.sketch > div, .motion > div {
+    background-color: var(--black);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px #050505;
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* ------------------------------------------------------------------ */
