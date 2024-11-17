@@ -1,14 +1,9 @@
 // ANIMATE NAVBAR
 
 const logoContainer = document.getElementById('LogoContainer');
-const arrowIcon = document.querySelector('.LogoIcon');
 
-logoContainer.addEventListener('click', function() {
-    logoContainer.classList.add('animate');
-
-    arrowIcon.addEventListener('animationend', function() {
-        location.reload();
-    }, { once: true });
+logoContainer.addEventListener('click', () => {
+    window.location.href = 'Index.html';
 });
 
 // SLIDE GALLERY
@@ -111,29 +106,29 @@ Button1.addEventListener('click', function() {
 
 // MODAL PAGE
 
-function openModal(htmlFile) {
-    loadHTML(htmlFile, 'ModalPage');
-}
+// function openModal(htmlFile) {
+//     loadHTML(htmlFile, 'ModalPage');
+// }
 
-function loadHTML(url, elementId) {
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(elementId).innerHTML = data;
-        })
-        .catch(error => console.error('Error loading HTML:', error));
-}
+// function loadHTML(url, elementId) {
+//     fetch(url)
+//         .then(response => response.text())
+//         .then(data => {
+//             document.getElementById(elementId).innerHTML = data;
+//         })
+//         .catch(error => console.error('Error loading HTML:', error));
+// }
 
-GalleryArticles.forEach(article => {
-    article.addEventListener('click', function() {
-        const htmlFile = this.getAttribute('data-html');
-        openModal(htmlFile);
-        Modal.style.display = 'flex';
-        MessageBox.style.display = 'none';
-        ModalImage.style.display = 'none';
-        CloseModal.style.display = 'flex';
-    });
-});
+// GalleryArticles.forEach(article => {
+//     article.addEventListener('click', function() {
+//         const htmlFile = this.getAttribute('data-html');
+//         openModal(htmlFile);
+//         Modal.style.display = 'flex';
+//         MessageBox.style.display = 'none';
+//         ModalImage.style.display = 'none';
+//         CloseModal.style.display = 'flex';
+//     });
+// });
 
 // MODAL ARTICLE
 
