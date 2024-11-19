@@ -53,11 +53,29 @@ h2 {
     font-size: 1.5em;
 }
 
+h3 {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
 h4 {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
     font-size: 2em;
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: var(--black);
 }
 
 p {
@@ -74,7 +92,6 @@ td {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 0.6em;
-    transform: translateX(-2px);
 }
 
 /* NAVIGATION BAR */
@@ -196,6 +213,7 @@ nav {
     "   colorH  color   color   color   color   color   "
     "   assetH  asset   asset   asset   asset   asset   "
     "   fontH   font    font    font    font    font    "
+    "   prdctH  prdct   prdct   prdct   prdct   prdct   "
     ;
 }
 
@@ -332,10 +350,20 @@ nav {
 }
 
 .iconP > div {
+    background-color: var(--blue);
     aspect-ratio: 1/1;
     border: var(--border);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconP > div > img {
+    width: auto;
+    height: 50%;
+    object-fit: cover;
 }
 
 .iconS {
@@ -348,9 +376,6 @@ nav {
 /* ------------------------------------------------------------------ */
 
 .fontH {grid-area: fontH; padding-right: calc(var(--gap) * 3);}
-.fontP {grid-area: fontP;}
-.fontS {grid-area: fontS;}
-.fontM {grid-area: fontM;}
 
 .font {
     grid-area: font;
@@ -368,4 +393,39 @@ nav {
     display: flex;
     align-items: center;
     padding: var(--padding);
+}
+
+/* ------------------------------------------------------------------ */
+
+.prdctH {grid-area: prdctH; padding-right: calc(var(--gap) * 3);}
+
+.prdct {
+    grid-area: prdct;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    row-gap: calc(var(--gap) * 2);
+}
+
+.prdct > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.news > div,
+.sw > div,
+.sosok > div,
+.tamasya > div,
+.icip2 > div,
+.tipis2 > div {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    /* box-shadow: var(--shadow); */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16/9;
+    background-color: var(--black);
 }
