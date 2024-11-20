@@ -97,7 +97,7 @@ td {
 /* NAVIGATION BAR */
 
 nav {
-    background-color: #050505;
+    background-color: var(--black);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,13 +105,13 @@ nav {
     top: 0;
     z-index: 1000;
     height: 60px;
-    width: calc(var(--container-width) + 70px);
+    width: calc(var(--container-width) + (var(--padding-canvas) * 2));
 }
 
 .LogoContainer {
     cursor: pointer;
     height: 24px;
-    margin-left: 2vw;
+    margin-left: var(--padding-cover);
 }
 
 .rahmadip {
@@ -124,19 +124,16 @@ nav {
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    margin-right: 2vw;
+    margin-right: var(--padding-cover);
 }
 
 .Close > svg {
     stroke: #fafafa;
 }
 
-.bBlue {background-color: var(--blue)}
 /* CONST */
 
 :root {
-    --container-width: 80vw;
-
     /* COLOR PALETTE */
     --blue: #003366;
     --orange: #FF6633;
@@ -150,20 +147,20 @@ nav {
 
     /* RULES */
     --border: 1px solid #050505;
+    --container-width: 80vw;
     --border-radius: 12px;
     --gap: 18px;
     --padding: 18px;
+    --padding-cover: 30px;
+    --padding-canvas: 60px;
     --shadow: 2px 2px #050505;
 }
 
-.canvas {width: calc(var(--container-width) + 60px);}
 .container {width: var(--container-width)}
-.ratio1 {aspect-ratio: 1/1;}
 .ratio169 {aspect-ratio: 16/9;}
-.ratio219 {aspect-ratio: 21/9;}
 
 .gap {gap: var(--gap);}
-.padding {padding: 30px;}
+.padding {padding: 60px;}
 .padding15 {padding: 15px;}
 
 .border {
@@ -203,6 +200,46 @@ nav {
     align-items: center;
     text-align: center;
 }
+
+.cover {
+    width: calc(var(--container-width) + (var(--padding-canvas) * 2));
+    aspect-ratio: 16/9;
+    background-image: url('assets/MNI Project/Cover MNI Project 16x9.svg');
+    color: var(--white);
+    display: flex;
+}
+
+.cover > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--padding-cover);
+}
+
+.cover h1 {
+    font-weight: 500;
+    font-size: 11em;
+    text-transform: none;
+    line-height: 0.8;
+    letter-spacing: -0.06em;
+    transform: translate(-12px, 27px);
+}
+
+.cover p {
+    font-family: 'DM Sans';
+    font-weight: 200;
+    font-size: 0.9em;
+}
+
+.cover > div > div > img {
+    height: auto;
+    width: 7%;
+    object-fit: cover;
+    margin-bottom: var(--gap);
+    margin-right: var(--padding-cover);
+}
+
 
 .grid6 {
     display: grid;
@@ -421,7 +458,7 @@ nav {
 .tipis2 > div {
     border: var(--border);
     border-radius: var(--border-radius);
-    /* box-shadow: var(--shadow); */
+    box-shadow: var(--shadow);
     overflow: hidden;
     display: flex;
     align-items: center;

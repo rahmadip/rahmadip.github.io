@@ -1,15 +1,17 @@
 const mediaFiles = [
-    { type: 'gif', src: '', duration: null},
-    { type: 'image', src: '', duration: 300},
+    { type: 'gif', src: 'assets/tipis2/TipisTipis Logo Motion Full.gif', duration: null},
+    { type: 'image', src: 'assets/tipis2/1.Roy Suryo.jpg', duration: 300},
+    { type: 'image', src: 'assets/tipis2/2.Gilbert.jpg', duration: 300},
+    { type: 'image', src: 'assets/tipis2/3.Ray Rangkuti.jpg', duration: 300},
 ];
 
-const visualProduct = document.querySelector('.visualProduct');
+const visualTipis2 = document.querySelector('.visualTipis2');
 
 let currentIndex = 0;
 
 function playNextMedia() {
     const media = mediaFiles[currentIndex];
-    visualProduct.innerHTML = '';
+    visualTipis2.innerHTML = '';
 
     if (media.type === 'video') {
         const video = document.createElement('video');
@@ -20,7 +22,7 @@ function playNextMedia() {
             currentIndex = (currentIndex + 1) % mediaFiles.length;
             playNextMedia();
         };
-        visualProduct.appendChild(video);
+        visualTipis2.appendChild(video);
     } else if (media.type === 'gif' || media.type === 'image') {
         const img = document.createElement('img');
         img.src = media.src;
@@ -31,7 +33,7 @@ function playNextMedia() {
             img.style.objectFit = 'cover';
         }
 
-        visualProduct.appendChild(img);
+        visualTipis2.appendChild(img);
 
         const duration = media.duration || 2000;
         setTimeout(() => {
