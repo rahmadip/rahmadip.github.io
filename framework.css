@@ -332,19 +332,14 @@ nav {
     grid-area: color;
     display: flex;
     flex-direction: column;
-    gap: var(--gap);
 }
 
 .colorP {
     display: flex;
-    gap: var(--gap);
 }
 
 .colorP > div {
     padding: var(--padding);
-    border-radius: var(--border-radius);
-    border: var(--border);
-    box-shadow: var(--shadow);
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -354,14 +349,10 @@ nav {
 
 .colorS {
     display: flex;
-    gap: var(--gap);
 }
 
 .colorS > div {
     padding: var(--padding);
-    border-radius: var(--border-radius);
-    border: var(--border);
-    box-shadow: var(--shadow);
     flex: 1;
     display: flex;
     flex-direction: column;
