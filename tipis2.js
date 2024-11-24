@@ -29,7 +29,7 @@
             img.src = media.src;
 
             if (media.type === 'gif') {
-                img.style.width = '60%';
+                img.style.width = '40%';
                 img.style.height = 'auto';
                 img.style.objectFit = 'cover';
             }

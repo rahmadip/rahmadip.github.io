@@ -367,26 +367,27 @@ nav {
 .asset {
     grid-area: asset;
     display: flex;
-    gap: var(--gap);
 }
 
 .iconP {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap);
 }
 
 .iconP > div {
-    background-color: var(--blue);
     aspect-ratio: 1/1;
-    border: var(--border);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.iconP > div:nth-child(1) {background-color: var(--blue);}
+.iconP > div:nth-child(2) {background-color: var(--orange);}
+.iconP > div:nth-child(3) {background-color: var(--blue);}
+.iconP > div:nth-child(4) {background-color: var(--orange);}
+.iconP > div:nth-child(5) {background-color: var(--blue);}
+.iconP > div:nth-child(6) {background-color: var(--orange);}
 
 .iconP > div > img {
     width: auto;
@@ -397,8 +398,6 @@ nav {
 .iconS {
     flex: 1;
     border: var(--border);
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
 }
 
 /* ------------------------------------------------------------------ */

@@ -1,6 +1,6 @@
 (() => {
     const mediaFiles = [
-        // { type: 'gif', src: '', duration: null},
+        { type: 'video', src: 'assets/sw/SekaranglahWaktunya Logo Motion Full.mp4'},
         { type: 'image', src: 'assets/sw/1.Roy Suryo.jpg', duration: 300},
         { type: 'image', src: 'assets/sw/2.Arteria Dahlan.jpg', duration: 300},
         { type: 'image', src: 'assets/sw/3.Albertina Ho.jpg', duration: 300},
@@ -22,7 +22,7 @@
         if (media.type === 'video') {
             const video = document.createElement('video');
             video.src = media.src;
-            video.autoplay = false;
+            video.autoplay = true;
             video.muted = true;
             video.onended = () => {
                 currentIndex = (currentIndex + 1) % mediaFiles.length;
