@@ -116,7 +116,7 @@ nav {
 /* MODAL PASSWORD */
 
 .modal-content {
-    background-color: #fd7c0f;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,7 +153,7 @@ nav {
     outline: none;
     border: 1px solid #050505;
     border-radius: 6px;
-    color: #fd7c0f;
+    color: #ffffff;
     cursor: pointer;
     font-family: "DM Sans", sans-serif;
     font-size: 0.9em;
