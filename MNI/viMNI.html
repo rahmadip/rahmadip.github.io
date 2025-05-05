@@ -32,8 +32,39 @@
 <body class="bg-gray-100">
   <header id="header" class="z-50 sticky top-0 right-0 left-0"></header>
 
+  <div class="bg-gray-200 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div id="announcement" class="flex items-center justify-between py-3 text-gray-500">
+
+        <span> </span>
+
+        <p class="text-center font-semibold text-black text-xs lg:text-sm">
+            You can download this page in PDF format at this
+            <a href="#" class="inline-block underline hover:font-extrabold">link</a>
+        </p>
+
+        <button
+            type="button"
+            aria-label="Dismiss"
+            class="hover:text-black"
+            onclick="document.getElementById('announcement').style.display='none'"
+            >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-4 lg:size-6"
+            >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+    </div>
+  </div>
+
   <div class="mx-auto max-w-screen-xl">
-    <img src="/MNI/Visual Identity - 720P.png" alt="">
+    <img src="/MNI/Visual Identity - Print Layout.png" alt="">
   </div>
 
   <footer id="footer"></footer>
