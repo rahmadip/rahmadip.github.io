@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style> body {font-family: 'Poppins', sans-serif;} </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("/components/header.html")
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById("header").innerHTML = data;
+          });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("/components/footer.html")
+          .then(res => res.text())
+          .then(data => {
+            document.getElementById("footer").innerHTML = data;
+          });
+      });
+    </script>
+    <title>rahmadip Portfolio</title>
+    <link rel="icon" href="/components/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/components/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+</head>
+<body class="bg-gray-100">
+  <header id="header" class="z-50 sticky top-0 right-0 left-0"></header>
+
+  <!-- <div class="bg-white relative mx-auto max-w-screen-xl">
+
+    <svg class="absolute" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1280.01 720.01">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #000;
+              stroke-miterlimit: 10;
+              stroke-width: 0.1px;
+            }
+          </style>
+        </defs>
+        <g>
+          <rect class="cls-1" x="0" y="0" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="24" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="48" width="1280" height="24"/>
+          <rect class="cls-1" x="40" y="72" width="63.33" height="24"/>
+          <rect class="cls-1" x="0" y="72" width="40" height="24"/>
+          <rect class="cls-1" x="103.34" y="72" width="1176.67" height="24"/>
+          <rect class="cls-1" x="0" y="96" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="120" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="144" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="168" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="192" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="216" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="240" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="264" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="288" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="312" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="336" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="360" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="384" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="408" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="432" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="456" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="480" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="504" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="528" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="552" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="576" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="600" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="624" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="648" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="672" width="1280" height="24"/>
+          <rect class="cls-1" x="0" y="696" width="1280" height="24"/>
+        </g>
+        <g>
+          <rect class="cls-1" x="0" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="1136.67" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="1033.34" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="930" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="826.67" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="723.34" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="620" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="516.67" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="413.34" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="310" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="206.67" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="103.34" y="0" width="40" height="720"/>
+          <rect class="cls-1" x="1240" y="0" width="40" height="720"/>
+        </g>
+    </svg>
+
+    <div class="px-10 py-6">
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+        <h1 class="leading-6 text-base">A.Introduction</h1>
+    </div>
+
+  </div> -->
+
+  <div class="bg-red-600 mx-auto max-w-screen-xl px-4 py-1 sm:px-6 lg:px-10">asd
+  </div>
+
+  <footer id="footer"></footer>
+</body>
+</html>
