@@ -32,7 +32,7 @@
 <body class="bg-gray-100">
   <header id="header" class="z-50 sticky top-0 right-0 left-0"></header>
 
-  <div class="bg-gray-200 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+  <!-- <div class="bg-gray-200 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div id="announcement" class="flex items-center justify-between py-3 text-gray-500">
 
         <span> </span>
@@ -61,107 +61,95 @@
         </button>
 
     </div>
-  </div>
+  </div> -->
 
-  <div class="mx-auto max-w-screen-xl">
-    <img src="/MNI/componentVIMNI/Visual Identity - Print Layout.png" alt="">
-    <img src="/MNI/componentVIMNI/Visual Identity - Motion Logo.png" alt="">
+  <div class="bg-[#f9f9f9] mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-20">
 
-    <img src="/grid.svg" alt="">
+    <div>
 
-    <div class="bg-[#fafafa] aspect-16/9">
-
-      <p>Logo motion resmi Media Nawacita Indonesia yang dapat diaplikasikan di media digital. Motion logo mempunyai dua variasi, yaitu motion logo bewarna dan motion logo hitam putih.</p>
-
-      <div class="aspect-video overflow-hidden flex items-center justify-center">
-        <video
-          id="videoPlayer"
-          autoplay
-          loop
-          muted
-          playsinline
-          class="h-full w-auto object-cover"
-          src="/MNI/componentVIMNI/Animate MNI Full Color.mp4"
-        ></video>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-1 lg:gap-0">
+        <h2 class="text-lg lg:text-3xl font-bold leading-relaxed tracking-normal">Lorem ipsum</h2>
+        <p class="text-xs lg:text-sm font-normal leading-relaxed tracking-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
-    
-      <a
-        id="nextButton"
-        class="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:ring-3 focus:outline-hidden cursor-pointer"
-      >
-        <span class="sr-only"> Next Video </span>
-        <svg
-          class="size-5 shadow-sm rtl:rotate-180"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          />
-        </svg>
-      </a>
+
+      <div id="slider" class="aspect-16/9 overflow-hidden relative">
+        <div class="flex transition-transform duration-500 ease-in-out w-full h-full">
+
+          <div class="w-full flex-shrink-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="/MNI/componentVIMNI/Animate MNI Full Color.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="w-full flex-shrink-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="/MNI/componentVIMNI/Animate MNI Full Blue.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="w-full flex-shrink-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="/MNI/componentVIMNI/Animate MNI Full Orange.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="w-full flex-shrink-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+              <source src="/MNI/componentVIMNI/Animate MNI Full Black.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+
+          <div class="bg-[#060606] w-full flex-shrink-0">
+            <!-- <img
+            class="w-full h-full object-cover"
+            src=""
+            alt=""
+            /> -->
+          </div>
+
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 bg-gray-200">
+
+        <button id="prevBtn" class="mx-auto p-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5 lg:size-9 rotate-135 fill-gray-500 hover:fill-black" viewBox="0 0 1080 1080" stroke="none">
+            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
+          </svg>
+        </button>
+
+        <button id="nextBtn" class="mx-auto p-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5 lg:size-9 -rotate-45 fill-gray-500 hover:fill-black" viewBox="0 0 1080 1080" stroke="none">
+            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
+          </svg>
+        </button>
+
+      </div>
 
     </div>
-
-    <!-- <div class="bg-[#fafafa] aspect-16/9 flex">
-      <div class="aspect-square overflow-hidden flex items-center justify-center">
-        <video autoplay loop muted playsinline
-          class="h-full w-auto object-cover"
-          src="/MNI/componentVIMNI/Animate MNI Full Orange.mp4">
-        </video>
-      </div>
-      <a
-        class="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:ring-3 focus:outline-hidden"
-        href="#"
-        >
-        <span class="sr-only"> Download </span>
-
-        <svg
-          class="size-5 shadow-sm rtl:rotate-180"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M14 5l7 7m0 0l-7 7m7-7H3"
-          />
-        </svg>
-      </a>
-    </div> -->
-
 
   </div>
 
   <footer id="footer"></footer>
-
   <script>
-    (function () {
-      const videoSources = [
-        "/MNI/componentVIMNI/Animate MNI Full Color.mp4",
-        "/MNI/componentVIMNI/Animate MNI Full Blue.mp4",
-        "/MNI/componentVIMNI/Animate MNI Full Orange.mp4",
-        "/MNI/componentVIMNI/Animate MNI Full Black.mp4"
-      ];
+    const slider = document.querySelector('#slider > div');
+    const totalSlides = slider.children.length;
+    let currentIndex = 0;
   
-      let currentVideo = 0;
-      const videoElement = document.getElementById("videoPlayer");
-      const nextButton = document.getElementById("nextButton");
+    function updateSlidePosition() {
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
   
-      nextButton.addEventListener("click", () => {
-        currentVideo = (currentVideo + 1) % videoSources.length;
-        videoElement.src = videoSources[currentVideo];
-        videoElement.play(); // pastikan video langsung play
-      });
-    })();
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlidePosition();
+    });
+  
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlidePosition();
+    });
   </script>
 </body>
 </html>
