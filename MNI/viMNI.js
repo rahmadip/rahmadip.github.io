@@ -1,3 +1,5 @@
+// SLIDE
+
 (function () {
   function setupSlider(sliderId, prevBtnId, nextBtnId) {
     const slider = document.querySelector(`#${sliderId} > div`);
@@ -21,9 +23,23 @@
     updateSlidePosition();
   }
 
-  // Inisialisasi sliderMotion
   setupSlider('sliderMotion', 'prevBtnMotion', 'nextBtnMotion');
-
-  // Inisialisasi sliderSketch
   setupSlider('sliderSketch', 'prevBtnSketch', 'nextBtnSketch');
 })();
+
+
+
+// CHANGE FONT
+
+function changeFont(fontName) {
+  document.getElementById('changeFont').style.fontFamily = `'${fontName}', sans-serif`;
+
+  document.getElementById('fontName').textContent = fontName;
+
+  const fontType = fontName === 'STIX Two Text' ? 'Serif' : 'Sans Serif';
+  document.getElementById('fontType').textContent = fontType;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  changeFont('Poppins');
+});
