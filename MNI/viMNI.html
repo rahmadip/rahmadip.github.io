@@ -8,31 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <style> body {font-family: 'Poppins', sans-serif;} </style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch("/components/header.html")
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById("header").innerHTML = data;
-          });
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch("/components/footer.html")
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById("footer").innerHTML = data;
-          });
-      });
-    </script>
+    <style type="text/tailwindcss">
+      h2  {@apply text-[#060606] font-semibold text-4xl lg:text-8xl tracking-tighter leading-none;}
+      h3  {@apply text-[#060606] font-semibold text-lg lg:text-2xl tracking-tight leading-normal;}
+      h4  {@apply text-[#060606] font-semibold text-xs lg:text-xs tracking-normal leading-normal;}
+      h5  {@apply text-[#f9f9f9] font-normal text-xs lg:text-xs tracking-normal leading-normal;}
+      p   {@apply text-gray-500 font-normal text-xs lg:text-xs tracking-normal leading-normal;}
+    </style>
     <title>rahmadip Portfolio</title>
     <link rel="icon" href="/components/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/components/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 </head>
-<body class="bg-gray-100">
+<body class="bg-gradient-to-b from-black via-gray-950 to-gray-800">
   <header id="header" class="z-50 sticky top-0 right-0 left-0"></header>
 
-  <div class="bg-gray-200 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+  <div class="bg-gray-200 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 hidden">
     <div id="announcement" class="flex items-center justify-between py-3 text-gray-500">
 
         <span> </span>
@@ -63,384 +53,202 @@
     </div>
   </div>
 
-  <div class="mx-auto max-w-screen-xl">
-    <img src="/MNI/componentVIMNI/Visual Identity - Print Layout.png" alt="Visual Identity MNI">
-  </div>
+  <div class="bg-[#003366] mx-auto max-w-screen-xl aspect-video"></div>
 
-  <div class="bg-white mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 py-10 gap-5 lg:gap-10">
-    
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 border-t-4 py-2 lg:py-6">
-      
-      <div class="py-4 grid grid-cols-1 gap-3 bg-white border rounded">
-        <div class="px-4">
-          <h2 class="text-sm font-semibold antialiased block leading-tight">Lorem Ipsum</h2>
-          <h2 class="text-gray-600 text-xs block">Lorem Ipsum</h2>
-        </div>
+  <div class="bg-white mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-4 lg:grid-cols-12 gap-y-12 lg:gap-y-36">
 
-        <div class="bg-red-300 aspect-3/2 overflow-hidden">
-          <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1624792896718-76e9f7885ef3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        </div>
-        
-        <div class="flex items-center justify-between px-4">
-          <span></span>
-          <div class="flex">
-            
-            <fieldset class="flex flex-wrap gap-3">
-              <label for="ColorBlack" class="block size-3 rounded-full bg-[#eaeaea] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio"name="ColorOption" value="ColorBlack" id="ColorBlack" class="sr-only" checked/>
-              </label>
-
-              <label for="ColorRed" class="block size-3 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorRed" id="ColorRed" class="sr-only" />
-              </label>
-
-              <label for="ColorBlue" class="block size-3 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorBlue" id="ColorBlue" class="sr-only" />
-              </label>
-
-              <label for="ColorGold" class="block size-3 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorGold" id="ColorGold" class="sr-only" />
-              </label>
-            </fieldset>
-
-          </div>
-          <span></span>
-        </div>
-
-        <div class="px-4">
-          <div class="font-semibold text-xs">92,372 likes</div>
-          <div class="font-normal text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-      </div>
-
-      <div class="py-4 grid grid-cols-1 gap-3 bg-white border rounded">
-        <div class="px-4">
-          <h2 class="text-sm font-semibold antialiased block leading-tight">Lorem Ipsum</h2>
-          <h2 class="text-gray-600 text-xs block">Lorem Ipsum</h2>
-        </div>
-
-        <div class="bg-red-300 aspect-3/2 overflow-hidden">
-          <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1624792896718-76e9f7885ef3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        </div>
-        
-        <div class="flex items-center justify-between px-4">
-          <span></span>
-          <div class="flex">
-            
-            <fieldset class="flex flex-wrap gap-3">
-              <label for="ColorBlack" class="block size-3 rounded-full bg-[#eaeaea] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio"name="ColorOption" value="ColorBlack" id="ColorBlack" class="sr-only" checked/>
-              </label>
-
-              <label for="ColorRed" class="block size-3 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorRed" id="ColorRed" class="sr-only" />
-              </label>
-
-              <label for="ColorBlue" class="block size-3 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorBlue" id="ColorBlue" class="sr-only" />
-              </label>
-
-              <label for="ColorGold" class="block size-3 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorGold" id="ColorGold" class="sr-only" />
-              </label>
-            </fieldset>
-
-          </div>
-          <span></span>
-        </div>
-
-        <div class="px-4">
-          <div class="font-semibold text-xs">92,372 likes</div>
-          <div class="font-normal text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-      </div>
-
-      <div class="py-4 grid grid-cols-1 gap-3 bg-white border rounded">
-        <div class="px-4">
-          <h2 class="text-sm font-semibold antialiased block leading-tight">Lorem Ipsum</h2>
-          <h2 class="text-gray-600 text-xs block">Lorem Ipsum</h2>
-        </div>
-
-        <div class="bg-red-300 aspect-3/2 overflow-hidden">
-          <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1624792896718-76e9f7885ef3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        </div>
-        
-        <div class="flex items-center justify-between px-4">
-          <span></span>
-          <div class="flex">
-            
-            <fieldset class="flex flex-wrap gap-3">
-              <label for="ColorBlack" class="block size-3 rounded-full bg-[#eaeaea] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio"name="ColorOption" value="ColorBlack" id="ColorBlack" class="sr-only" checked/>
-              </label>
-
-              <label for="ColorRed" class="block size-3 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorRed" id="ColorRed" class="sr-only" />
-              </label>
-
-              <label for="ColorBlue" class="block size-3 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorBlue" id="ColorBlue" class="sr-only" />
-              </label>
-
-              <label for="ColorGold" class="block size-3 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorGold" id="ColorGold" class="sr-only" />
-              </label>
-            </fieldset>
-
-          </div>
-          <span></span>
-        </div>
-
-        <div class="px-4">
-          <div class="font-semibold text-xs">92,372 likes</div>
-          <div class="font-normal text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-      </div>
-
-    </div>
-    
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 border-t-4 py-2 lg:py-6">
-      
-      <div class="py-4 grid grid-cols-1 gap-3 bg-white border rounded">
-        <div class="px-4">
-          <h2 class="text-sm font-semibold antialiased block leading-tight">Lorem Ipsum</h2>
-          <h2 class="text-gray-600 text-xs block">Lorem Ipsum</h2>
-        </div>
-
-        <div class="bg-red-300 aspect-3/2 overflow-hidden">
-          <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1624792896718-76e9f7885ef3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        </div>
-        
-        <div class="flex items-center justify-between px-4">
-          <span></span>
-          <div class="flex">
-            
-            <fieldset class="flex flex-wrap gap-3">
-              <label for="ColorBlack" class="block size-3 rounded-full bg-[#eaeaea] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio"name="ColorOption" value="ColorBlack" id="ColorBlack" class="sr-only" checked/>
-              </label>
-
-              <label for="ColorRed" class="block size-3 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorRed" id="ColorRed" class="sr-only" />
-              </label>
-
-              <label for="ColorBlue" class="block size-3 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorBlue" id="ColorBlue" class="sr-only" />
-              </label>
-
-              <label for="ColorGold" class="block size-3 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorGold" id="ColorGold" class="sr-only" />
-              </label>
-            </fieldset>
-
-          </div>
-          <span></span>
-        </div>
-
-        <div class="px-4">
-          <div class="font-semibold text-xs">92,372 likes</div>
-          <div class="font-normal text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-      </div>
-
-      <div class="py-4 grid grid-cols-1 gap-3 bg-white border rounded">
-        <div class="px-4">
-          <h2 class="text-sm font-semibold antialiased block leading-tight">Lorem Ipsum</h2>
-          <h2 class="text-gray-600 text-xs block">Lorem Ipsum</h2>
-        </div>
-
-        <div class="bg-red-300 aspect-3/2 overflow-hidden">
-          <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1624792896718-76e9f7885ef3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-        </div>
-        
-        <div class="flex items-center justify-between px-4">
-          <span></span>
-          <div class="flex">
-            
-            <fieldset class="flex flex-wrap gap-3">
-              <label for="ColorBlack" class="block size-3 rounded-full bg-[#eaeaea] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio"name="ColorOption" value="ColorBlack" id="ColorBlack" class="sr-only" checked/>
-              </label>
-
-              <label for="ColorRed" class="block size-3 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorRed" id="ColorRed" class="sr-only" />
-              </label>
-
-              <label for="ColorBlue" class="block size-3 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorBlue" id="ColorBlue" class="sr-only" />
-              </label>
-
-              <label for="ColorGold" class="block size-3 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOption" value="ColorGold" id="ColorGold" class="sr-only" />
-              </label>
-            </fieldset>
-
-          </div>
-          <span></span>
-        </div>
-
-        <div class="px-4">
-          <div class="font-semibold text-xs">92,372 likes</div>
-          <div class="font-normal text-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-        </div>
-      </div>
-
+    <div class="col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 gap-2 lg:gap-4 border-t-4 lg:border-t-8 border-[#060606] pt-2 lg:pt-6"> <!-- INTRODUCTION -->
+      <h2 class="col-span-4 lg:col-span-12">Introduction.</h2>
+      <div class="col-span-4 lg:col-span-12 aspect-21/9 overflow-hidden rounded border border-[#060606]"></div>
+      <h3 class="col-span-4 lg:col-span-6">Lorem Ipsum</h3>
+      <p class="col-span-4 lg:col-span-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
 
-    <div class="grid grid-cols-1 gap-4 border-t-4 py-2 lg:py-6">
-
-      <div class="grid grid-cols-1 lg:grid-cols-2">
-        <h2 class="text-lg lg:text-3xl font-semibold leading-relaxed tracking-tight">B.3 Motion Logo</h2>
-        <p class="text-xs lg:text-sm font-normal leading-relaxed tracking-normal">
-          Logo motion Media Nawacita Indonesia yang dapat diaplikasikan untuk kebutuhan media digital.
-          Logo motion Media Nawacita Indonesia tersedia dengan variasi bewarna ataupun hitam putih.
-        </p>
-      </div>
-
-      <div id="sliderMotion" class="aspect-16/9 overflow-hidden rounded border relative">
-        <div class="flex transition-transform duration-500 ease-in-out w-full h-full">
-
-          <div class="w-full flex-shrink-0">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover">
-              <source src="/MNI/componentVIMNI/Animate MNI Full Color.mp4" type="video/mp4" />
-            </video>
+    <div class="col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 gap-2 lg:gap-4 border-t-4 lg:border-t-8 border-[#060606] pt-2 lg:pt-6"> <!-- LOGO -->
+      <h2 class="col-span-4 lg:col-span-6 lg:row-span-2">Logo.</h2>
+      <h3 class="col-span-4 lg:col-span-6">Konsep Logo</h3>
+      <p class="col-span-4 lg:col-span-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="col-span-4 lg:col-span-12 aspect-21/9 overflow-hidden border rounded border-[#060606]"></div>
+      <h3 class="col-span-4 lg:col-span-6">Variasi Logo</h3>
+      <p class="col-span-4 lg:col-span-6">Variasi logo yang dapat digunakan dan disesuaikan dengan kebutuhan di berbagai jenis media. Logo Media Nawacita Indonesia mempunyai tiga variasi logo yang masing-masing dapat diaplikasikan dengan bewarna ataupun hitam putih.</p>
+      <details class="col-span-4 lg:col-span-4 border rounded border-gray-300 hover:shadow-[2px_2px_0px_0px_#060606] py-4 px-4 group [&_summary::-webkit-details-marker]:hidden" open>
+        <summary class="flex justify-between items-center">
+          <div>
+            <h4>Logo Utama</h4>
+            <p>Media Nawacita Indonesia</p>
           </div>
-
-          <div class="w-full flex-shrink-0">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover">
-              <source src="/MNI/componentVIMNI/Animate MNI Full Blue.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="w-full flex-shrink-0">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover">
-              <source src="/MNI/componentVIMNI/Animate MNI Full Orange.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div class="w-full flex-shrink-0">
-            <video autoplay loop muted playsinline class="w-full h-full object-cover">
-              <source src="/MNI/componentVIMNI/Animate MNI Full Black.mp4" type="video/mp4" />
-            </video>
-          </div>
-
+          <svg class="size-7 shrink-0 fill-gray-500 hover:cursor-pointer hover:fill-[#060606] -rotate-45 transition-transform duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
+            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
+          </svg>
+        </summary>
+        <div id="logoUtama">
+          <img id="logoUtamaColor" class="object-cover w-auto h-[30%]" src="/MNI/componentVIMNI/MNILogoUtamaColor.svg"/>
+          <img id="logoUtamaWhite" class="object-cover w-auto h-[30%] hidden" src="/MNI/componentVIMNI/MNILogoUtamaWhite.svg"/>
         </div>
-      </div>
-
-      <div class="flex justify-end items-center gap-3 lg:gap-6">
-
-        <button id="prevBtnMotion">
-          <svg xmlns="http://www.w3.org/2000/svg" class="size-7 lg:size-12 rotate-135 fill-gray-500 hover:fill-black" viewBox="0 0 1080 1080" stroke="none">
-            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-          </svg>
-        </button>
-
-        <button id="nextBtnMotion">
-          <svg xmlns="http://www.w3.org/2000/svg" class="size-7 lg:size-12 -rotate-45 fill-gray-500 hover:fill-black" viewBox="0 0 1080 1080" stroke="none">
-            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-          </svg>
-        </button>
-
-      </div>
-
-    </div>
-
-    <div class="grid grid-cols-1 gap-4 border-t-4 py-2 lg:py-6">
-
-      <div class="grid grid-cols-1 lg:grid-cols-2">
-        <h2 class="text-lg lg:text-3xl font-semibold leading-relaxed tracking-tight">B.4 Konstruksi Logo</h2>
-        <p class="text-xs lg:text-sm font-normal leading-relaxed tracking-normal">
-          Konstruksi ini dibuat sebagai panduan untuk memproduksi ulang logo Media Nawacita Indonesia, agar skala logo dan karakter visual terjaga visibilitas dan konsistensinya.
-        </p>
-      </div>
-
-      <div id="sliderSketch" class="aspect-16/9 overflow-hidden rounded border relative">
-        <div class="flex transition-transform duration-500 ease-in-out w-full h-full">
-
-          <div class="w-full flex-shrink-0">
-            <img
-            class="w-full h-full object-cover"
-            src="/MNI/componentVIMNI/Konstruksi Logo Utama MNI.svg"
-            alt="Logo Utama MNI"
-            />
-          </div>
-
-          <div class="w-full flex-shrink-0">
-            <img
-            class="w-full h-full object-cover"
-            src="/MNI/componentVIMNI/Konstruksi Logo Alternatif MNI.svg"
-            alt="Logo Alternatif MNI"
-            />
-          </div>
-
-          <div class="w-full flex-shrink-0">
-            <img
-            class="w-full h-full object-cover"
-            src="/MNI/componentVIMNI/Konstruksi Logo Ikon MNI.svg"
-            alt="Logo Ikon MNI"
-            />
-          </div>
-
-        </div>
-      </div>
-
-      <div class="flex justify-end items-center gap-3 lg:gap-6">
-
-        <button id="prevBtnSketch">
-          <svg xmlns="http://www.w3.org/2000/svg" class="size-7 lg:size-12 rotate-135 fill-gray-500 hover:fill-black" viewBox="0 0 1080 1080" stroke="none">
-            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-          </svg>
-        </button>
-
-        <button id="nextBtnSketch">
-          <svg xmlns="http://www.w3.org/2000/svg" class="size-7 lg:size-12 -rotate-45 fill-gray-500 hover:fill-black" viewBox="0 0 1080 1080" stroke="none">
-            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-          </svg>
-        </button>
-
-      </div>
-
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 border-t-4 py-2 lg:py-6">
-      <div class="col-span-1 lg:hidden">
-        <h2 class="text-lg lg:text-3xl font-semibold leading-relaxed tracking-tight">Tipografi</h2>
-        <p class="text-xs lg:text-sm font-normal leading-relaxed tracking-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-      </div>
-
-      <div class="col-span-1 lg:col-span-2 text-5xl lg:text-[136px] tracking-tighter lg:leading-[8rem]" id="changeFont">
-        <h2 class="font-normal">Reguler</h2>
-        <h2 class="font-medium">Medium</h2>
-        <h2 class="font-semibold">SemiBold</h2>
-        <h2 class="font-bold">Bold</h2>
-      </div>
-
-      <div class="col-span-1 flex flex-col gap-4 lg:gap-8">
-        
-        <div class="hidden lg:block">
-          <h2 class="text-lg lg:text-3xl font-semibold leading-relaxed tracking-tight">Tipografi</h2>
-          <p class="text-xs lg:text-sm font-normal leading-relaxed tracking-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-        </div>
-
-        <div class="text-xs lg:text-sm font-normal leading-relaxed tracking-normal flex gap-2">
-          <label><input type="radio" name="font" class="hidden peer" onclick="changeFont('Poppins')" checked />
-            <div class="border text-center rounded-full border-black bg-white text-black peer-checked:bg-black peer-checked:text-white peer-checked:border-black px-2 cursor-pointer">Utama</div>
+        <fieldset class="h-9 px-1 flex items-center flex-wrap gap-3">
+          <label for="ColorWhiteLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoUtama" value="ColorWhiteLogoUtama" id="ColorWhiteLogoUtama" class="sr-only" onchange="updateLogoUtama()" checked/>
           </label>
-          
-          <label><input type="radio" name="font" class="hidden peer" onclick="changeFont('Inter')" />
-            <div class="border text-center rounded-full border-black bg-white text-black peer-checked:bg-black peer-checked:text-white peer-checked:border-black px-2 cursor-pointer">Alt. Sans Serif</div>
-          </label>
-          
-          <label><input type="radio" name="font" class="hidden peer" onclick="changeFont('STIX Two Text')" />
-            <div class="border text-center rounded-full border-black bg-white text-black peer-checked:bg-black peer-checked:text-white peer-checked:border-black px-2 cursor-pointer">Alt. Serif</div>
-          </label>
-        </div>
 
-        <div>
-          <h2 class="text-sm lg:text-lg font-semibold leading-relaxed tracking-tight" id="fontName">Poppins</h2>
-          <h2 class="text-xs lg:text-sm font-normal leading-relaxed tracking-normal" id="fontType">Sans Serif</h2>
-        </div>
+          <label for="WhiteBlueLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoUtama" value="WhiteBlueLogoUtama" id="WhiteBlueLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
+          </label>
 
+          <label for="WhiteOrangeLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoUtama" value="WhiteOrangeLogoUtama" id="WhiteOrangeLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
+          </label>
+
+          <label for="WhiteBlackLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoUtama" value="WhiteBlackLogoUtama" id="WhiteBlackLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
+          </label>
+        </fieldset>
+        <p>Logo utama digunakan pada media yang mempunyai porsi ruang horizontal yang cukup. Penggunaan logo ini umumnya digunakan pada media digital. Tidak menutup kemungkinan digunakan untuk media cetak.</p>
+      </details>
+      <details class="col-span-4 lg:col-span-4 border rounded border-gray-300 hover:shadow-[2px_2px_0px_0px_#060606] py-4 px-4 group [&_summary::-webkit-details-marker]:hidden" open>
+        <summary class="flex justify-between items-center">
+          <div>
+            <h4>Logo Utama</h4>
+            <p>Media Nawacita Indonesia</p>
+          </div>
+          <svg class="size-7 shrink-0 fill-gray-500 hover:cursor-pointer hover:fill-[#060606] -rotate-45 transition-transform duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
+            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
+          </svg>
+        </summary>
+        <div id="logoAlternatif">
+          <img id="logoAlternatifColor" class="object-cover w-auto h-[36%]" src="/MNI/componentVIMNI/MNILogoAlternatifColor.svg"/>
+          <img id="logoAlternatifWhite" class="object-cover w-auto h-[36%] hidden" src="/MNI/componentVIMNI/MNILogoAlternatifWhite.svg"/>
+        </div>
+        <fieldset class="h-9 px-1 flex items-center flex-wrap gap-3">
+          <label for="ColorWhiteLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+            <input type="radio"name="ColorOptionLogoAlternatif" value="ColorWhiteLogoAlternatif" id="ColorWhiteLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
+          </label>
+
+          <label for="WhiteBlueLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteBlueLogoAlternatif" id="WhiteBlueLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" checked/>
+          </label>
+
+          <label for="WhiteOrangeLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteOrangeLogoAlternatif" id="WhiteOrangeLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
+          </label>
+
+          <label for="WhiteBlackLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteBlackLogoAlternatif" id="WhiteBlackLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
+          </label>
+        </fieldset>
+        <p>Logo utama digunakan pada media yang mempunyai porsi ruang horizontal yang cukup. Penggunaan logo ini umumnya digunakan pada media digital. Tidak menutup kemungkinan digunakan untuk media cetak.</p>
+      </details>
+      <details class="col-span-4 lg:col-span-4 border rounded border-gray-300 hover:shadow-[2px_2px_0px_0px_#060606] py-4 px-4 group [&_summary::-webkit-details-marker]:hidden" open>
+        <summary class="flex justify-between items-center">
+          <div>
+            <h4>Logo Utama</h4>
+            <p>Media Nawacita Indonesia</p>
+          </div>
+          <svg class="size-7 shrink-0 fill-gray-500 hover:cursor-pointer hover:fill-[#060606] -rotate-45 transition-transform duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
+            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
+          </svg>
+        </summary>
+        <div id="logoIkon">
+          <img id="logoIkonColor" class="object-cover w-auto h-[30%]" src="/MNI/componentVIMNI/MNILogoIkonColor.svg"/>
+          <img id="logoIkonWhite" class="object-cover w-auto h-[30%] hidden" src="/MNI/componentVIMNI/MNILogoIkonWhite.svg"/>
+        </div>
+        <fieldset class="h-9 px-1 flex items-center flex-wrap gap-3">
+          <label for="ColorWhiteLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+            <input type="radio"name="ColorOptionLogoIkon" value="ColorWhiteLogoIkon" id="ColorWhiteLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
+          </label>
+
+          <label for="WhiteBlueLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoIkon" value="WhiteBlueLogoIkon" id="WhiteBlueLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
+          </label>
+
+          <label for="WhiteOrangeLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoIkon" value="WhiteOrangeLogoIkon" id="WhiteOrangeLogoIkon" class="sr-only" onchange="updateLogoIkon()" checked/>
+          </label>
+
+          <label for="WhiteBlackLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoIkon" value="WhiteBlackLogoIkon" id="WhiteBlackLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
+          </label>
+        </fieldset>
+        <p>Logo utama digunakan pada media yang mempunyai porsi ruang horizontal yang cukup. Penggunaan logo ini umumnya digunakan pada media digital. Tidak menutup kemungkinan digunakan untuk media cetak.</p>
+      </details>
+      <details class="col-span-4 lg:col-span-6 border rounded border-gray-300 hover:shadow-[2px_2px_0px_0px_#060606] py-4 px-4 group [&_summary::-webkit-details-marker]:hidden" open>
+        <summary class="flex justify-between items-center">
+          <div>
+            <h4>Logo Utama</h4>
+            <p>Media Nawacita Indonesia</p>
+          </div>
+          <svg class="size-7 shrink-0 fill-gray-500 hover:cursor-pointer hover:fill-[#060606] -rotate-45 transition-transform duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
+            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
+          </svg>
+        </summary>
+        <div id="logoMotion">
+          <video id="logoMotionColorWhite" class="object-cover w-auto h-[180%]" src="/MNI/componentVIMNI/MNILogoMotionColorWhite.mp4" autoplay loop muted playsinline></video>
+          <video id="logoMotionWhiteBlue" class="object-cover w-auto h-[180%] hidden" src="/MNI/componentVIMNI/MNILogoMotionWhiteBlue.mp4" autoplay loop muted playsinline></video>
+          <video id="logoMotionWhiteOrange" class="object-cover w-auto h-[180%] hidden" src="/MNI/componentVIMNI/MNILogoMotionWhiteOrange.mp4" autoplay loop muted playsinline></video>
+          <video id="logoMotionWhiteBlack" class="object-cover w-auto h-[180%] hidden" src="/MNI/componentVIMNI/MNILogoMotionWhiteBlack.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <fieldset class="h-9 px-1 flex items-center flex-wrap gap-3">
+          <label for="ColorWhiteLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+            <input type="radio"name="ColorOptionLogoMotion" value="ColorWhiteLogoMotion" id="ColorWhiteLogoMotion" class="sr-only" onchange="updateLogoMotion()" checked/>
+          </label>
+
+          <label for="WhiteBlueLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoMotion" value="WhiteBlueLogoMotion" id="WhiteBlueLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
+          </label>
+
+          <label for="WhiteOrangeLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoMotion" value="WhiteOrangeLogoMotion" id="WhiteOrangeLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
+          </label>
+
+          <label for="WhiteBlackLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+            <input type="radio" name="ColorOptionLogoMotion" value="WhiteBlackLogoMotion" id="WhiteBlackLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
+          </label>
+        </fieldset>
+        <p>Logo utama digunakan pada media yang mempunyai porsi ruang horizontal yang cukup. Penggunaan logo ini umumnya digunakan pada media digital. Tidak menutup kemungkinan digunakan untuk media cetak.</p>
+      </details>
+      <details class="col-span-4 lg:col-span-6 border rounded border-gray-300 hover:shadow-[2px_2px_0px_0px_#060606] py-4 px-4 group [&_summary::-webkit-details-marker]:hidden" open>
+        <summary class="flex justify-between items-center">
+          <div>
+            <h4>Kontruksi Logo</h4>
+            <p>Media Nawacita Indonesia</p>
+          </div>
+          <svg class="size-7 shrink-0 fill-gray-500 hover:cursor-pointer hover:fill-[#060606] -rotate-45 transition-transform duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
+            <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
+          </svg>
+        </summary>
+        <div id="logoKontruksi">
+          <img id="logoKontruksiUtama" class="object-cover w-auto h-[145%] hidden" src="/MNI/componentVIMNI/MNILogoKontruksiUtama.svg"/>
+          <img id="logoKontruksiAlternatif" class="object-cover w-auto h-[145%] hidden" src="/MNI/componentVIMNI/MNILogoKontruksiAlternatif.svg"/>
+          <img id="logoKontruksiIkon" class="object-cover w-auto h-[145%]" src="/MNI/componentVIMNI/MNILogoKontruksiIkon.svg"/>
+        </div>
+        <fieldset class="h-9 px-1 flex items-center flex-wrap gap-3">
+          <label for="OptionLogoKontruksiUtama" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-gray-500 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
+            <h5>Logo Utama</h5>
+            <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiUtama" id="OptionLogoKontruksiUtama" class="sr-only" onchange="updateLogoKontruksi()" checked/>
+          </label>
+          <label for="OptionLogoKontruksiAlternatif" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-gray-500 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
+            <h5>Logo Alternatif</h5>
+            <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiAlternatif" id="OptionLogoKontruksiAlternatif" class="sr-only" onchange="updateLogoKontruksi()"/>
+          </label>
+          <label for="OptionLogoKontruksiIkon" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-gray-500 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
+            <h5>Logo Ikon</h5>
+            <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiIkon" id="OptionLogoKontruksiIkon" class="sr-only" onchange="updateLogoKontruksi()"/>
+          </label>
+        </fieldset>
+        <p>Logo utama digunakan pada media yang mempunyai porsi ruang horizontal yang cukup. Penggunaan logo ini umumnya digunakan pada media digital. Tidak menutup kemungkinan digunakan untuk media cetak.</p>
+      </details>
+    </div>
+
+    <div class="col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 gap-2 lg:gap-12 border-t-4 lg:border-t-8 border-[#060606] pt-2 lg:pt-6"> <!-- TIPOGRAFI -->
+      <h2 class="col-span-4 lg:col-span-12">Tipografi.</h2>
+      <h3 class="col-span-4 lg:col-span-2">Lorem Ipsum</h3>
+      <p class="col-span-4 lg:col-span-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="col-span-4 lg:col-span-6">
+        <div class="text-[#060606] text-4xl lg:text-8xl tracking-tighter leading-none">
+          <div class="font-normal">Reguler</div>
+          <div class="font-medium">Medium</div>
+          <div class="font-semibold">SemiBold</div>
+          <div class="font-bold">Bold</div>
+        </div>
       </div>
     </div>
 
@@ -448,5 +256,7 @@
 
   <footer id="footer"></footer>
   <script src="/MNI/viMNI.js"></script>
+  <script src="/components/headerFooter.js"></script>
+  <script src="/components/disableCopy.js"></script>
 </body>
 </html>
