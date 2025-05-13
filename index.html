@@ -135,24 +135,35 @@
 
   </div>
 
-  <!-- <div class="fixed inset-0 z-50 grid place-content-center bg-black/50 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="w-full max-w-xl">
-      <div class="bg-black aspect-square">a</div>
-      <div class="flex items-start justify-between">
-        <h2 id="modalTitle" class="text-xl font-bold text-gray-900 sm:text-2xl">Modal Title</h2>
-
-        <button type="button" class="-me-4 -mt-4 rounded-full p-2 text-gray-400 transition-colors hover:bg-gray-50 hover:text-gray-600 focus:outline-none" aria-label="Close">
-          <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+  <div class="fixed inset-0 z-50 grid place-content-center bg-black/90 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    
+    <div class="w-full max-w-5xl rounded-lg overflow-hidden bg-white shadow-lg">
+      <div class="flex justify-between items-center py-4 border-b-1 border-gray-300">
+        <h2 id="modalTitle" class="ml-4 text-xl font-bold text-black sm:text-2xl">Modal Title</h2>
+        <button type="button" class="mr-4 cursor-pointer size-6 text-gray-300 hover:text-black" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="square" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
 
-      <div class="mt-4">
-        <p class="text-pretty text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi euconsectetur. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="grid grid-cols-8">
+        <div class="col-span-5 bg-red-900 aspect-square"></div>
+        <div class="col-span-3 p-4">
+          <div class="flex gap-3 items-center bg-slate-500">
+            <div class="row-span-2 bg-black aspect-square size-9 rounded-full overflow-hidden"></div>
+            <div class="text-xs leading-tight">
+              <h2 class="font-bold">Lorem Ipsum</h2>
+              <h2 class="font-normal">Lorem Ipsum</h2>
+            </div>
+          </div>
+
+          <p class="text-xs text-gray-500"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod.</p>
+        </div>
       </div>
+
     </div>
-</div> -->
+  </div>
 
   <footer id="footer"></footer>
   <script src="/components/headerFooter.js"></script>
