@@ -18,7 +18,7 @@ document.addEventListener('touchstart', function(e) {
     window.getSelection().removeAllRanges();
     // Hanya cegah default untuk <img>, <video>, atau <svg> yang bukan bagian dari <a> di #gridProject atau #modalCover
     if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.tagName === 'SVG') {
-        if (!e.target.closest('#gridProject a') && !e.target.closest('#modalCover')) {
+        if (!e.target.closest('#gridProject a, #gridPhoto a') && !e.target.closest('#modalCover')) {
             e.preventDefault();
         }
     }
@@ -27,7 +27,7 @@ document.addEventListener('touchstart', function(e) {
 document.addEventListener('touchend', function(e) {
     // Hanya cegah default untuk <img>, <video>, atau <svg> yang bukan bagian dari <a> di #gridProject atau #modalCover
     if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.tagName === 'SVG') {
-        if (!e.target.closest('#gridProject a') && !e.target.closest('#modalCover')) {
+        if (!e.target.closest('#gridProject a, #gridPhoto a') && !e.target.closest('#modalCover')) {
             e.preventDefault();
         }
     }

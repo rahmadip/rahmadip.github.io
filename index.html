@@ -67,120 +67,220 @@
     </div>
 
   </div>
+
+  <fieldset class=" mx-auto max-w-screen-xl flex justify-between items-center">
+    <legend class="sr-only">Delivery</legend>
+
+    <div class="flex-1">
+      <label for="GridOptionProject" class="flex items-center justify-center gap-4 text-gray-300 bg-white p-3 transition-colors hover:bg-gray-50 has-checked:bg-gray-200 has-checked:text-gray-500">
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M8.649 2.577A10.004 10.004 0 0 1 20.344 6.49a9.995 9.995 0 0 1 1.2 8.486l-.004.01-.005.015a2.958 2.958 0 0 1-2.836 2.001h-2.69a1.037 1.037 0 0 0-.95.68c-.047.13-.068.27-.06.409v.916A3.01 3.01 0 0 1 11.96 22a9.626 9.626 0 0 1-4.195-1l.009.005-.018-.009.01.004a10.1 10.1 0 0 1-5.716-7.996l-.001-.012a9.992 9.992 0 0 1 6.6-10.415Zm3.35 3.429a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12ZM8.53 7.518a1 1 0 0 0 0 2h.01a1 1 0 1 0 0-2h-.01Zm6.968 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM6.99 11.004a1 1 0 1 0 0 2H7a1 1 0 1 0 0-2h-.01Z" clip-rule="evenodd"/>
+        </svg>
+        <input type="radio" name="GridOption" value="GridOptionProject" id="GridOptionProject" class="sr-only" onchange="updateGridContent()"" checked/>
+      </label>
+    </div>
+
+    <div class="flex-1">
+      <label for="GridOptionPhoto" class="flex items-center justify-center gap-4 text-gray-300 bg-white p-3 transition-colors hover:bg-gray-50 has-checked:bg-gray-200 has-checked:text-gray-500">
+        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M7.5 4.586A2 2 0 0 1 8.914 4h6.172a2 2 0 0 1 1.414.586L17.914 6H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1.086L7.5 4.586ZM10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" clip-rule="evenodd"/>
+        </svg>
+        <input type="radio" name="GridOption" value="GridOptionPhoto" id="GridOptionPhoto" class="sr-only" onchange="updateGridContent()"" />
+      </label>
+    </div>
+  </fieldset>
   
-  <div id="gridProject" class="bg-white mx-auto max-w-screen-xl py-0.5 grid grid-cols-3 gap-0.5">
-    <a  href="/MNI/MNI.html" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Design 101"
-        data-description="Selamat datang di halaman Design 101. Tujuan dari halaman ini sangat sederhana, untuk menyediakan panduan informasi desain brand Media Nawacita Indonesia agar menciptakan komunikasi yang konsisten dan mudah dikenali."
-        >
-      <img
-      class="h-full w-full object-cover"
-      src="/MNI/coverMNI.png"
-      alt="Media Nawacita Indonesia"
-      >
-    </a>
 
-    <a  href="" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Project 2"
-        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  <div id="gridCanvas" class="mx-auto max-w-screen-xl py-0.5 overflow-hidden flex justify-start items-start">
+    <div id="gridProject" class="bg-white mx-auto max-w-screen-xl grid grid-cols-3 gap-0.5">
+      <a  href="/MNI/MNI.html" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Design 101"
+          data-description="Selamat datang di halaman Design 101. Tujuan dari halaman ini sangat sederhana, untuk menyediakan panduan informasi desain brand Media Nawacita Indonesia agar menciptakan komunikasi yang konsisten dan mudah dikenali."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="/MNI/coverMNI.png"
+        alt="Media Nawacita Indonesia"
         >
-      <img
-      class="h-full w-full object-cover"
-      src="https://images.unsplash.com/photo-1645705614585-65757c275331?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="alt 2"
-      >
-    </a>
-
-    <a  href="" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Project 3"
-        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 2"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1645705614585-65757c275331?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 2"
         >
-      <img
-      class="h-full w-full object-cover"
-      src="https://images.unsplash.com/photo-1596248095800-dd24b17c2d2b?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="alt 3"
-      >
-    </a>
-
-    <a  href="" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Project 4"
-        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 3"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1596248095800-dd24b17c2d2b?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 3"
         >
-      <img
-      class="h-full w-full object-cover"
-      src="https://images.unsplash.com/photo-1642369073424-a98bf968b5d3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="alt 4"
-      >
-    </a>
-
-    <a  href="" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Project 5"
-        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 4"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1642369073424-a98bf968b5d3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 4"
         >
-      <img
-      class="h-full w-full object-cover"
-      src="https://images.unsplash.com/photo-1747116728949-bd0b222526a4?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="alt 5"
-      >
-    </a>
-
-    <a  href="" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Project 6"
-        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 5"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1747116728949-bd0b222526a4?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 5"
         >
-      <img
-      class="h-full w-full object-cover"
-      src="https://images.unsplash.com/photo-1602503874991-934cdacf2c46?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="alt 6"
-      >
-    </a>
-
-    <a  href="" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Project 7"
-        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 6"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1602503874991-934cdacf2c46?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 6"
         >
-      <img
-      class="h-full w-full object-cover"
-      src="https://images.unsplash.com/photo-1571219836033-d62fe95c873d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="alt 7"
-      >
-    </a>
-
-    <a  href="" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Project 8"
-        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 7"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1571219836033-d62fe95c873d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 7"
         >
-      <img
-      class="h-full w-full object-cover"
-      src="https://images.unsplash.com/photo-1602488257131-7751faf0cca0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="alt 8"
-      >
-    </a>
-
-    <a  href="" 
-        class="aspect-square flex justify-center items-center overflow-hidden"
-        data-title="Project 9"
-        data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 8"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1602488257131-7751faf0cca0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 8"
         >
-      <img
-      class="h-full w-full object-cover"
-      src="https://images.unsplash.com/photo-1736801515753-316513619464?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="alt 9"
-      >
-    </a>
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 9"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1736801515753-316513619464?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 9"
+        >
+      </a>
+    </div>
+  
+    <div id="gridPhoto" class="bg-white mx-auto max-w-screen-xl grid grid-cols-3 gap-0.5 hidden">
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 4"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1642369073424-a98bf968b5d3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 4"
+        >
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="TEKOKAK LABU PARANG"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1747116728949-bd0b222526a4?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 5"
+        >
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 6"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1602503874991-934cdacf2c46?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 6"
+        >
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 7"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1571219836033-d62fe95c873d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 7"
+        >
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 8"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1602488257131-7751faf0cca0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 8"
+        >
+      </a>
+  
+      <a  href="" 
+          class="aspect-square flex justify-center items-center overflow-hidden"
+          data-title="Project 9"
+          data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          >
+        <img
+        class="h-full w-full object-cover"
+        src="https://images.unsplash.com/photo-1736801515753-316513619464?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="alt 9"
+        >
+      </a>
+    </div>
   </div>
 
   <div id="modalContent"></div>
   <footer id="footer"></footer>
   <script src="/components/headerFooter.js"></script>
+  <script src="index.js"></script>
   <script src="/components/modalContent.js"></script>
   <script src="/components/disableCopy.js"></script>
 </body>

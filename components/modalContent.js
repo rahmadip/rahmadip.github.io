@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             // Event listener untuk semua <a> di #gridProject
-            const projectLinks = document.querySelectorAll("#gridProject a");
+            const projectLinks = document.querySelectorAll("#gridProject a, #gridPhoto a");
             projectLinks.forEach(link => {
                 link.addEventListener("click", function (event) {
                     event.preventDefault(); // Mencegah aksi default <a>
