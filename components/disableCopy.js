@@ -16,20 +16,22 @@ document.addEventListener('mousedown', function(e) {
 
 document.addEventListener('touchstart', function(e) {
     window.getSelection().removeAllRanges();
-    if (e.target.tagName === 'IMG' || 
-        e.target.tagName === 'VIDEO' || 
-        e.target.tagName === 'SVG') {
-        e.preventDefault();
+    // Hanya cegah default untuk <img>, <video>, atau <svg> yang bukan bagian dari <a> di #gridProject atau #modalCover
+    if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.tagName === 'SVG') {
+        if (!e.target.closest('#gridProject a') && !e.target.closest('#modalCover')) {
+            e.preventDefault();
+        }
     }
-});
+}, { passive: false });
 
 document.addEventListener('touchend', function(e) {
-    if (e.target.tagName === 'IMG' || 
-        e.target.tagName === 'VIDEO' || 
-        e.target.tagName === 'SVG') {
-        e.preventDefault();
+    // Hanya cegah default untuk <img>, <video>, atau <svg> yang bukan bagian dari <a> di #gridProject atau #modalCover
+    if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.tagName === 'SVG') {
+        if (!e.target.closest('#gridProject a') && !e.target.closest('#modalCover')) {
+            e.preventDefault();
+        }
     }
-});
+}, { passive: false });
 
 document.addEventListener('touchmove', function(e) {
     window.getSelection().removeAllRanges();
