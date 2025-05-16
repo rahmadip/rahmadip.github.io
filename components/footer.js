@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("/components/header.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("header").innerHTML = data;
-        });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
     fetch("/components/footer.html")
         .then(res => res.text())
         .then(data => {
@@ -19,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         const query = e.target.value.trim().toLowerCase();
                         if (query === 'owner') {
                             resultSpan.textContent = 'Fauzi Rahmadi Primanto';
+                            return;
+                    } else if (query === 'peliharaan owner') {
+                            resultSpan.textContent = 'ARYOK';
                             return;
                         }
 

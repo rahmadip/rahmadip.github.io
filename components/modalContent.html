@@ -1,26 +1,26 @@
-  <div id="modalBg" class="fixed inset-0 z-50 grid place-content-center bg-black/95 p-8 hidden" role="dialog" aria-modal="true" aria-labelledby="modalBg">
-    <div id="modalCanvas" class="w-full max-w-xl lg:max-w-6xl grid grid-cols-1 lg:grid-cols-8 rounded-lg overflow-hidden bg-white shadow-lg">
+  <div id="modalBg" class="fixed inset-0 z-50 grid place-content-center transition bg-neutral-50 dark:bg-neutral-950 p-8" role="dialog" aria-modal="true" aria-labelledby="modalBg">
+    <div id="modalCanvas" class="w-full max-w-xl lg:max-w-6xl grid grid-cols-1 lg:grid-cols-8 rounded-lg overflow-hidden transition-all bg-neutral-50 dark:bg-neutral-950 border border-neutral-950/20 dark:border-neutral-50/20 shadow-sm shadow-neutral-950/5 dark:shadow-neutral-50/5">
 
-      <div id="modalHead" class="col-span-1 lg:col-span-8 flex justify-between items-center p-4 border-0 lg:border-b-1 border-gray-300">
+      <div id="modalHead" class="col-span-1 lg:col-span-8 flex justify-between items-center p-4 transition-all border-b-0 lg:border-b border-neutral-950/20 dark:border-neutral-50/20">
         <div class="grid grid-rows-2 grid-cols-4">
-          <div class="row-span-2 col-span-1 aspect-square rounded-full place-content-center overflow-hidden size-10 bg-black"><img class="w-full h-full object-cover" src="/components/rahmadipPP.jpg" alt="rahmadipPP"></div>
-          <h6 class="row-span-1 col-span-3 font-bold text-sm leading-normal">Fauzi Rahmadi Primanto</h6>
-          <h6 class="row-span-1 col-span-3 font-normal text-sm leading-none text-gray-500">rahmadip</h6>
+          <div class="row-span-2 col-span-1 aspect-square rounded-full place-content-center overflow-hidden size-10"><img class="w-full h-full object-cover" src="/components/rahmadipPP.jpg" alt="rahmadipPP"></div>
+          <h6 class="row-span-1 col-span-3 font-bold text-sm tracking-wide leading-normal text-neutral-950 dark:text-neutral-50">Fauzi Rahmadi Primanto</h6>
+          <h6 class="row-span-1 col-span-3 font-normal text-sm tracking-wide leading-none text-neutral-950 dark:text-neutral-50">rahmadip</h6>
         </div>
-        <button id="modalClose" type="button" class="cursor-pointer size-6 text-gray-300 hover:text-black" aria-label="Close">
+        <button id="modalClose" type="button" class="cursor-pointer size-6 text-neutral-950 dark:text-neutral-50 opacity-20 transition-opacity hover:opacity-75" aria-label="Close">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="square" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
       </div>
 
-      <a id="modalCover" href="" class="col-span-1 lg:col-span-5 overflow-hidden flex justify-center items-center bg-black">
+      <a id="modalCover" href="" class="col-span-1 lg:col-span-5 overflow-hidden flex justify-center items-center">
         <img class="w-full h-auto object-cover" src="" alt="">
       </a>
       <div id="modalDesc" class="col-span-1 lg:col-span-3 p-4 lg:p-6 flex flex-col gap-1 lg:gap-4">
-        <h6 id="modalDescTitle" class="font-bold text-lg tracking-normal leading-normal"></h6>
-        <p id="modalDescInfo" class="font-normal text-xs tracking-normal leading-normal text-gray-500 text-pretty"></p>
-        <a id="modalDescDetails" class="font-normal text-xs tracking-normal leading-normal text-gray-500 text-pretty hover:text-black" href="">more details ...</a>
+        <h6 id="modalDescTitle" class="font-bold text-lg tracking-normal leading-normal text-pretty text-neutral-950 dark:text-neutral-50"></h6>
+        <p id="modalDescInfo" class="font-normal text-xs tracking-normal leading-normal text-pretty text-neutral-950/60 dark:text-neutral-50/60"></p>
+        <a id="modalDescDetails" class="font-medium text-xs tracking-widest leading-normal text-pretty text-neutral-950 dark:text-neutral-50 opacity-75 transition-opacity hover:opacity-100" href="">more details ...</a>
       </div>
     </div>
   </div>
