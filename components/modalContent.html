@@ -14,13 +14,17 @@
         </button>
       </div>
 
-      <a id="modalCover" href="" class="col-span-1 lg:col-span-5 overflow-hidden flex justify-center items-center">
-        <img class="w-full h-auto object-cover" src="" alt="">
-      </a>
+      <div id="modalCover" class="col-span-1 lg:col-span-5 overflow-hidden flex justify-center items-center relative">
+        <button id="carouselPrev" class="absolute left-2 z-10 hidden text-neutral-950 dark:text-neutral-50 opacity-20 transition-opacity hover:opacity-100 cursor-pointer font-bold text-5xl">&#x1F890;</button>
+        <div id="carouselImages" class="w-full h-auto flex justify-center items-center"></div>
+        <button id="carouselNext" class="absolute right-2 z-10 hidden text-neutral-950 dark:text-neutral-50 opacity-20 transition-opacity hover:opacity-100 cursor-pointer font-bold text-5xl">&#x1F892;</button>
+      </div>
+
       <div id="modalDesc" class="col-span-1 lg:col-span-3 p-4 lg:p-6 flex flex-col gap-1 lg:gap-4">
         <h6 id="modalDescTitle" class="font-bold text-lg tracking-normal leading-normal text-pretty text-neutral-950 dark:text-neutral-50"></h6>
         <p id="modalDescInfo" class="font-normal text-xs tracking-normal leading-normal text-pretty text-neutral-950/60 dark:text-neutral-50/60"></p>
-        <a id="modalDescDetails" class="font-medium text-xs tracking-widest leading-normal text-pretty text-neutral-950 dark:text-neutral-50 opacity-75 transition-opacity hover:opacity-100" href="">more details ...</a>
+        <a id="modalDescDetails" class="font-medium text-xs tracking-widest leading-normal text-pretty text-neutral-950 dark:text-neutral-50 opacity-75 transition-opacity hover:opacity-100" target="_blank" href="">more details ...</a>
       </div>
+    
     </div>
   </div>

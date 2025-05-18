@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/components/hideYScrollBar.css">
     <style> body {font-family: 'Plus Jakarta Sans', sans-serif;}</style>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>rahmadip Portfolio</title>
@@ -13,7 +14,7 @@
     <link rel="icon" href="/components/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 </head>
 <body class="bg-neutral-50 dark:bg-neutral-950">
-  <header id="header" class="z-50 sticky top-0 right-0 left-0"></header>
+  <header id="header" class="z-50 fixed top-0 right-0 left-0"></header>
   
   <section class="bg-neutral-50 dark:bg-neutral-950 h-screen mx-auto max-w-screen-xl lg:grid lg:place-content-center">
     <div class="mx-auto w-screen max-w-screen-xl px-4 py-30 sm:px-6 sm:py-24 md:grid md:grid-cols-2 md:items-center md:gap-4 lg:px-8 lg:py-32">
@@ -30,31 +31,33 @@
     </div>
   </section>
 
-  <fieldset id="buttonProject" class="mx-auto max-w-screen-xl flex justify-between items-center z-40 sticky top-16 lg:translate-x-[1px] bg-neutral-50 dark:bg-neutral-950">
-    <div class="flex-1">
-      <label for="GridOptionProject" class="flex items-center justify-center gap-4 p-3 text-neutral-950 dark:text-neutral-50 bg-neutral-50 dark:bg-neutral-950 fill-neutral-950/50 dark:fill-neutral-50/50 transition-all hover:fill-neutral-950/100 hover:dark:fill-neutral-50/100 has-checked:border-b has-checked:fill-neutral-950/100 has-checked:dark:fill-neutral-50/100">
-        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path fill-rule="evenodd" d="M8.649 2.577A10.004 10.004 0 0 1 20.344 6.49a9.995 9.995 0 0 1 1.2 8.486l-.004.01-.005.015a2.958 2.958 0 0 1-2.836 2.001h-2.69a1.037 1.037 0 0 0-.95.68c-.047.13-.068.27-.06.409v.916A3.01 3.01 0 0 1 11.96 22a9.626 9.626 0 0 1-4.195-1l.009.005-.018-.009.01.004a10.1 10.1 0 0 1-5.716-7.996l-.001-.012a9.992 9.992 0 0 1 6.6-10.415Zm3.35 3.429a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12ZM8.53 7.518a1 1 0 0 0 0 2h.01a1 1 0 1 0 0-2h-.01Zm6.968 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM6.99 11.004a1 1 0 1 0 0 2H7a1 1 0 1 0 0-2h-.01Z" clip-rule="evenodd"/>
-        </svg>
-        <input type="radio" name="GridOption" value="GridOptionProject" id="GridOptionProject" class="sr-only" onchange="updateGridContent()"" checked/>
-      </label>
-    </div>
+  <div class="z-40 sticky top-16 right-0 left-0 bg-neutral-50 dark:bg-neutral-950">
+    <fieldset id="buttonProject" class="mx-auto max-w-screen-xl flex justify-between items-center">
+      <div class="flex-1">
+        <label for="GridOptionProject" class="flex items-center justify-center gap-4 p-3 text-neutral-950 dark:text-neutral-50 bg-neutral-50 dark:bg-neutral-950 fill-neutral-950/50 dark:fill-neutral-50/50 transition-all hover:fill-neutral-950/100 hover:dark:fill-neutral-50/100 has-checked:border-b has-checked:fill-neutral-950/100 has-checked:dark:fill-neutral-50/100">
+          <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M8.649 2.577A10.004 10.004 0 0 1 20.344 6.49a9.995 9.995 0 0 1 1.2 8.486l-.004.01-.005.015a2.958 2.958 0 0 1-2.836 2.001h-2.69a1.037 1.037 0 0 0-.95.68c-.047.13-.068.27-.06.409v.916A3.01 3.01 0 0 1 11.96 22a9.626 9.626 0 0 1-4.195-1l.009.005-.018-.009.01.004a10.1 10.1 0 0 1-5.716-7.996l-.001-.012a9.992 9.992 0 0 1 6.6-10.415Zm3.35 3.429a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12ZM8.53 7.518a1 1 0 0 0 0 2h.01a1 1 0 1 0 0-2h-.01Zm6.968 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM6.99 11.004a1 1 0 1 0 0 2H7a1 1 0 1 0 0-2h-.01Z" clip-rule="evenodd"/>
+          </svg>
+          <input type="radio" name="GridOption" value="GridOptionProject" id="GridOptionProject" class="sr-only" onchange="updateGridContent()"" checked/>
+        </label>
+      </div>
 
-    <div class="flex-1">
-      <label for="GridOptionPhoto" class="flex items-center justify-center gap-4 p-3 text-neutral-950 dark:text-neutral-50 bg-neutral-50 dark:bg-neutral-950 fill-neutral-950/50 dark:fill-neutral-50/50 transition-all hover:fill-neutral-950/100 hover:dark:fill-neutral-50/100 has-checked:border-b has-checked:fill-neutral-950/100 has-checked:dark:fill-neutral-50/100">
-        <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path fill-rule="evenodd" d="M7.5 4.586A2 2 0 0 1 8.914 4h6.172a2 2 0 0 1 1.414.586L17.914 6H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1.086L7.5 4.586ZM10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" clip-rule="evenodd"/>
-        </svg>
-        <input type="radio" name="GridOption" value="GridOptionPhoto" id="GridOptionPhoto" class="sr-only" onchange="updateGridContent()"" />
-      </label>
-    </div>
-  </fieldset>
-  
+      <div class="flex-1">
+        <label for="GridOptionPhoto" class="flex items-center justify-center gap-4 p-3 text-neutral-950 dark:text-neutral-50 bg-neutral-50 dark:bg-neutral-950 fill-neutral-950/50 dark:fill-neutral-50/50 transition-all hover:fill-neutral-950/100 hover:dark:fill-neutral-50/100 has-checked:border-b has-checked:fill-neutral-950/100 has-checked:dark:fill-neutral-50/100">
+          <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M7.5 4.586A2 2 0 0 1 8.914 4h6.172a2 2 0 0 1 1.414.586L17.914 6H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h1.086L7.5 4.586ZM10 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm2-4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" clip-rule="evenodd"/>
+          </svg>
+          <input type="radio" name="GridOption" value="GridOptionPhoto" id="GridOptionPhoto" class="sr-only" onchange="updateGridContent()"" />
+        </label>
+      </div>
+    </fieldset>
+  </div>
+
   <div id="gridCanvas" class="mx-auto max-w-screen-xl my-0.5 overflow-hidden">
     <div id="gridSlide" class="flex justify-start items-start">
       <div id="gridProject" class="min-w-full grid grid-cols-3 lg:grid-cols-4 gap-0.5">
-        <!-- <a  href="/MNI/MNI.html" 
-            class="aspect-square flex justify-center items-center overflow-hidden"
+        <a  href="/MNI/MNI.html" 
+            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
             data-title="Design 101"
             data-description="Selamat datang di halaman Design 101. Tujuan dari halaman ini sangat sederhana, untuk menyediakan panduan informasi desain brand Media Nawacita Indonesia agar menciptakan komunikasi yang konsisten dan mudah dikenali."
             >
@@ -63,7 +66,7 @@
           src="/MNI/coverMNI.png"
           alt="Media Nawacita Indonesia"
           >
-        </a> -->
+        </a>
     
         <a  href="" 
             class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
@@ -194,18 +197,6 @@
           class="h-full w-full object-cover"
           src="https://images.unsplash.com/photo-1642369073424-a98bf968b5d3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="alt 4"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 5"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1747116728949-bd0b222526a4?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 5"
           >
         </a>
       </div>
@@ -213,146 +204,13 @@
       <div id="gridPhoto" class="min-w-full grid grid-cols-3 lg:grid-cols-4 gap-0.5">
         <a  href="" 
             class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 2"
+            data-title="Mt. Bromo"
             data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1645705614585-65757c275331?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 2"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 3"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1596248095800-dd24b17c2d2b?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 3"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 4"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1642369073424-a98bf968b5d3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 4"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 5"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1747116728949-bd0b222526a4?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 5"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 6"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1602503874991-934cdacf2c46?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 6"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 7"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1571219836033-d62fe95c873d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 7"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 8"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1602488257131-7751faf0cca0?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 8"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 9"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1736801515753-316513619464?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 9"
-          >
-        </a>
-
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 2"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1645705614585-65757c275331?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 2"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 3"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1596248095800-dd24b17c2d2b?q=80&w=1956&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 3"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 4"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1642369073424-a98bf968b5d3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 4"
-          >
-        </a>
-    
-        <a  href="" 
-            class="aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50"
-            data-title="Project 5"
-            data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            >
-          <img
-          class="h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1747116728949-bd0b222526a4?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="alt 5"
-          >
+          <img class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/pw/AP1GczN_lt6TYZ7p3u411UPcupkQCzCHDOBPxte4WFEvjl4gcyPv6hLQkZ3lxHe8FOZTO_P5_y_lQAl07ElSEyAFnjxdv5QQw9QRJkeefCXQBUSKfQqAa7hYG9P-uywuSieJTpryRPGMPlGIW8VyWvTqP_P0=w804-h991-s-no-gm?authuser=0"alt="alt 1">
+          <img class="h-full w-full object-cover hidden" src="https://lh3.googleusercontent.com/pw/AP1GczN_lt6TYZ7p3u411UPcupkQCzCHDOBPxte4WFEvjl4gcyPv6hLQkZ3lxHe8FOZTO_P5_y_lQAl07ElSEyAFnjxdv5QQw9QRJkeefCXQBUSKfQqAa7hYG9P-uywuSieJTpryRPGMPlGIW8VyWvTqP_P0=w804-h991-s-no-gm?authuser=0"alt="alt 2">
+          <img class="h-full w-full object-cover hidden" src="https://lh3.googleusercontent.com/pw/AP1GczN_lt6TYZ7p3u411UPcupkQCzCHDOBPxte4WFEvjl4gcyPv6hLQkZ3lxHe8FOZTO_P5_y_lQAl07ElSEyAFnjxdv5QQw9QRJkeefCXQBUSKfQqAa7hYG9P-uywuSieJTpryRPGMPlGIW8VyWvTqP_P0=w804-h991-s-no-gm?authuser=0"alt="alt 3">
+          
         </a>
       </div>
     </div>
@@ -360,9 +218,10 @@
 
   <div id="modalContent"></div>
   <footer id="footer"></footer>
+
   <script src="/components/header.js"></script>
   <script src="/components/footer.js"></script>
-  <script src="index.js"></script>
+  <script src="gridContent.js"></script>
   <script src="/components/modalContent.js"></script>
   <script src="/components/disableCopy.js"></script>
 </body>
