@@ -6,17 +6,15 @@
     <title>rahmadip Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <style> body {font-family: 'Plus Jakarta Sans', sans-serif;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="StyleDownload.css" rel="stylesheet">
+</head>
 <body>
-    <nav>
+    <nav class="bg-neutral-50 dark:bg-neutral-950">
         <div class="LogoContainer" id="LogoContainer">
-            <!-- <div class="CircleWrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" fill="#050505" class="LogoIcon" viewBox="0 0 1080 1080">
-                    <path class="cls-1" d="m765,431c-18.8,0-34,15.2-34,34v217.9l-392-392c-13.3-13.3-34.8-13.3-48.1,0-13.3,13.3-13.3,34.8,0,48.1l392,392h-217.9c-18.8,0-34,15.2-34,34s15.2,34,34,34h300c5.1,0,9.9-1.1,14.3-3.2,0,0,0,0,0,0,.5-.2,1-.5,1.4-.7,0,0,0,0,0,0,.5-.2.9-.5,1.4-.8,0,0,0,0,0,0,.5-.3.9-.6,1.4-.9,0,0,0,0,0,0,3.8-2.5,7.1-5.8,9.7-9.7,0,0,0,0,0,0,.3-.4.6-.9.9-1.4,0,0,0,0,0-.1.3-.4.5-.9.8-1.4,0,0,0,0,0,0,.2-.5.5-.9.7-1.4,0,0,0,0,0,0,2-4.3,3.1-9.2,3.1-14.3v-300c0-18.8-15.2-34-34-34Z"/>
-                </svg>
-            </div> -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="LogoType" viewBox="0 0 1080 243.2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="LogoType fill-neutral-950 dark:fill-neutral-50" viewBox="0 0 1080 243.2">
                 <path class="cls-1" d="m0,186.6V56.9h27.5l2.6,24.2c3.3-5.7,7.1-10.5,11.6-14.5,4.5-4,9.9-7.2,16.2-9.4,6.3-2.2,13.4-3.3,21.1-3.3v32.4h-11.1c-5.1,0-10,.6-14.7,1.9-4.6,1.3-8.6,3.4-12,6.3-3.3,2.9-5.9,6.9-7.7,11.8-1.8,5-2.7,11.1-2.7,18.3v62H0Z"/>
                 <path class="cls-1" d="m131.6,189.6c-10.5,0-19.3-1.8-26.4-5.4-7.1-3.6-12.4-8.4-15.8-14.4-3.4-6-5.1-12.6-5.1-19.8s2.1-15.1,6.3-21.1c4.2-6,10.4-10.7,18.7-14,8.2-3.3,18.4-5,30.6-5h32.7c0-6.9-1-12.6-3-17.1-2-4.5-4.9-8-8.9-10.3-3.9-2.3-9.1-3.5-15.4-3.5s-13,1.6-18,4.9c-5,3.3-8.1,8.1-9.3,14.7h-30.4c1-9.3,4.2-17.2,9.4-23.9,5.2-6.7,12.1-11.8,20.6-15.4,8.5-3.6,17.7-5.4,27.7-5.4s22.9,2.1,31.5,6.3c8.7,4.2,15.3,10.2,19.8,17.9,4.5,7.7,6.8,17.2,6.8,28.3v80.3h-26.5l-3.1-20.6c-1.7,3.4-3.9,6.6-6.6,9.4-2.7,2.8-5.7,5.3-9.3,7.5-3.5,2.1-7.4,3.8-11.7,5-4.3,1.2-9.2,1.8-14.7,1.8Zm6.9-24.4c5,0,9.4-.9,13.4-2.7,3.9-1.8,7.3-4.4,10-7.7,2.7-3.3,4.9-7.1,6.6-11.3,1.6-4.2,2.6-8.6,3-13.3v-.5h-28.3c-6.2,0-11.2.8-15.1,2.3-3.9,1.5-6.7,3.6-8.6,6.3-1.9,2.7-2.8,5.8-2.8,9.4s.9,6.9,2.7,9.5,4.4,4.5,7.7,5.9c3.3,1.4,7.2,2.1,11.4,2.1Z"/>
                 <path class="cls-1" d="m226,186.6V1.3h30.9v75.7c4.1-7,9.9-12.6,17.2-16.9,7.4-4.2,15.8-6.3,25.2-6.3s19.4,2.2,26.8,6.6c7.4,4.4,13,10.9,16.9,19.4,3.9,8.6,5.8,19.1,5.8,31.6v75.1h-30.6v-72.3c0-11.1-2.3-19.7-6.9-25.6-4.6-5.9-11.8-8.9-21.4-8.9s-11.8,1.5-16.9,4.6c-5.1,3.1-9,7.5-11.8,13.1s-4.2,12.4-4.2,20.3v68.7h-30.9Z"/>
@@ -28,11 +26,29 @@
             </svg>
         </div>
     </nav>
-    <div id="PasswordModal" class="modal">
-        <div class="modal-content">
-            <input type="password" id="PasswordInput" placeholder="Enter password">
-            <button id="ButtonPassword" class="ButtonPassword" type="submit">Submit</button>
-            <p>Powered by <b>rahmadip</b></p>
+
+    <div id="PasswordModal" class="fixed inset-0 z-50 grid place-content-center transition bg-neutral-50 dark:bg-neutral-950">
+        <div class="w-full max-w-xl lg:max-w-3xl grid grid-cols-1 rounded-lg overflow-hidden transition-all bg-neutral-50 dark:bg-neutral-950 border border-neutral-950/20 dark:border-neutral-50/20 shadow-sm shadow-neutral-950/5 dark:shadow-neutral-50/5">
+
+            <div class="col-span-1 flex justify-between items-center p-4 transition-all border-b border-neutral-950/20 dark:border-neutral-50/20">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" class="fill-neutral-950 dark:fill-neutral-50 transition size-5 animate-spin"><path d="M941.6,678.83c-70.19,217.16-326.29,341.68-540.43,262.76-112.88-41.56-247.63,23.95-284.65,138.41-114.15-24.56-158.54-167.89-68.48-246.54,56.55-49.49,125.58-83.25,199.34-97.58,73.02-14.17,148.91-8.76,219.5,15.64,37.2,12.86,77.14,15.72,115.47,8.29,77.39-14.48,143.97-71.87,169.18-146.69,12.86-37.2,15.73-77.14,8.29-115.47-5.47-51.11-143.69,8.9-154.17,12.78,84.68-38.17,370.5-166.51,449.33-203.85-185.24,127.55-38.83,173.93-113.37,372.25h-.01ZM25.03,773.42c78.83-37.35,364.65-165.68,449.33-203.85-10.48,3.88-148.7,63.88-154.17,12.78-7.44-38.33-4.57-78.27,8.29-115.47,25.21-74.82,91.79-132.21,169.18-146.69,38.33-7.44,78.27-4.57,115.47,8.29,70.58,24.4,146.48,29.81,219.5,15.64,73.77-14.33,142.79-48.09,199.34-97.58,90.06-78.65,45.66-221.98-68.48-246.54-37.02,114.46-171.77,179.97-284.65,138.41C464.69,59.49,208.6,184.01,138.4,401.17c-74.54,198.33,71.86,244.71-113.37,372.25h0Z"/></svg>
+                    <h6 class="row-span-1 col-span-3 font-bold text-lg tracking-wide leading-normal text-neutral-950 dark:text-neutral-50 cursor-default">Asset Library</h6>
+                </div>
+                <a href="/index.html">
+                    <button type="button" class="cursor-pointer size-6 text-neutral-950 dark:text-neutral-50 opacity-20 transition-opacity hover:opacity-75" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="square" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+
+            <div class="col-span-1 p-4 lg:p-6 flex flex-col justify-between gap-8">
+                <input type="password" id="PasswordInput" class="inline-block py-2 border-b font-medium text-neutral-950/40 dark:text-neutral-50/40 outline-none" placeholder="Enter password"></input>
+                <button id="ButtonPassword" type="submit" class="inline-block rounded border px-5 py-2 font-medium border-neutral-950 dark:border-neutral-50 text-neutral-950 dark:text-neutral-50 hover:bg-neutral-950 dark:hover:bg-neutral-50 hover:text-neutral-50 dark:hover:text-neutral-950 opacity-20 transition-opacity hover:opacity-75 text-center">Submit</button>
+            </div>
+            
         </div>
     </div>
 

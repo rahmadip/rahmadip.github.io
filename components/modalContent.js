@@ -40,21 +40,21 @@ document.addEventListener("DOMContentLoaded", function () {
                         modalDescInfo.classList.add("hidden");
                     }
 
-                    // === START Carousel Logic ===
                     const imgs = link.querySelectorAll("img");
                     const carouselContainer = document.getElementById("carouselImages");
-                    carouselContainer.innerHTML = ""; // Kosongkan
+                    carouselContainer.innerHTML = "";
 
                     const innerWrapper = document.createElement("div");
                     innerWrapper.className = "flex w-full transition-transform duration-500 ease-in-out";
                     innerWrapper.style.transform = "translateX(0%)";
+                    innerWrapper.style.touchAction = "pan-y";
                     carouselContainer.appendChild(innerWrapper);
 
                     let currentIndex = 0;
 
                     imgs.forEach((img) => {
                         const wrapper = document.createElement("div");
-                        wrapper.className = "w-full shrink-0 flex justify-center items-center";
+                        wrapper.className = "w-full shrink-0 m-0 p-0";
 
                         const clone = img.cloneNode(true);
                         clone.classList.remove("hidden");
@@ -65,32 +65,103 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
 
                     const totalSlides = imgs.length;
-                    const prevBtn = document.getElementById("carouselPrev");
-                    const nextBtn = document.getElementById("carouselNext");
+                    const dotsContainer = document.getElementById("carouselDots");
 
                     const showSlide = (index) => {
                         innerWrapper.style.transform = `translateX(-${index * 100}%)`;
+                        updateDots();
                     };
 
-                    prevBtn.onclick = () => {
-                        if (totalSlides < 2) return;
-                        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                        showSlide(currentIndex);
+                    const updateDots = () => {
+                        dots.forEach((dot, idx) => {
+                            if (idx === currentIndex) {
+                                dot.classList.remove("opacity-20");
+                                dot.classList.add("opacity-100");
+                            } else {
+                                dot.classList.remove("opacity-100");
+                                dot.classList.add("opacity-20");
+                            }
+                        });
                     };
 
-                    nextBtn.onclick = () => {
-                        if (totalSlides < 2) return;
-                        currentIndex = (currentIndex + 1) % totalSlides;
-                        showSlide(currentIndex);
-                    };
+                    // DOTS
+                    dotsContainer.innerHTML = "";
+                    const dots = [];
+
+                    for (let i = 0; i < totalSlides; i++) {
+                        const dot = document.createElement("button");
+                        dot.className = "size-2 lg:size-3 bg-neutral-950 dark:bg-neutral-50 opacity-20 transition-opacity hover:opacity-75 cursor-pointer";
+                        dot.addEventListener("click", () => {
+                            currentIndex = i;
+                            showSlide(currentIndex);
+                        });
+                        dotsContainer.appendChild(dot);
+                        dots.push(dot);
+                    }
 
                     if (totalSlides > 1) {
-                        prevBtn.classList.remove("hidden");
-                        nextBtn.classList.remove("hidden");
+                        dotsContainer.classList.remove("hidden");
+                        updateDots();
                     } else {
-                        prevBtn.classList.add("hidden");
-                        nextBtn.classList.add("hidden");
+                        dotsContainer.classList.add("hidden");
                     }
+
+                    // === Swipe + Mouse Drag Logic ===
+                    let startX = 0;
+                    let currentTranslate = 0;
+                    let isDragging = false;
+
+                    const startDrag = (x) => {
+                        startX = x;
+                        isDragging = true;
+                        innerWrapper.style.transition = "none";
+                    };
+
+                    const moveDrag = (x) => {
+                        if (!isDragging) return;
+                        const deltaX = x - startX;
+                        const translate = -currentIndex * carouselContainer.clientWidth + deltaX;
+
+                        currentTranslate = deltaX;
+                        innerWrapper.style.transform = `translateX(${translate}px)`;
+                    };
+
+                    const endDrag = () => {
+                        if (!isDragging) return;
+                        isDragging = false;
+                        innerWrapper.style.transition = "transform 0.5s ease";
+
+                        const threshold = carouselContainer.clientWidth * 0.4;
+                        if (currentTranslate < -threshold && currentIndex < totalSlides - 1) {
+                            currentIndex++;
+                        } else if (currentTranslate > threshold && currentIndex > 0) {
+                            currentIndex--;
+                        }
+
+                        innerWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+                        updateDots();
+                    };
+
+                    // Touch
+                    innerWrapper.addEventListener("touchstart", (e) => startDrag(e.touches[0].clientX));
+                    innerWrapper.addEventListener("touchmove", (e) => moveDrag(e.touches[0].clientX));
+                    innerWrapper.addEventListener("touchend", endDrag);
+
+                    // Mouse
+                    innerWrapper.addEventListener("mousedown", (e) => {
+                        e.preventDefault();
+                        startDrag(e.clientX);
+                    });
+
+                    innerWrapper.addEventListener("mousemove", (e) => {
+                        if (isDragging) moveDrag(e.clientX);
+                    });
+
+                    innerWrapper.addEventListener("mouseup", endDrag);
+                    innerWrapper.addEventListener("mouseleave", () => {
+                        if (isDragging) endDrag();
+                    });
+
                     // === END Carousel Logic ===
 
                     modalBg.classList.remove("hidden");

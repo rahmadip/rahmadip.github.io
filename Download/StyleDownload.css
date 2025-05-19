@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: scroll;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
@@ -57,7 +57,6 @@ p {
 /* NAVIGATION BAR */
 
 nav {
-    background-color: #050505;
     display: flex;
     align-items: center;
     position: sticky;
@@ -107,7 +106,6 @@ nav {
 }
 
 .LogoType {
-    fill: #fafafa;
     width: auto;
     height: 24px;
     transform: translateY(2px);
