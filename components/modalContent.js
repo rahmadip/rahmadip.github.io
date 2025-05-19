@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                         const clone = img.cloneNode(true);
                         clone.classList.remove("hidden");
-                        clone.classList.add("object-cover", "w-full", "h-auto");
+                        clone.classList.add("object-cover", "w-full", "h-full");
 
                         wrapper.appendChild(clone);
                         innerWrapper.appendChild(wrapper);
