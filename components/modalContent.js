@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     const description = link.dataset.description || "";
 
                     modalDescTitle.textContent = title;
-                    modalDescInfo.textContent = description;
+                    modalDescInfo.innerHTML = description;
                     if (description && description !== "") {
                         modalDescInfo.classList.remove("hidden");
                     } else {
                         modalDescInfo.classList.add("hidden");
                     }
 
-                    const imgs = link.querySelectorAll("img");
+                    const imgs = link.querySelectorAll("picture img");
                     const carouselContainer = document.getElementById("carouselImages");
                     carouselContainer.innerHTML = "";
 
