@@ -12,7 +12,7 @@
     <style type="text/tailwindcss">
       h1  {@apply text-[#f9f9f9]  font-semibold text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-[0.9]}
       h2  {@apply text-[#060606]  font-semibold text-4xl sm:text-6xl lg:text-8xl tracking-tighter leading-none;}
-      h3  {@apply text-[#060606]  font-semibold text-lg lg:text-2xl tracking-tight leading-normal;}
+      h3  {@apply font-semibold text-lg lg:text-2xl tracking-tight leading-normal;}
       h4  {@apply text-[#060606]  font-semibold text-xs lg:text-xs tracking-normal leading-normal;}
       h5  {@apply text-[#f9f9f9]  font-normal   text-xs lg:text-xs tracking-normal leading-normal;}
       p   {@apply                   font-normal   text-xs tracking-normal leading-relaxed text-pretty;}
@@ -99,31 +99,56 @@
     </div>
 
     <div  id="viColors"
-          class=" grid col-span-1 border-[#060606] bg-green-200
+          class=" grid col-span-1 border-[#060606]
                   grid-cols-4 sm:grid-cols-8 lg:grid-cols-12
                   gap-4 sm:gap-6 lg:gap-8
                   pt-4 sm:pt-6 lg:pt-8
                   border-t-4 sm:border-t-6 lg:border-t-8">
 
-      <h2 class="col-span-4 sm:col-span-8 lg:col-span-12 border">Colors</h2>
-      <h2 class="col-span-2 sm:col-span-4 lg:col-span-6 border">X/2</h2>
-      <h2 class="col-span-2 sm:col-span-4 lg:col-span-6 border">X/2</h2>
-      <h2 class="col-span-1 sm:col-span-2 lg:col-span-3 border">X/4</h2>
-      <h2 class="col-span-1 sm:col-span-2 lg:col-span-3 border">X/4</h2>
-      <h2 class="col-span-1 sm:col-span-2 lg:col-span-3 border">X/4</h2>
-      <h2 class="col-span-1 sm:col-span-2 lg:col-span-3 border">X/4</h2>
-      <h2 class="col-span-4 sm:col-span-1 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-1 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-1 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-1 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-1 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-1 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-1 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-1 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-8 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-8 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-8 lg:col-span-1 border">11</h2>
-      <h2 class="col-span-4 sm:col-span-8 lg:col-span-1 border">11</h2>
+      <h2 class="col-span-4 sm:col-span-8 lg:col-span-12">Colors</h2>
+      <h3 class="col-span-4 sm::col-span-8 lg:col-span-3">Lorem Ipsum</h3>
+      <p class="col-span-4 sm::col-span-8 lg:col-span-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum ornare est, eget porta justo laoreet sit amet. Integer faucibus eros eu magna lobortis, hendrerit efficitur erat ultricies. Cras tincidunt eget velit vitae suscipit. Donec malesuada lacinia elit, vel ullamcorper est ullamcorper ac. Integer et orci efficitur, vehicula lacus a, efficitur velit. Cras dictum nibh ultricies massa vestibulum imperdiet.</p>
+     
+
+      <div class="col-span-2 sm:col-span-4 lg:col-span-3 aspect-square rounded-md bg-[#060606] group">
+        <div class="bg-[#003366] text-[#f9f9f9] aspect-square rounded-md p-4 place-content-end transition duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <h3>Blue</h3>
+          <p class="block group-hover:hidden">#003366</p>
+          <div class="hidden group-hover:block">
+            <div><p class="inline-block w-9">HEX</p>  <p class="inline-block">:</p> <p class="inline-block">#003366</p></div>
+            <div><p class="inline-block w-9">RGB</p>  <p class="inline-block">:</p> <p class="inline-block">R0 G51 102</p></div>
+            <div><p class="inline-block w-9">CMYK</p>  <p class="inline-block">:</p> <p class="inline-block">C100 M87 Y33 K23</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-span-2 sm:col-span-4 lg:col-span-3 aspect-square rounded-md bg-[#060606] group">
+        <div class="bg-[#ff6600] text-[#f9f9f9] aspect-square rounded-md p-4 place-content-end transition duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <h3>Blue</h3>
+          <p class="block group-hover:hidden">#ff6600</p>
+          <p class="hidden group-hover:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem omnis atques.</p>
+        </div>
+      </div>
+
+      <div class="col-span-2 sm:col-span-4 lg:col-span-3 aspect-square rounded-md bg-[#060606] group">
+        <div class="bg-[#003366] text-[#f9f9f9] aspect-square rounded-md p-4 place-content-end transition duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <h3>Blue</h3>
+          <p class="block group-hover:hidden">Lorem ipsum dolor</p>
+          <p class="hidden group-hover:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem omnis atques.</p>
+        </div>
+      </div>
+
+      <div class="col-span-2 sm:col-span-4 lg:col-span-3 aspect-square rounded-md bg-[#060606] group">
+        <div class="bg-[#003366] text-[#f9f9f9] aspect-square rounded-md p-4 place-content-end transition duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <h3>Blue</h3>
+          <p class="block group-hover:hidden">Lorem ipsum dolor</p>
+          <p class="hidden group-hover:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem omnis atques.</p>
+        </div>
+      </div>
+
+
+      <h3 class="col-span-4 sm::col-span-8 lg:col-span-3">Lorem Ipsum</h3>
+      <p class="col-span-4 sm::col-span-8 lg:col-span-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum ornare est, eget porta justo laoreet sit amet. Integer faucibus eros eu magna lobortis, hendrerit efficitur erat ultricies. Cras tincidunt eget velit vitae suscipit. Donec malesuada lacinia elit, vel ullamcorper est ullamcorper ac. Integer et orci efficitur, vehicula lacus a, efficitur velit. Cras dictum nibh ultricies massa vestibulum imperdiet.</p>
       
     </div>
 
@@ -217,7 +242,7 @@
   </div>
 
   
-  <!-- <div class="bg-white mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-4 lg:grid-cols-12 gap-y-12 lg:gap-y-36">
+  <div class="bg-white mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-4 lg:grid-cols-12 gap-y-12 lg:gap-y-36">
 
     <div class="col-span-4 lg:col-span-12 grid grid-cols-4 lg:grid-cols-12 gap-2 lg:gap-4 border-t-4 lg:border-t-8 border-[#060606] pt-2 lg:pt-6">
       <h2 class="col-span-4 lg:col-span-12">Jancok.</h2>
@@ -419,7 +444,7 @@
       <h3 class="col-span-4 lg:col-span-6">Lorem Ipsum</h3>
       <p class="col-span-4 lg:col-span-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <div class="col-span-1 lg:col-span-3">
-        <div class="w-full bg-[#003366] aspect-square"></div>
+        <div class="w-full bg-[#003366] aspect-square hover:animate-bounce"></div>
         <h3 class="mt-4 text-lg font-bold text-gray-900 sm:text-xl">Lorem, ipsum dolor.</h3>
         <p class="mt-2 max-w-sm text-gray-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni reiciendis sequi ipsam incidunt.</p>
       </div>
@@ -475,7 +500,7 @@
       <div class="col-span-4 lg:col-span-9 aspect-21/9 overflow-hidden rounded border border-[#060606]"></div>
     </div>
 
-  </div> -->
+  </div>
 
   <footer id="footer"></footer>
   <script src="/MNI/viMNI.js"></script>
