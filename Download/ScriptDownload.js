@@ -14,8 +14,7 @@ function checkPassword() {
     const PasswordModal = document.getElementById('PasswordModal');
 
     if (password === 'NawacitaTV2023') {
-        PasswordModal.style.display = 'none';
-        MainContent.style.display = 'flex';
+        window.location.href = 'https://rahmadip.github.io/terminal/';
     } else {
         PasswordInput.value = "";
         PasswordInput.placeholder = "Wrong password!";
