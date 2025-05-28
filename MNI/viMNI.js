@@ -192,3 +192,26 @@ function changeFont(fontName) {
 document.addEventListener('DOMContentLoaded', function () {
   changeFont('Poppins');
 });
+
+
+// INFINITE LOOP
+
+    const track = document.querySelector('.sliderTrack');
+    let offset = 0;
+
+    function loop() {
+      offset -= 1;
+      track.style.transform = `translateX(${offset}px)`;
+
+      const first = track.children[0];
+      const firstWidth = first.offsetWidth;
+
+      if (Math.abs(offset) >= firstWidth) {
+        track.appendChild(first);
+        offset += firstWidth;
+      }
+
+      requestAnimationFrame(loop);
+    }
+
+    loop();
