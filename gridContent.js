@@ -1,20 +1,14 @@
-/**
- * Update grid slide content based on selected radio option with smooth transition
- */
 function updateGridContent() {
   const gridSlide = document.getElementById('gridSlide');
   const selectedGridOption = document.querySelector('input[name="GridOption"]:checked');
 
-  // Add smoother transition to gridSlide
-  gridSlide.style.transition = 'transform 0.7s ease'; // Increased duration to 0.7s and using ease
+  gridSlide.style.transition = 'transform 0.7s ease';
 
-  // Fallback if no radio option is selected
   if (!selectedGridOption) {
-    gridSlide.style.transform = 'translateX(0%)'; // Default to gridProject
+    gridSlide.style.transform = 'translateX(0%)';
     return;
   }
 
-  // Slide to show gridProject or gridPhoto
   if (selectedGridOption.value === 'GridOptionProject') {
     gridSlide.style.transform = 'translateX(0%)';
   } else if (selectedGridOption.value === 'GridOptionPhoto') {
@@ -22,7 +16,6 @@ function updateGridContent() {
   }
 }
 
-// Touch slide functionality for gridSlide
 function enableTouchSlide() {
   const gridSlide = document.getElementById('gridSlide');
   let touchStartX = 0;
@@ -41,28 +34,25 @@ function enableTouchSlide() {
     touchEndX = e.touches[0].clientX;
     touchEndY = e.touches[0].clientY;
 
-    // Deteksi apakah gerakan lebih vertikal (scroll) atau horizontal (slide)
     const deltaX = Math.abs(touchEndX - touchStartX);
     const deltaY = Math.abs(touchEndY - touchStartY);
 
-    // Jika gerakan lebih vertikal, tandai sebagai scroll
     if (deltaY > deltaX) {
       isScrolling = true;
     }
   });
 
   gridSlide.addEventListener('touchend', () => {
-    if (isScrolling) return; // Abaikan jika sedang scroll vertikal
+    if (isScrolling) return;
 
     const deltaX = touchEndX - touchStartX;
-    const minSwipeDistance = 50; // Sensitivitas swipe tetap tinggi
+    const minSwipeDistance = 50;
 
     // Swipe ke kiri (tunjukkan gridPhoto)
     if (deltaX < -minSwipeDistance) {
       document.querySelector('input[value="GridOptionPhoto"]').checked = true;
       updateGridContent();
     }
-    // Swipe ke kanan (tunjukkan gridProject)
     else if (deltaX > minSwipeDistance) {
       document.querySelector('input[value="GridOptionProject"]').checked = true;
       updateGridContent();
@@ -70,13 +60,11 @@ function enableTouchSlide() {
   });
 }
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   updateGridContent();
-  enableTouchSlide(); // Aktifkan fitur touch slide
+  enableTouchSlide();
 });
 
-// Update on radio button change
 document.querySelectorAll('input[name="GridOption"]').forEach(radio => {
   radio.addEventListener('change', updateGridContent);
 });
