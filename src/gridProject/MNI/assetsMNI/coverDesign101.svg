@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #f60;
+      }
+
+      .cls-4, .cls-5 {
+        font-family: Poppins-SemiBold, Poppins;
+        font-size: 48px;
+        font-weight: 600;
+      }
+
+      .cls-6 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-7 {
+        fill: #f9f9f9;
+      }
+
+      .cls-8 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-5, .cls-9 {
+        fill: #036;
+      }
+
+      .cls-10 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-12 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.03em;
+      }
+    </style>
+  </defs>
+  <g id="coverDesign101">
+    <rect class="cls-7" width="1080" height="1080"/>
+    <text class="cls-5" transform="translate(443.27 1007.95)"><tspan class="cls-11" x="0" y="0">D</tspan><tspan class="cls-12" x="33" y="0">e</tspan><tspan class="cls-8" x="60.69" y="0">s</tspan><tspan class="cls-13" x="84.9" y="0">i</tspan><tspan class="cls-10" x="96.48" y="0">g</tspan><tspan class="cls-14" x="127.15" y="0">n</tspan></text>
+    <text class="cls-4" transform="translate(600.79 991.97) scale(.58)"><tspan class="cls-6" x="0" y="0">1</tspan><tspan class="cls-1" x="15.77" y="0">0</tspan><tspan class="cls-2" x="44.27" y="0">1</tspan></text>
+    <g>
+      <polygon class="cls-3" points="679.38 480 655.63 630 685.63 630 709.38 480 679.38 480"/>
+      <polygon class="cls-9" points="451.57 592.5 424.38 480 394.38 480 370.62 630 400.63 630 412.5 555 430.63 630 460.63 630 502.5 555 490.63 630 520.62 630 544.38 480 514.37 480 451.57 592.5"/>
+      <polygon class="cls-9" points="634.38 480 617.42 587.14 559.38 480 552.58 522.86 610.63 630 640.63 630 664.38 480 634.38 480"/>
+    </g>
+  </g>
+</svg>
