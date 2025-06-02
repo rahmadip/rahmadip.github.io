@@ -472,6 +472,9 @@
   .place-content-end {
     place-content: end;
   }
+  .place-content-start {
+    place-content: start;
+  }
   .items-center {
     align-items: center;
   }
@@ -585,9 +588,6 @@
   }
   .bg-\[\#ffeedd\] {
     background-color: #ffeedd;
-  }
-  .bg-\[f9f9f9\] {
-    background-color: f9f9f9;
   }
   .bg-neutral-50 {
     background-color: var(--color-neutral-50);
