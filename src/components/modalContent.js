@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         modalDescInfo.classList.add("hidden");
                     }
 
-                    const imgs = link.querySelectorAll("picture img");
+                    const imgs = link.querySelectorAll("picture img, picture video");
                     const carouselContainer = document.getElementById("carouselImages");
                     carouselContainer.innerHTML = "";
 
