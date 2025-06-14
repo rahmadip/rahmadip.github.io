@@ -1,34 +1,62 @@
-  <div id="modalBg" class="fixed inset-0 z-50 grid place-content-center transition bg-neutral-50 dark:bg-neutral-950" role="dialog" aria-modal="true" aria-labelledby="modalBg">
-    <div id="modalCanvas" class="w-full max-w-xs sm:max-w-md lg:max-w-4xl grid grid-cols-1 lg:grid-cols-8 rounded-lg overflow-hidden transition-all bg-neutral-50 dark:bg-neutral-950 border border-neutral-950/20 dark:border-neutral-50/20 shadow-sm shadow-neutral-950/5 dark:shadow-neutral-50/5">
+<div id="modalBg" class=" fixed inset-0 z-99 rahmadipTheme
+                          grid place-content-start sm:place-content-start lg:place-content-center">
+  
+  <div  id="modalCanvas"
+        class=" w-full max-w-screen sm:max-w-screen lg:max-w-5xl
+                grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-8
+                rahmadipTheme rahmadipRounded lg:border overflow-hidden">
 
-      <div id="modalHead" class="col-span-1 lg:col-span-8 flex justify-between items-center p-4 transition-all border-b-0 lg:border-b border-neutral-950/20 dark:border-neutral-50/20">
-        <div class="flex items-center gap-2">
-          <div class="aspect-square rounded-full flex justify-center items-center overflow-hidden size-10 border border-neutral-950/20 dark:border-neutral-50/20">
-            <img class="w-1/2 h-1/2 object-cover block dark:hidden" loading="lazy" src="/src/components/favicon-dark.svg" alt="rahmadipPP">
-            <img class="w-1/2 h-1/2 object-cover hidden dark:block" loading="lazy" src="/src/components/favicon-light.svg" alt="rahmadipPP">
-          </div>
-          <div>
-            <h6 class="font-bold text-xs tracking-wide leading-none text-neutral-950 dark:text-neutral-50">Fauzi Rahmadi Primanto</h6>
-            <h6 class="font-normal text-xs tracking-wide leading-none text-neutral-950 dark:text-neutral-50">rahmadip</h6>
-          </div>
+    <div class="col-span-1 sm:col-span-1 lg:col-span-8
+                p-3 flex flex-row justify-between items-center rahmadipTheme lg:border-b">
+
+      <a href="https://rahmadip.github.io/profile.html" class="flexCenter gap-3">
+
+        <div class="aspect-square rounded-full overflow-hidden rahmadipBorder flexCenter size-9">
+          
+          <img  class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/pw/AP1GczOfbi9He530hnpgALjgUR5NFpC2NynHlLn3GY83wgn83o-oJ832FpmvAQkXrmshgucpks_7jEUVsLcs4BjGDS0eueOjEWN9uYBBOyAjdxbOFLdtHBR9hLNYSh6OPGIXe6mxLoRED0xmyGKj86oBQknv=w1267-h1267-s-no-gm?authuser=0"
+                alt="rahmadipPP">
         </div>
-        <button id="modalClose" type="button" class="cursor-pointer size-6 text-neutral-950 dark:text-neutral-50 opacity-20 transition-opacity hover:opacity-75" aria-label="Close">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="square" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
-        </button>
-      </div>
 
-      <div id="modalCover" class="col-span-1 lg:col-span-5 overflow-hidden flex justify-center items-center relative">
-        <div id="carouselImages" class="w-full h-full flex justify-center items-center"></div>
-        <div id="carouselDots" class="absolute bottom-3 flex gap-1 lg:gap-2"></div>
-      </div>
+        <div>
+          <h3 class="rahmadipName">Fauzi Rahmadi Primanto</h3>
+          <p class="rahmadipTitle">rahmadip</p>
+        </div>
+        
+      </a>
 
-      <div id="modalDesc" class="col-span-1 lg:col-span-3 p-4 flex flex-col gap-1 lg:gap-4">
-        <h6 id="modalDescTitle" class="font-bold text-lg lg:text-xl tracking-normal leading-normal text-pretty text-neutral-950 dark:text-neutral-50"></h6>
-        <p id="modalDescInfo" class="font-normal text-xs lg:text-sm tracking-wide leading-normal text-pretty text-neutral-950/60 dark:text-neutral-50/60"></p>
-        <a id="modalDescDetails" class="font-medium text-xs tracking-widest leading-normal text-pretty text-neutral-950 dark:text-neutral-50 opacity-75 transition-opacity hover:opacity-100" target="_blank" href="">more details ...</a>
-      </div>
-    
+      <button id="modalClose" type="button" class="cursor-pointer size-6 opacity-20 rahmadipTheme hover:opacity-75" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="square" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+
     </div>
+
+    <div id="modalCover" class="col-span-1 sm:col-span-1 lg:col-span-5 flexCenter overflow-hidden">
+      <div id="carouselImages" class="w-full h-full object-cover"></div>
+    </div>
+
+    <div id="modalDesc" class="col-span-1 sm:col-span-1 lg:col-span-3 p-3 gap-3 lg:gap-6 flex flex-col">
+
+      <div id="carouselDots" class="flex flex-row justify-center lg:justify-start items-center gap-1 lg:gap-2"></div>
+
+      <div>
+        <h2 id="modalDescTitle" class="font-bold text-sm sm:text-base tracking-normal leading-normal rahmadipTheme"></h2>
+        <p id="modalDescInfo" class="font-normal text-xs sm:text-sm tracking-wide leading-normal text-pretty rahmadipTheme opacity-50"></p>
+      </div>
+
+      <div id="modalDirectionContainer" class="flex flex-col">
+        <h2 class="font-bold text-sm sm:text-base tracking-normal leading-normal rahmadipTheme">for more details click below:</h2>
+        <div class="flex flex-row lg:flex-col gap-3 lg:gap-0">
+          <a id="modalDirection1" class="font-normal text-xs sm:text-sm tracking-wide leading-normal text-pretty opacity-50 rahmadipTheme hover:opacity-100" target="_blank"></a>
+          <a id="modalDirection2" class="font-normal text-xs sm:text-sm tracking-wide leading-normal text-pretty opacity-50 rahmadipTheme hover:opacity-100" target="_blank"></a>
+          <a id="modalDirection3" class="font-normal text-xs sm:text-sm tracking-wide leading-normal text-pretty opacity-50 rahmadipTheme hover:opacity-100" target="_blank"></a>
+        </div>
+      </div>
+
+    </div>
+
   </div>
+
+</div>

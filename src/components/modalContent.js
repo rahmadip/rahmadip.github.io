@@ -18,27 +18,47 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.addEventListener("click", function (event) {
                     event.preventDefault();
 
-                    const modalDescDetails = document.getElementById("modalDescDetails");
-                    const linkHref = link.getAttribute("href");
-                    if (linkHref && linkHref !== "") {
-                        modalDescDetails.setAttribute("href", linkHref);
-                        modalDescDetails.classList.remove("hidden");
-                    } else {
-                        modalDescDetails.classList.add("hidden");
-                    }
-
                     const modalDescTitle = document.getElementById("modalDescTitle");
-                    const modalDescInfo = document.getElementById("modalDescInfo");
                     const title = link.dataset.title || "No Title";
+                    const modalDescInfo = document.getElementById("modalDescInfo");
                     const description = link.dataset.description || "";
+                    const modalDirection1 = document.getElementById("modalDirection1");
+                    const direction1 = link.dataset.direction1 || "";
+                    const href1 = link.getAttribute("data-href1") || "";
+                    const modalDirection2 = document.getElementById("modalDirection2");
+                    const direction2 = link.dataset.direction2 || "";
+                    const href2 = link.getAttribute("data-href2") || "";
+                    const modalDirection3 = document.getElementById("modalDirection3");
+                    const direction3 = link.dataset.direction3 || "";
+                    const href3 = link.getAttribute("data-href3") || "";
+                    const modalDirectionContainer = document.getElementById("modalDirectionContainer")
+                    
 
-                    modalDescTitle.textContent = title;
+                    modalDescTitle.innerHTML = title;
+
                     modalDescInfo.innerHTML = description;
-                    if (description && description !== "") {
-                        modalDescInfo.classList.remove("hidden");
-                    } else {
-                        modalDescInfo.classList.add("hidden");
-                    }
+                        if (description && description !== "") {modalDescInfo.classList.remove("hidden");}
+                        else {modalDescInfo.classList.add("hidden");}
+
+                    modalDirection1.innerHTML = direction1;
+                        if (direction1 && direction1 !== "") {
+                            modalDirectionContainer.classList.remove("hidden");
+                            modalDirection1.classList.remove("hidden");
+                            modalDirection1.setAttribute("href", href1);}
+                        else {modalDirection1.classList.add("hidden");
+                              modalDirectionContainer.classList.add("hidden");}
+                    
+                    modalDirection2.innerHTML = direction2;
+                        if (direction2 && direction2 !== "") {
+                            modalDirection2.classList.remove("hidden");
+                            modalDirection2.setAttribute("href", href2);}
+                        else {modalDirection2.classList.add("hidden");}
+
+                    modalDirection3.innerHTML = direction3;
+                        if (direction3 && direction3 !== "") {
+                            modalDirection3.classList.remove("hidden");
+                            modalDirection3.setAttribute("href", href3);}
+                        else {modalDirection3.classList.add("hidden");}
 
                     const imgs = link.querySelectorAll("picture img, picture video");
                     const carouselContainer = document.getElementById("carouselImages");

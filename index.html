@@ -24,7 +24,7 @@
             <h2 class="text-neutral-950 dark:text-neutral-50 text-5xl sm:text-8xl text-center lg:text-start lg:text-7xl font-bold text-pretty">Designs that <br><i>Shine.</i> Beyond <br>the <i>Line.</i></h2>
             <h1 class="text-neutral-950/20 dark:text-neutral-50/20 text-md sm:text-xl lg:text-xl text-center lg:text-start font-mono mt-4 text-pretty"><i>rahmadip.github.io</i></h1>
             <div class="mt-4 sm:mt-6 flex gap-4 justify-center lg:justify-start">
-            <a href="/index.html#buttonProject" class="inline-block rounded border px-5 py-3 font-semibold shadow-xs border-neutral-950 dark:border-neutral-50 bg-neutral-950 dark:bg-neutral-50 text-neutral-50 dark:text-neutral-950 shadow-neutral-950/50 dark:shadow-neutral-50/50 opacity-75 transition-opacity hover:opacity-100">Project</a>
+            <a href="/index.html#gridCanvas" class="inline-block rounded border px-5 py-3 font-semibold shadow-xs border-neutral-950 dark:border-neutral-50 bg-neutral-950 dark:bg-neutral-50 text-neutral-50 dark:text-neutral-950 shadow-neutral-950/50 dark:shadow-neutral-50/50 opacity-75 transition-opacity hover:opacity-100">Project</a>
             <a href="/profile.html" class="inline-block rounded border px-5 py-3 font-semibold shadow-xs border-neutral-950 dark:border-neutral-50 text-neutral-950 dark:text-neutral-50 shadow-neutral-950/50 dark:shadow-neutral-50/50 hover:bg-neutral-950 dark:hover:bg-neutral-50 hover:text-neutral-50 dark:hover:text-neutral-950 opacity-75 transition-opacity hover:opacity-100">Profile</a>
             </div>
         </div>
@@ -38,7 +38,7 @@
         </div>
     </div>
 
-    <div class="z-40 sticky top-16 right-0 left-0 bg-neutral-50 dark:bg-neutral-950">
+    <!-- <div class="z-40 sticky top-16 right-0 left-0 bg-neutral-50 dark:bg-neutral-950">
       <fieldset id="buttonProject" class="mx-auto max-w-screen-xl flex justify-between items-center">
 
         <div class="flex-1">
@@ -60,102 +60,130 @@
         </div>
         
       </fieldset>
-    </div>
+    </div> -->
 
     <div id="gridCanvas" class="mx-auto max-w-screen-xl my-0.5 overflow-hidden">
       <div id="gridSlide" class="flex justify-start items-start">
 
         <div id="gridProject" class="min-w-full grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-0.5">
 
-          <a  data-title="Attention"
-              data-description="you got me looking for <i>Attention<i>"
-              href=""
-              class="bg-neutral-950 dark:bg-neutral-50 aspect-square grid place-content-start overflow-hidden opacity-100 transition-opacity hover:opacity-50">
+          <a id="Attention"
+
+          data-title="Attention"
+          data-description="you got me looking for <i>Attention<i>"
+          class="bg-neutral-950 dark:bg-neutral-50 aspect-square grid place-content-start overflow-hidden opacity-100 transition-opacity hover:opacity-50 cursor-pointer">
             
-            <picture class="w-full h-full object-cover">
+          <picture class="w-full h-full object-cover">
               <source srcset="/src/gridProject/Attention/Attention.webp" type="image/webp">
-              <img src="/src/gridProject/Attention/Attention.jpg" loading="lazy" width="1080" height="1350" alt="Attention" class="h-full w-full object-cover">
-            </picture>
-          </a>
+              <img    src   ="/src/gridProject/Attention/Attention.jpg"  alt="Attention"
+                      loading="lazy" width="1080" height="1350" class="h-full w-full object-cover">
+          </picture>
 
-          <a  data-title="One Direction"
-              data-description="you shouldn't against the current"
-              href=""
-              class="bg-neutral-950 dark:bg-neutral-50 aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50">
-
-              <picture class="w-full h-full object-cover">
-                <video src="/src/gridProject/OneDirection/OneDirection.mp4" autoplay muted loop playsinline></video>
-              </picture>
           </a>
-          
-          <a  data-title="lost"
-              data-description="When the path no longer made sense, only silence remained to lead the way."
-              href=""
-              class="bg-neutral-950 dark:bg-neutral-50 aspect-square grid place-content-start overflow-hidden opacity-100 transition-opacity hover:opacity-50">
+          <a id="OneDirection"
+
+          data-title="One Direction"
+          data-description="you shouldn't against the current"
+          class="bg-neutral-950 dark:bg-neutral-50 aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50 cursor-pointer">
             
-            <picture class="w-full h-full object-cover">
+          <picture class="w-full h-full object-cover">
+              <video  src="/src/gridProject/OneDirection/OneDirection.mp4"  alt="One Direction" loading="lazy" width="1080" height="1080" class="h-full w-full object-cover"
+                      autoplay muted loop playsinline></video>
+          </picture>
+
+          </a>
+          <a id="LOST"
+
+          data-title="LOST"
+          data-description="When the path no longer made sense, only silence remained to lead the way."
+          class="bg-neutral-950 dark:bg-neutral-50 aspect-square grid place-content-start overflow-hidden opacity-100 transition-opacity hover:opacity-50 cursor-pointer">
+            
+          <picture class="w-full h-full object-cover">
               <source srcset="/src/gridProject/LetItGetLost/LetItGetLost.webp" type="image/webp">
-              <img src="/src/gridProject/LetItGetLost/LetItGetLost.png" loading="lazy" width="1080" height="1350" alt="LostPoster" class="h-full w-full object-cover">
-            </picture>
-          </a>
+              <img    src   ="/src/gridProject/LetItGetLost/LetItGetLost.png"  alt="LostPoster"
+                      loading="lazy" width="1080" height="1350" class="h-full w-full object-cover">
+          </picture>
 
-          <a  data-title="Design 101"
-              data-description="Work in Progress"
-              href=""
-              class="bg-neutral-950 dark:bg-neutral-50 aspect-square flex justify-start items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50">
-            
-            <picture class="w-full h-full">
-              <source srcset="/src/gridProject/MNI/assetsMNI/coverDesign101.svg" type="image/svg">
-              <img src="/src/gridProject/MNI/assetsMNI/coverDesign101.svg" loading="lazy" width="1080" height="1080" alt="Media Nawacita Indonesia" class="h-full w-full object-cover">
-            </picture>
-            <picture>
-              <source srcset="/src/gridProject/MNI/assetsMNI/coverVisualIdentity.svg" type="image/svg">
-              <img src="/src/gridProject/MNI/assetsMNI/coverVisualIdentity.svg" loading="lazy" width="1080" height="1080" alt="Media Nawacita Indonesia" class="h-full w-full object-cover bg-[#f9f9f9] hidden">
-            </picture>
-            <picture>
-              <source srcset="/src/gridProject/MNI/assetsMNI/coverBrandGuidelines.svg" type="image/svg">
-              <img src="/src/gridProject/MNI/assetsMNI/coverBrandGuidelines.svg" loading="lazy" width="1080" height="1080" alt="Media Nawacita Indonesia" class="h-full w-full object-cover bg-[#f9f9f9] hidden">
-            </picture>
-            <picture>
-              <source srcset="/src/gridProject/MNI/assetsMNI/coverProduct.svg" type="image/svg">
-              <img src="/src/gridProject/MNI/assetsMNI/coverProduct.svg" loading="lazy" width="1080" height="1080" alt="Media Nawacita Indonesia" class="h-full w-full object-cover bg-[#f9f9f9] hidden">
-            </picture>
           </a>
+          <a id="MtBromo"
 
-          <a  data-title="Mt. Bromo"
-              data-description="  Probolinggo, Indonesia | 2018.07.22 07:52<br>
-                                  iPhone SE | f/2.2 1/2481 ISO25<br>"
-              href=""
-              class="bg-neutral-950 dark:bg-neutral-50 aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50">
+          data-title="Mt. Bromo"
+          data-description="Probolinggo, Indonesia | 2018.07.22 07:52<br>iPhone SE | f/2.2 1/2481 ISO25"
+          class="bg-neutral-950 dark:bg-neutral-50 aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50 cursor-pointer">
             
-            <picture class="w-full">
+          <picture class="w-full h-full object-cover">
               <source srcset="/src/gridProject/Bromo2018/Bromo2018.webp" type="image/webp">
-              <img src="/src/gridProject/Bromo2018/Bromo2018_1.webp" loading="lazy" width="1080" height="1440" alt="BromoTrip2018" class="h-full w-full object-cover">
-            </picture>
+              <img    src   ="/src/gridProject/Bromo2018/Bromo2018_1.webp"  alt="BromoTrip2018"
+                      loading="lazy" width="1080" height="1440" class="h-full w-full object-cover">
+          </picture>
+
+          </a>
+          <a id="MediaNawacitaIndonesia"
+
+          data-title="Design 101"
+          data-description="Dokumen ini menyediakan segala informasi desain <strong><i>Media Nawacita Indonesia</i></strong>.
+                            Tujuan dari dokumen ini, untuk menciptakan brand yang mudah dikenali serta membangun komunikasi visual yang konsisten."
+
+          data-direction1="&#x21B5; (in progress)"
+          data-href1="https://rahmadip.github.io/"
+
+          data-direction2="&#x21B5; (in progress)"
+          data-href2="https://rahmadip.github.io/"
+
+          data-direction3="&#x21B5; (in progress)"
+          data-href3="https://rahmadip.github.io/"
+
+          class="bg-neutral-950 dark:bg-neutral-50 aspect-square flex justify-start items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50 cursor-pointer">
+            
+          <picture class="w-full h-full object-cover">
+              <source srcset="/src/gridProject/MNI/assetsMNI/coverDesign101.svg" type="image/svg">
+              <img    src   ="/src/gridProject/MNI/assetsMNI/coverDesign101.svg" alt="Design 101 Media Nawacita Indonesia"
+                      loading="lazy" width="1080" height="1080" class="h-full w-full object-cover">
+          </picture>
+
+          <picture class="w-full h-full object-cover hidden">
+              <source srcset="/src/gridProject/MNI/assetsMNI/coverVisualIdentity.svg" type="image/svg">
+              <img    src="/src/gridProject/MNI/assetsMNI/coverVisualIdentity.svg"    alt="Visual Identity Media Nawacita Indonesia" 
+                      loading="lazy" width="1080" height="1080" class="h-full w-full object-cover bg-[#f9f9f9]">
+          </picture>
+
+          <picture class="w-full h-full object-cover hidden">
+              <source srcset="/src/gridProject/MNI/assetsMNI/coverBrandGuidelines.svg" type="image/svg">
+              <img    src="/src/gridProject/MNI/assetsMNI/coverBrandGuidelines.svg"    alt="Brand Guidelines Media Nawacita Indonesia"
+                      loading="lazy" width="1080" height="1080" class="h-full w-full object-cover bg-[#f9f9f9]">
+          </picture>
+
+          <picture class="w-full h-full object-cover hidden">
+              <source srcset="/src/gridProject/MNI/assetsMNI/coverProduct.svg" type="image/svg">
+              <img    src="/src/gridProject/MNI/assetsMNI/coverProduct.svg"    alt="Product Media Nawacita Indonesia"
+                      loading="lazy" width="1080" height="1080" class="h-full w-full object-cover bg-[#f9f9f9]">
+          </picture>
+
+          </a>
+          <a id="MtMerbabu"
+
+          data-title="Mt. Merbabu"
+          data-description="Boyolali, Indonesia<br>2017.07.26 12:00<br>Canon EOS M | f/5.6 1/125 ISO100"
+          class="bg-neutral-950 dark:bg-neutral-50 aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50 cursor-pointer">
+            
+          <picture class="w-full h-full object-cover">
+              <source srcset="/src/gridPhoto/Merbabu2017/IMG_3075.webp" type="image/webp">
+              <img    src   ="/src/gridPhoto/Merbabu2017/IMG_3075.jpg"  alt="Merbabu2017_1"
+                      loading="lazy" width="1080" height="720" class="h-full w-full object-cover">
+          </picture>
+
+          <picture class="w-full h-full object-cover hidden">
+              <source srcset="/src/gridPhoto/Merbabu2017/IMG_3066.webp" type="image/webp">
+              <img    src   ="/src/gridPhoto/Merbabu2017/IMG_3066.jpg"  alt="Merbabu2017_2"
+                      loading="lazy" width="1080" height="720" class="h-full w-full object-cover">
+          </picture>
+
+
           </a>
 
         </div>
       
-        <div id="gridPhoto" class="min-w-full grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-0.5">
-
-          <a  data-title="Mt. Merbabu"
-              data-description="  Boyolali, Indonesia<br>
-                                  2017.07.26 12:00<br>
-                                  Canon EOS M | f/5.6 1/125 ISO100"
-              href=""
-              class="bg-neutral-950 dark:bg-neutral-50 aspect-square flex justify-center items-center overflow-hidden opacity-100 transition-opacity hover:opacity-50">
-            
-            <picture class="h-full">
-              <source srcset="/src/gridPhoto/Merbabu2017/IMG_3075.webp" type="image/webp">
-              <img src="/src/gridPhoto/Merbabu2017/IMG_3075.jpg" loading="lazy" width="1080" height="720" alt="Merbabu2017_1" class="h-full w-full object-cover">
-            </picture>
-            <picture class="h-full">
-              <source srcset="/src/gridPhoto/Merbabu2017/IMG_3066.webp" type="image/webp">
-              <img src="/src/gridPhoto/Merbabu2017/IMG_3066.jpg" loading="lazy" width="1080" height="720" alt="Merbabu2017_2" class="h-full w-full object-cover hidden">
-            </picture>
-          </a>
-
-        </div>
+        <!-- <div id="gridPhoto" class="min-w-full grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-4 gap-0.5"></div> -->
 
       </div>
     </div>
