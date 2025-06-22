@@ -13,53 +13,38 @@
     <link rel="icon" href="/src/components/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
     <link rel="icon" href="/src/components/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
 </head>
-<body class="bg-neutral-[#f9f9f9] MNITheme">
-  <header id="header" class="z-50 sticky top-0 right-0 left-0"></header>
+<body class="bg-neutral-50 dark:bg-neutral-950 MNITheme">
+  <header id="header" class="z-50 fixed top-0 right-0 left-0"></header>
 
-  <div class="h-dvh w-screen bg-[#003366]">
-    <div class="mx-auto max-w-screen-xl h-dvh flex justify-between items-center px-4 sm:px-6 lg:px-8">
+  <div class="mt-16 bg-[url(/src/gridProject/MNI/viMNI/coverviMNI.svg)] mx-auto max-w-screen-xl aspect-2/1
+              flex flex-col justify-center items-start
+              gap-4 sm:gap-2 lg:gap-2
+              p-4 sm:p-6 lg:p-8 lg:py-32">
 
-      <div class="flex-row text-start max-w-2xl">
-        <h1 class="text-[#f9f9f9] uppercase">Visual<br>Indentity</h1>
-        <p class="text-[#f9f9f9] my-4">Visual Identity merupakan representasi visual atas nilai dan karakter brand. Dengan tampilan yang kuat dan konsisten, visual identity ditunjukan untuk menciptakan visualisasi yang mudah dikenali oleh audiens. Bagian ini menguraikan elemen-elemen utama pembentuk Visual Identity Media Nawacita Indonesia.</p>
-        <div>
-          <a href="/src/gridProject/MNI/viMNI/viMNI.html#viIntroduction" class="inline-block rounded-full border text-xs font-medium tracking-wide px-2.5 py-1 my-1 border-[#f9f9f9] text-neutral-50 transition hover:text-[#003366] hover:bg-[#f9f9f9]">Introduction</a>
-          <a href="/src/gridProject/MNI/viMNI/viMNI.html#viLogo" class="inline-block rounded-full border text-xs font-medium tracking-wide px-2.5 py-1 my-1 border-[#f9f9f9] text-neutral-50 transition hover:text-[#003366] hover:bg-[#f9f9f9]">Logo</a>
-          <a href="/src/gridProject/MNI/viMNI/viMNI.html#viColors" class="inline-block rounded-full border text-xs font-medium tracking-wide px-2.5 py-1 my-1 border-[#f9f9f9] text-neutral-50 transition hover:text-[#003366] hover:bg-[#f9f9f9]">Colors</a>
-          <a href="/src/gridProject/MNI/viMNI/viMNI.html#viTypography" class="inline-block rounded-full border text-xs font-medium tracking-wide px-2.5 py-1 my-1 border-[#f9f9f9] text-neutral-50 transition hover:text-[#003366] hover:bg-[#f9f9f9]">Typography</a>
-          <a href="/src/gridProject/MNI/viMNI/viMNI.html#viGraphicElements" class="inline-block rounded-full border text-xs font-medium tracking-wide px-2.5 py-1 my-1 border-[#f9f9f9] text-neutral-50 transition hover:text-[#003366] hover:bg-[#f9f9f9]">Graphic Elements</a>
-          <a href="/src/gridProject/MNI/viMNI/viMNI.html#viImagery" class="inline-block rounded-full border text-xs font-medium tracking-wide px-2.5 py-1 my-1 border-[#f9f9f9] text-neutral-50 transition hover:text-[#003366] hover:bg-[#f9f9f9]">Imagery</a>
-        </div>
-      </div>
+      <h1 class="text-[#f9f9f9] uppercase">Visual Identity</h1>
+      <p class="text-[#f9f9f9] max-w-2xl text-justify text-[0.6rem] sm:text-xs">Dengan tampilan yang kuat dan konsisten, visual identity ditunjukan untuk menciptakan visualisasi yang mudah dikenali oleh audiens. Bagian ini akan menjelaskan elemen-elemen utama pembentuk Visual Identity Media Nawacita Indonesia.</p>
 
-      <div class="aspect-video w-full h-auto overflow-hidden hidden lg:flex justify-center items-center">
-        <video autoplay muted loop playsinline class="h-[180%] w-auto object-cover">
-          <!-- <source src="/MNI/componentVIMNI/MNILogoMotionWhiteBlue.webm" type="video/webm">
-          <source src="/MNI/componentVIMNI/MNILogoMotionWhiteBlue.mp4" type="video/mp4"> -->
-        </video>
-      </div>
-
-    </div>
   </div>
 
   <div  class=" mx-auto max-w-screen-xl grid grid-cols-1
+                bg-[#f9f9f9]
                 p-4 sm:p-6 lg:p-8
-                gap-16 sm:gap-24 lg:gap-32">
+                gap-4 sm:gap-6 lg:gap-8">
 
     <div  id="viIntroduction"
           class=" grid col-span-1 border-[#060606]
                   grid-cols-4 sm:grid-cols-8 lg:grid-cols-12
                   gap-4 sm:gap-6 lg:gap-8">
 
-        <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center">
+        <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center gap-4 sm:gap-6 lg:gap-8">
           <h2>Introduction</h2>
           <span class="h-px flex-1 bg-[#060606]/20"></span>
         </div>
-        <h3 class="col-span-4 sm:col-span-8 lg:col-span-3">About MNI</h3>
-        <p class="col-span-4 sm:col-span-8 lg:col-span-9">
-            Media Nawacita Indonesia [MNI] merupakan media digital yang memproduksi artikel online dan video dengan fokus pada isu aktual dan politik.
-            Melalui berbagai platform digital, MNI menghadirkan konten yang cepat, jujur, dan tepercaya, sesuai dengan visi perusahaan.
-            Identitas ini tercermin dalam produk-produk media yang inspiratif dan edukatif, serta diperkuat oleh tagline "Cepat, Jujur, Tepercaya."
+
+        <h3 class="col-span-4 sm:col-span-2 lg:col-span-3 leading-none">About MNI</h3>
+        <p class="col-span-4 sm:col-span-6 lg:col-span-9">
+            Media Nawacita Indonesia merupakan media digital yang memproduksi artikel online dan video dengan fokus pada isu aktual dan politik.
+            Melalui berbagai platform digital, Identitas ini tercermin dalam produk-produk media yang inspiratif dan edukatif, serta diperkuat oleh tagline <strong>"Cepat, Jujur, Tepercaya"</strong>.
         </p>
     </div>
 
@@ -68,241 +53,212 @@
                   grid-cols-4 sm:grid-cols-8 lg:grid-cols-12
                   gap-4 sm:gap-6 lg:gap-8">
 
-        <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center">
+        <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center gap-4 sm:gap-6 lg:gap-8">
           <h2>Logo</h2>
           <span class="h-px flex-1 bg-[#060606]/20"></span>
         </div>
 
-        <h3 class="col-span-4 sm:col-span-2 lg:col-span-3">Konsep Logo</h3>
-        <p class="col-span-4 sm:col-span-6 lg:col-span-9">Logo MNI dirancang dengan pendekatan visual modern dan dinamis yang merepresentasikan karakter platform digital yang adaptif. Desainnya mengacu pada tagline utama “Cepat, Jujur, Tepercaya”, diwujudkan melalui komposisi yang sederhana, proporsional, dan bermakna.</p>
-        <details class="col-span-4 sm:col-span-4 lg:col-span-4 hover-active-border group [&_summary::-webkit-details-marker]:hidden" open>
+        <!-- KONSEP LOGO -->
+        <div class="col-span-4 sm:col-span-2 lg:col-span-3">
+          <h3>Konsep Logo</h3>
+          <p>Logo dirancang dengan pendekatan visual modern dan proporsional. Desain mengacu pada tagline <strong>“Cepat, Jujur, Tepercaya”.</strong></p>
+        </div>
+        <div class="col-span-4 sm:col-span-6 lg:col-span-9 flex flex-col sm:flex-row lg:flex-row gap-4 sm:gap-6 lg:gap-8">
 
-            <summary class="flex justify-between items-center gap-4 p-4">
-                <div>
-                    <h4>Kecepatan</h4>
-                    <p>Kemiringan mewakili kecepatan dan gerak maju</p>
-                </div>
-                <svg class="size-7 shrink-0 cursor-pointer fill-[#060606]/20 transition group-hover:fill-[#060606]/50 -rotate-45 duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
-                    <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-                </svg>
-            </summary>
-
-            <div class="bg-[#060606]/50 aspect-video">
-                <img class="object-cover w-full h-auto" src="" alt="" loading="lazy"/>
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+            <div class="col-span-2 sm:col-span-5 lg:col-span-5 aspect-video h-full w-full overflow-hidden">
+              <img src="/src/gridProject/MNI/viMNI/01-Logo/01-konsepLogo/konsepCepat.webp" alt="konsepCepat" class="h-full w-full object-cover" loading="lazy">
             </div>
-
-        </details>
-        <details class="col-span-4 sm:col-span-4 lg:col-span-4 hover-active-border group [&_summary::-webkit-details-marker]:hidden" open>
-
-            <summary class="flex justify-between items-center gap-4 p-4">
-                <div>
-                    <h4>Kepercayaan</h4>
-                    <p>Biru mewakili nilai kejujuran dan kepercayaan</p>
-                </div>
-                <svg class="size-7 shrink-0 cursor-pointer fill-[#060606]/20 transition group-hover:fill-[#060606]/50 -rotate-45 duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
-                    <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-                </svg>
-            </summary>
-
-            <div class="bg-[#060606]/50 aspect-video">
-                <img class="object-cover w-full h-auto" src="" alt="" loading="lazy"/>
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <h4>Kecepatan</h4>
+              <p>Kemiringan</p>
             </div>
-
-        </details>
-        <details class="col-span-4 sm:col-span-4 lg:col-span-4 hover-active-border group [&_summary::-webkit-details-marker]:hidden" open>
-
-            <summary class="flex justify-between items-center gap-5 p-4">
-                <div>
-                    <h4>Inovasi</h4>
-                    <p>Oranye melambangkan adaptif dan inovatif.</p>
-                </div>
-                <svg class="size-7 shrink-0 cursor-pointer fill-[#060606]/20 transition group-hover:fill-[#060606]/50 -rotate-45 duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
-                    <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-                </svg>
-            </summary>
-
-            <div class="bg-[#060606]/50 aspect-video">
-                <img class="object-cover w-full h-auto" src="" alt="" loading="lazy"/>
+          </div>
+  
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+            <div class="col-span-2 sm:col-span-5 lg:col-span-5 aspect-video h-full w-full overflow-hidden">
+              <img src="/src/gridProject/MNI/viMNI/01-Logo/01-konsepLogo/konsepPercaya.webp" alt="konsepPercaya" class="h-full w-full object-cover" loading="lazy">
             </div>
-
-        </details>
-
-        <span id="dividers" class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center"><span class="h-px flex-1 bg-[#060606]/20"></span></span>
-
-        <h3 class="col-span-4 sm:col-span-2 lg:col-span-4">Variasi Logo</h3>
-        <p class="col-span-4 sm:col-span-6 lg:col-span-8">Logo Media Nawacita Indonesia hadir dalam tiga variasi, yaitu utama, alternatif, dan ikon. Logo dirancang fleksibel untuk berbagai kebutuhan media. Setiap versi dapat digunakan dalam warna penuh maupun hitam putih, memastikan konsistensi visual di berbagai platform dan latar belakang.</p>
-        <details class="col-span-4 sm:col-span-4 lg:col-span-4 hover-active-border group [&_summary::-webkit-details-marker]:hidden" open>
-
-            <summary class="flex justify-between items-center gap-4 p-4">
-                <div>
-                    <h4>Logo Utama</h4>
-                    <p>Ideal untuk tampilan horizontal</p>
-                </div>
-                <svg class="size-7 shrink-0 cursor-pointer fill-[#060606]/20 transition group-hover:fill-[#060606]/50 -rotate-45 duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
-                    <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-                </svg>
-            </summary>
-
-            <div id="logoUtama">
-                <img id="logoUtamaColor" class="object-cover w-auto h-[30%]" src="/src/gridProject/MNI/assetsMNI/MNILogoUtamaColor.svg" alt="Logo Utama MNI Color" loading="lazy"/>
-                <img id="logoUtamaWhite" class="object-cover w-auto h-[30%] hidden" src="/src/gridProject/MNI/assetsMNI/MNILogoUtamaWhite.svg" alt="Logo Utama MNI White" loading="lazy"/>
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <h4>Kepercayaan</h4>
+              <p>Biru</p>
             </div>
-
-            <fieldset class="p-4 flex justify-center items-center flex-wrap gap-4">
-                <label for="ColorWhiteLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606]/20 has-checked:ring-offset-2">
-                    <input type="radio" name="ColorOptionLogoUtama" value="ColorWhiteLogoUtama" id="ColorWhiteLogoUtama" class="sr-only" onchange="updateLogoUtama()" checked/>
-                </label>
-
-                <label for="WhiteBlueLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                    <input type="radio" name="ColorOptionLogoUtama" value="WhiteBlueLogoUtama" id="WhiteBlueLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
-                </label>
-
-                <label for="WhiteOrangeLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                    <input type="radio" name="ColorOptionLogoUtama" value="WhiteOrangeLogoUtama" id="WhiteOrangeLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
-                </label>
-
-                <label for="WhiteBlackLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                    <input type="radio" name="ColorOptionLogoUtama" value="WhiteBlackLogoUtama" id="WhiteBlackLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
-                </label>
-            </fieldset>
-        </details>
-        <details class="col-span-4 sm:col-span-4 lg:col-span-4 hover-active-border group [&_summary::-webkit-details-marker]:hidden" open>
-
-            <summary class="flex justify-between items-center gap-4 p-4">
-                <div>
-                    <h4>Logo Alternatif</h4>
-                    <p>Efektif untuk ruang horizontal terbatas</p>
-                </div>
-                <svg class="size-7 shrink-0 cursor-pointer fill-[#060606]/20 transition group-hover:fill-[#060606]/50 -rotate-45 duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
-                    <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-                </svg>
-            </summary>
-
-            <div id="logoAlternatif">
-                <img id="logoAlternatifColor" class="object-cover w-auto h-[36%]" src="/src/gridProject/MNI/assetsMNI/MNILogoAlternatifColor.svg" alt="Logo Alternatif MNI Color" loading="lazy"/>
-                <img id="logoAlternatifWhite" class="object-cover w-auto h-[36%] hidden" src="/src/gridProject/MNI/assetsMNI/MNILogoAlternatifWhite.svg" alt="Logo Alternatif MNI White" loading="lazy"/>
+          </div>
+  
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+            <div class="col-span-2 sm:col-span-5 lg:col-span-5 aspect-video h-full w-full overflow-hidden">
+              <img src="/src/gridProject/MNI/viMNI/01-Logo/01-konsepLogo/konsepInovasi.webp" alt="konsepInovasi" class="h-full w-full object-cover" loading="lazy">
             </div>
-
-            <fieldset class="p-4 flex justify-center items-center flex-wrap gap-4">
-            <label for="ColorWhiteLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606]/20 has-checked:ring-offset-2">
-                <input type="radio"name="ColorOptionLogoAlternatif" value="ColorWhiteLogoAlternatif" id="ColorWhiteLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
-            </label>
-
-            <label for="WhiteBlueLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteBlueLogoAlternatif" id="WhiteBlueLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" checked/>
-            </label>
-
-            <label for="WhiteOrangeLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteOrangeLogoAlternatif" id="WhiteOrangeLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
-            </label>
-
-            <label for="WhiteBlackLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteBlackLogoAlternatif" id="WhiteBlackLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
-            </label>
-            </fieldset>
-        </details>
-        <details class="col-span-4 sm:col-span-4 lg:col-span-4 hover-active-border group [&_summary::-webkit-details-marker]:hidden" open>
-
-            <summary class="flex justify-between items-center gap-4 p-4">
-                <div>
-                    <h4>Logo Ikon</h4>
-                    <p>Ideal pada ruang sangat minim</p>
-                </div>
-                <svg class="size-7 shrink-0 cursor-pointer fill-[#060606]/20 transition group-hover:fill-[#060606]/50 -rotate-45 duration-300 group-open:rotate-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" stroke="none">
-                    <path d="M540,0C241.8,0,0,241.8,0,540s241.8,540,540,540,540-241.8,540-540S838.2,0,540,0ZM870.9,870.9c-43,43-93.1,76.8-148.8,100.3-57.7,24.4-118.9,36.8-182.1,36.8s-124.5-12.4-182.1-36.8c-55.7-23.6-105.8-57.3-148.8-100.3-43-43-76.8-93.1-100.3-148.8-24.4-57.7-36.8-118.9-36.8-182.1s12.4-124.5,36.8-182.1c23.6-55.7,57.3-105.8,100.3-148.8,43-43,93.1-76.8,148.8-100.3,57.7-24.4,118.9-36.8,182.1-36.8s124.5,12.4,182.1,36.8c55.7,23.6,105.8,57.3,148.8,100.3,43,43,76.8,93.1,100.3,148.8,24.4,57.6,36.8,118.9,36.8,182.1s-12.4,124.5-36.8,182.1c-23.6,55.7-57.3,105.8-100.3,148.8ZM720,450h72v342h-342v-72h219.1l-406.5-406.5,50.9-50.9,406.5,406.5v-219.1Z"/>
-                </svg>
-            </summary>
-
-            <div id="logoIkon">
-                <img id="logoIkonColor" class="object-cover w-auto h-[30%]" src="/src/gridProject/MNI/assetsMNI/MNILogoIkonColor.svg" alt="Logo Ikon MNI Color" loading="lazy"/>
-                <img id="logoIkonWhite" class="object-cover w-auto h-[30%] hidden" src="/src/gridProject/MNI/assetsMNI/MNILogoIkonWhite.svg" alt="Logo Ikon MNI White" loading="lazy"/>
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <h4>Inovasi</h4>
+              <p>Oranye</p>
             </div>
-
-            <fieldset class="p-4 flex justify-center items-center flex-wrap gap-4">
-            <label for="ColorWhiteLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606]/20 has-checked:ring-offset-2">
-                <input type="radio"name="ColorOptionLogoIkon" value="ColorWhiteLogoIkon" id="ColorWhiteLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
-            </label>
-
-            <label for="WhiteBlueLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoIkon" value="WhiteBlueLogoIkon" id="WhiteBlueLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
-            </label>
-
-            <label for="WhiteOrangeLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoIkon" value="WhiteOrangeLogoIkon" id="WhiteOrangeLogoIkon" class="sr-only" onchange="updateLogoIkon()" checked/>
-            </label>
-
-            <label for="WhiteBlackLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoIkon" value="WhiteBlackLogoIkon" id="WhiteBlackLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
-            </label>
-            </fieldset>
-        </details>
-
-        <span id="dividers" class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center"><span class="h-px flex-1 bg-[#060606]/20"></span></span>
-
-        <h3 class="col-span-4 sm:col-span-2 lg:col-span-4">Motion Logo</h3>
-        <p class="col-span-4 sm:col-span-6 lg:col-span-8">Motion logo resmi Media Nawacita Indonesia hadir sebagai elemen visual dinamis untuk berbagai kebutuhan digital. Tersedia dalam versi berwarna dan hitam putih, logo ini dirancang agar fleksibel digunakan pada media sosial, video pembuka, maupun format digital lainnya.</p>
-        <div class="col-span-4 sm:col-span-8 lg:col-span-12 hover-active-border group overflow-hidden">
-            <div id="logoMotion">
-                <video id="logoMotionColorWhite" class="object-cover w-full h-auto" autoplay loop muted playsinline loading="lazy">
-                  <source src="/src/gridProject/MNI/assetsMNI/MNILogoMotionColorWhite.webm" type="video/webm">
-                  <source src="/src/gridProject/MNI/assetsMNI/MNILogoMotionColorWhite.mp4" type="video/mp4">
-                </video>
-                <video id="logoMotionWhiteBlue" class="object-cover w-full h-auto" autoplay loop muted playsinline loading="lazy">
-                  <source src="/src/gridProject/MNI/assetsMNI/MNILogoMotionWhiteBlue.webm" type="video/webm">
-                  <source src="/src/gridProject/MNI/assetsMNI/MNILogoMotionWhiteBlue.mp4" type="video/mp4">
-                </video>
-                <video id="logoMotionWhiteOrange" class="object-cover w-full h-auto" autoplay loop muted playsinline loading="lazy">
-                  <source src="/src/gridProject/MNI/assetsMNI/MNILogoMotionWhiteOrange.webm" type="video/webm">
-                  <source src="/src/gridProject/MNI/assetsMNI/MNILogoMotionWhiteOrange.mp4" type="video/mp4">
-                </video>
-                <video id="logoMotionWhiteBlack" class="object-cover w-full h-auto" autoplay loop muted playsinline loading="lazy">
-                  <source src="/src/gridProject/MNI/assetsMNI/MNILogoMotionWhiteBlack.webm" type="video/webm">
-                  <source src="/src/gridProject/MNI/assetsMNI/MNILogoMotionWhiteBlack.mp4" type="video/mp4">
-                </video>
-            </div>
-            <fieldset class="p-4 flex justify-center items-center flex-wrap gap-4">
-            <label for="ColorWhiteLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio"name="ColorOptionLogoMotion" value="ColorWhiteLogoMotion" id="ColorWhiteLogoMotion" class="sr-only" onchange="updateLogoMotion()" checked/>
-            </label>
-
-            <label for="WhiteBlueLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoMotion" value="WhiteBlueLogoMotion" id="WhiteBlueLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
-            </label>
-
-            <label for="WhiteOrangeLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoMotion" value="WhiteOrangeLogoMotion" id="WhiteOrangeLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
-            </label>
-
-            <label for="WhiteBlackLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
-                <input type="radio" name="ColorOptionLogoMotion" value="WhiteBlackLogoMotion" id="WhiteBlackLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
-            </label>
-            </fieldset>
+          </div>
+          
         </div>
 
-        <span id="dividers" class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center"><span class="h-px flex-1 bg-[#060606]/20"></span></span>
+        <!-- VARIASI LOGO -->
+        <div class="col-span-4 sm:col-span-8 lg:col-span-3">
+          <h3>Variasi Logo</h3>
+          <p> Media Nawacita Indonesia mempunyai tiga variasi logo yang dirancang agar fleksibel dan konsisten di berbagai kebutuhan media. 
+              Setiap variasi dapat digunakan dalam bewarna maupun hitam putih.</p>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-9 flex flex-col sm:flex-row lg:flex-row gap-4 sm:gap-6 lg:gap-8">
 
-        <h3 class="col-span-4 sm:col-span-2 lg:col-span-4">Kontruksi Logo</h3>
-        <p class="col-span-4 sm:col-span-6 lg:col-span-8">Konstruksi logo dirancang untuk menjadi panduan dalam memproduksi ulang logo Media Nawacita Indonesia secara konsisten. Dengan mengikuti panduan yang telah dirancang, skala dan karakter logo akan terjaga visibilitas dan konsistensinya. Logo MNI dibangun menggunakan sistem grid dengan garis vertikal miring 9°.</p>
-        <div class="col-span-4 sm:col-span-8 lg:col-span-12 hover-active-border group overflow-hidden">
-            <div id="logoKontruksi">
-                <img id="logoKontruksiUtama" class="object-cover w-full h-full" src="/src/gridProject/MNI/assetsMNI/MNILogoKontruksiUtama.svg" loading="lazy"/>
-                <img id="logoKontruksiAlternatif" class="object-cover w-full h-full" src="/src/gridProject/MNI/assetsMNI/MNILogoKontruksiAlternatif.svg" loading="lazy"/>
-                <img id="logoKontruksiIkon" class="object-cover w-full h-full" src="/src/gridProject/MNI/assetsMNI/MNILogoKontruksiIkon.svg" loading="lazy"/>
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+            <div id="logoUtama">
+                <img id="logoUtamaColor" class="object-cover w-auto h-[30%]" src="/src/gridProject/MNI/viMNI/01-Logo/02-variasiLogo/MNILogoUtamaColor.svg" alt="Logo Utama MNI Color" loading="lazy"/>
+                <img id="logoUtamaWhite" class="object-cover w-auto h-[30%] hidden" src="/src/gridProject/MNI/viMNI/01-Logo/02-variasiLogo/MNILogoUtamaWhite.svg" alt="Logo Utama MNI White" loading="lazy"/>
             </div>
-            <fieldset class="p-4 flex justify-center items-center flex-wrap gap-4">
-              <label for="OptionLogoKontruksiUtama" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-[#060606]/20 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
-                <h5 class="text-[#f9f9f9]">Logo Utama</h5>
-                <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiUtama" id="OptionLogoKontruksiUtama" class="sr-only" onchange="updateLogoKontruksi()" checked/>
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <fieldset class="flex justify-start sm:justify-center items-center flex-wrap gap-3 mb-2">
+                  <label for="ColorWhiteLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606]/20 has-checked:ring-offset-2">
+                      <input type="radio" name="ColorOptionLogoUtama" value="ColorWhiteLogoUtama" id="ColorWhiteLogoUtama" class="sr-only" onchange="updateLogoUtama()" checked/>
+                  </label>
+
+                  <label for="WhiteBlueLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
+                      <input type="radio" name="ColorOptionLogoUtama" value="WhiteBlueLogoUtama" id="WhiteBlueLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
+                  </label>
+
+                  <label for="WhiteOrangeLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
+                      <input type="radio" name="ColorOptionLogoUtama" value="WhiteOrangeLogoUtama" id="WhiteOrangeLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
+                  </label>
+
+                  <label for="WhiteBlackLogoUtama" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+                      <input type="radio" name="ColorOptionLogoUtama" value="WhiteBlackLogoUtama" id="WhiteBlackLogoUtama" class="sr-only" onchange="updateLogoUtama()" />
+                  </label>
+              </fieldset>
+              <h4>Logo Utama</h4>
+              <p>Ideal untuk ruang horizontal</p>
+            </div>
+          </div>
+  
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+            <div id="logoAlternatif">
+                <img id="logoAlternatifColor" class="object-cover w-auto h-[36%]" src="/src/gridProject/MNI/viMNI/01-Logo/02-variasiLogo/MNILogoAlternatifColor.svg" alt="Logo Alternatif MNI Color" loading="lazy"/>
+                <img id="logoAlternatifWhite" class="object-cover w-auto h-[36%] hidden" src="/src/gridProject/MNI/viMNI/01-Logo/02-variasiLogo/MNILogoAlternatifWhite.svg" alt="Logo Alternatif MNI White" loading="lazy"/>
+            </div>
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <fieldset class="flex justify-start sm:justify-center items-center flex-wrap gap-3 mb-2">
+              <label for="ColorWhiteLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606]/20 has-checked:ring-offset-2">
+                  <input type="radio"name="ColorOptionLogoAlternatif" value="ColorWhiteLogoAlternatif" id="ColorWhiteLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
               </label>
-              <label for="OptionLogoKontruksiAlternatif" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-[#060606]/20 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
-                <h5 class="text-[#f9f9f9]">Logo Alternatif</h5>
-                <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiAlternatif" id="OptionLogoKontruksiAlternatif" class="sr-only" onchange="updateLogoKontruksi()"/>
+
+              <label for="WhiteBlueLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
+                  <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteBlueLogoAlternatif" id="WhiteBlueLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" checked/>
               </label>
-              <label for="OptionLogoKontruksiIkon" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-[#060606]/20 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
-                <h5 class="text-[#f9f9f9]">Logo Ikon</h5>
-                <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiIkon" id="OptionLogoKontruksiIkon" class="sr-only" onchange="updateLogoKontruksi()"/>
+
+              <label for="WhiteOrangeLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
+                  <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteOrangeLogoAlternatif" id="WhiteOrangeLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
               </label>
-            </fieldset>
+
+              <label for="WhiteBlackLogoAlternatif" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+                  <input type="radio" name="ColorOptionLogoAlternatif" value="WhiteBlackLogoAlternatif" id="WhiteBlackLogoAlternatif" class="sr-only" onchange="updateLogoAlternatif()" />
+              </label>
+              </fieldset>
+              <h4>Logo Alternatif</h4>
+              <p>Efektif untuk ruang vertikal</p>
+            </div>
+          </div>
+  
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+            <div id="logoIkon">
+                <img id="logoIkonColor" class="object-cover w-auto h-[30%]" src="/src/gridProject/MNI/viMNI/01-Logo/02-variasiLogo/MNILogoIkonColor.svg" alt="Logo Ikon MNI Color" loading="lazy"/>
+                <img id="logoIkonWhite" class="object-cover w-auto h-[30%] hidden" src="/src/gridProject/MNI/viMNI/01-Logo/02-variasiLogo/MNILogoIkonWhite.svg" alt="Logo Ikon MNI White" loading="lazy"/>
+            </div>
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <fieldset class="flex justify-start sm:justify-center items-center flex-wrap gap-3 mb-2">
+                <label for="ColorWhiteLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606]/20 has-checked:ring-offset-2">
+                    <input type="radio"name="ColorOptionLogoIkon" value="ColorWhiteLogoIkon" id="ColorWhiteLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
+                </label>
+
+                <label for="WhiteBlueLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
+                    <input type="radio" name="ColorOptionLogoIkon" value="WhiteBlueLogoIkon" id="WhiteBlueLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
+                </label>
+
+                <label for="WhiteOrangeLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
+                    <input type="radio" name="ColorOptionLogoIkon" value="WhiteOrangeLogoIkon" id="WhiteOrangeLogoIkon" class="sr-only" onchange="updateLogoIkon()" checked/>
+                </label>
+
+                <label for="WhiteBlackLogoIkon" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+                    <input type="radio" name="ColorOptionLogoIkon" value="WhiteBlackLogoIkon" id="WhiteBlackLogoIkon" class="sr-only" onchange="updateLogoIkon()" />
+                </label>
+              </fieldset>
+              <h4>Logo Ikon</h4>
+              <p>Ideal pada ruang minim</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- MOTION LOGO -->
+        <div class="col-span-4 sm:col-span-4 lg:col-span-6">
+          <h3>Motion Logo</h3>
+          <p class="mb-4"> Motion logo resmi Media Nawacita Indonesia hadir sebagai elemen visual dinamis untuk berbagai kebutuhan digital. Tersedia dalam versi berwarna dan hitam putih, logo ini dirancang agar fleksibel digunakan pada media sosial, video pembuka, maupun format digital lainnya.</p>
+          <div class="hover-active-border group overflow-hidden">
+              <div id="logoMotion">
+                  <video id="logoMotionColorWhite" class="object-cover w-full h-auto" autoplay loop muted playsinline loading="lazy">
+                    <source src="/src/gridProject/MNI/viMNI/01-Logo/03-motionLogo/MNILogoMotionColorWhite.webm" type="video/webm">
+                    <source src="/src/gridProject/MNI/viMNI/01-Logo/03-motionLogo/MNILogoMotionColorWhite.mp4" type="video/mp4">
+                  </video>
+                  <video id="logoMotionWhiteBlue" class="object-cover w-full h-auto" autoplay loop muted playsinline loading="lazy">
+                    <source src="/src/gridProject/MNI/viMNI/01-Logo/03-motionLogo/MNILogoMotionWhiteBlue.webm" type="video/webm">
+                    <source src="/src/gridProject/MNI/viMNI/01-Logo/03-motionLogo/MNILogoMotionWhiteBlue.mp4" type="video/mp4">
+                  </video>
+                  <video id="logoMotionWhiteOrange" class="object-cover w-full h-auto" autoplay loop muted playsinline loading="lazy">
+                    <source src="/src/gridProject/MNI/viMNI/01-Logo/03-motionLogo/MNILogoMotionWhiteOrange.webm" type="video/webm">
+                    <source src="/src/gridProject/MNI/viMNI/01-Logo/03-motionLogo/MNILogoMotionWhiteOrange.mp4" type="video/mp4">
+                  </video>
+                  <video id="logoMotionWhiteBlack" class="object-cover w-full h-auto" autoplay loop muted playsinline loading="lazy">
+                    <source src="/src/gridProject/MNI/viMNI/01-Logo/03-motionLogo/MNILogoMotionWhiteBlack.webm" type="video/webm">
+                    <source src="/src/gridProject/MNI/viMNI/01-Logo/03-motionLogo/MNILogoMotionWhiteBlack.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <fieldset class="p-4 flex justify-center items-center flex-wrap gap-4">
+              <label for="ColorWhiteLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#f9f9f9] border border-gray-300 has-checked:ring-2 has-checked:ring-[#060606]/20 has-checked:ring-offset-2">
+                  <input type="radio"name="ColorOptionLogoMotion" value="ColorWhiteLogoMotion" id="ColorWhiteLogoMotion" class="sr-only" onchange="updateLogoMotion()" checked/>
+              </label>
+  
+              <label for="WhiteBlueLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#003366] has-checked:ring-2 has-checked:ring-[#003366] has-checked:ring-offset-2">
+                  <input type="radio" name="ColorOptionLogoMotion" value="WhiteBlueLogoMotion" id="WhiteBlueLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
+              </label>
+  
+              <label for="WhiteOrangeLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#ff6600] has-checked:ring-2 has-checked:ring-[#ff6600] has-checked:ring-offset-2">
+                  <input type="radio" name="ColorOptionLogoMotion" value="WhiteOrangeLogoMotion" id="WhiteOrangeLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
+              </label>
+  
+              <label for="WhiteBlackLogoMotion" class="cursor-pointer block size-4 rounded-full bg-[#060606] has-checked:ring-2 has-checked:ring-[#060606] has-checked:ring-offset-2">
+                  <input type="radio" name="ColorOptionLogoMotion" value="WhiteBlackLogoMotion" id="WhiteBlackLogoMotion" class="sr-only" onchange="updateLogoMotion()" />
+              </label>
+              </fieldset>
+          </div>
+        </div>
+
+        <!-- KONTRUKSI LOGO -->
+        <div class="col-span-4 sm:col-span-4 lg:col-span-6">
+          <h3>Kontruksi Logo</h3>
+          <p class="mb-4">Konstruksi logo adalah panduan dalam memproduksi ulang logo Media Nawacita Indonesia. Dengan mengikuti panduan yang telah dirancang, skala dan karakter logo akan terjaga visibilitas dan konsistensinya. Logo MNI dibangun menggunakan sistem grid dengan garis vertikal miring <strong>9°</strong>.</p>
+          <div class="hover-active-border group overflow-hidden">
+              <div id="logoKontruksi">
+                  <img id="logoKontruksiUtama" class="object-cover w-full h-full" src="/src/gridProject/MNI/viMNI/01-Logo/04-kontruksiLogo/MNILogoKontruksiUtama.svg" loading="lazy"/>
+                  <img id="logoKontruksiAlternatif" class="object-cover w-full h-full" src="/src/gridProject/MNI/viMNI/01-Logo/04-kontruksiLogo/MNILogoKontruksiAlternatif.svg" loading="lazy"/>
+                  <img id="logoKontruksiIkon" class="object-cover w-full h-full" src="/src/gridProject/MNI//viMNI/01-Logo/04-kontruksiLogo/MNILogoKontruksiIkon.svg" loading="lazy"/>
+              </div>
+              <fieldset class="p-3 flex justify-center items-center flex-wrap gap-4">
+                <label for="OptionLogoKontruksiUtama" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-[#060606]/20 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
+                  <h4 class="text-[#f9f9f9] cursor-pointer">Logo Utama</h4>
+                  <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiUtama" id="OptionLogoKontruksiUtama" class="sr-only" onchange="updateLogoKontruksi()" checked/>
+                </label>
+                <label for="OptionLogoKontruksiAlternatif" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-[#060606]/20 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
+                  <h4 class="text-[#f9f9f9] cursor-pointer">Logo Alternatif</h4>
+                  <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiAlternatif" id="OptionLogoKontruksiAlternatif" class="sr-only" onchange="updateLogoKontruksi()"/>
+                </label>
+                <label for="OptionLogoKontruksiIkon" class="cursor-pointer flex justify-center items-center px-2 py-0.5 rounded-full bg-[#060606]/20 has-checked:ring-2 has-checked:ring-[#003366] has-checked:bg-[#003366] has-checked:ring-offset-2">
+                  <h4 class="text-[#f9f9f9] cursor-pointer">Logo Ikon</h4>
+                  <input type="radio" name="OptionLogoKontruksi" value="OptionLogoKontruksiIkon" id="OptionLogoKontruksiIkon" class="sr-only" onchange="updateLogoKontruksi()"/>
+                </label>
+              </fieldset>
+          </div>
         </div>
 
     </div>
@@ -310,225 +266,613 @@
     <div  id="viColors"
           class=" grid col-span-1 border-[#060606]
                   grid-cols-4 sm:grid-cols-8 lg:grid-cols-12
-                  gap-4 sm:gap-6 lg:gap-8
-                  pt-4 sm:pt-6 lg:pt-8
-                  border-t-4 sm:border-t-6 lg:border-t-8">
+                  gap-4 sm:gap-6 lg:gap-8">
 
-      <h2 class="col-span-4 sm:col-span-8 lg:col-span-12">Warna.</h2>
-      <p class="col-span-4 sm:col-span-6 lg:col-span-12">Media Nawacita Indonesia mengusung sembilan warna utama yang terdiri dari empat warna primer dan lima warna sekunder. Palet ini dirancang untuk merepresentasikan karakter, identitas, serta nilai visual perusahaan secara konsisten di berbagai media. Komposisi warna ini menjadi satu-satunya acuan dalam pengembangan identitas visual, dan penggunaannya dapat disesuaikan dengan kebutuhan serta karakteristik media yang digunakan.</p>
-      <h3 class="col-span-4 sm:col-span-2 lg:col-span-4">Warna Primer</h3>
-      <p class="col-span-4 sm:col-span-6 lg:col-span-8">Empat warna primer menjadi fondasi utama dari identitas visual MNI: Biru dan Oranye sebagai warna khas brand, didampingi Putih dan Hitam sebagai warna netral. Kombinasi ini digunakan untuk, menjaga kejelasan identitas perusahaan di berbagai media.</p>
-      <div class="col-span-2 sm:col-span-2 lg:col-span-3 group">
-        <div class="bg-[#003366] aspect-square rounded-md p-4 place-content-end hover-active-translate">
-          <h4 class="text-[#f9f9f9]">Blue</h4>
-          <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#003366</h5>
-          <div class="hover-active-hiddentoblock">
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">HEX</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: #003366</h5>
-            </div>
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">RGB</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: R0 G51 B102</h5>
-            </div>
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">CMYK</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: C100 M87 Y33 K23</h5>
-            </div>
-          </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center gap-4 sm:gap-6 lg:gap-8">
+          <h2>Warna</h2>
+          <span class="h-px flex-1 bg-[#060606]/20"></span>
         </div>
-      </div>
-      <div class="col-span-2 sm:col-span-2 lg:col-span-3 group">
-        <div class="bg-[#ff6600] aspect-square rounded-md p-4 place-content-end hover-active-translate">
-          <h4 class="text-[#f9f9f9]">Orange</h4>
-          <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#ff6600</h5>
-          <div class="hover-active-hiddentoblock">
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">HEX</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: #ff6600</h5>
-            </div>
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">RGB</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: R255 G102 B0</h5>
-            </div>
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">CMYK</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: C0 M74 Y100 K0</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-2 sm:col-span-2 lg:col-span-3 group">
-        <div class="bg-[#f9f9f9] aspect-square rounded-md p-4 place-content-end hover-active-translate">
-          <h4>White</h4>
-          <h5 class="hover-active-blocktohidden">#F9F9F9</h5>
-          <div class="hover-active-hiddentoblock">
-            <div>
-              <h5 class="inline-block w-10">HEX</h5>
-              <h5 class="inline-block">: #F9F9F9</h5>
-            </div>
-            <div>
-              <h5 class="inline-block w-10">RGB</h5>
-              <h5 class="inline-block">: R249 G249 B249</h5>
-            </div>
-            <div>
-              <h5 class="inline-block w-10">CMYK</h5>
-              <h5 class="inline-block">: C2 M1 Y1 K0</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-span-2 sm:col-span-2 lg:col-span-3 group">
-        <div class="bg-[#060606] aspect-square rounded-md p-4 place-content-end hover-active-translate">
-          <h4 class="text-[#f9f9f9]">Black</h4>
-          <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#060606</h5>
-          <div class="hover-active-hiddentoblock">
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">HEX</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: #060606</h5>
-            </div>
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">RGB</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: R6 G6 B6</h5>
-            </div>
-            <div>
-              <h5 class="inline-block text-[#f9f9f9] w-10">CMYK</h5>
-              <h5 class="inline-block text-[#f9f9f9]">: C74 M68 67 K88</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <h3 class="col-span-4 sm:col-span-2 lg:col-span-4">Warna Sekunder</h3>
-      <p class="col-span-4 sm:col-span-6 lg:col-span-8">Warna sekunder dirancang untuk memperkaya ekspresi visual tanpa mengganggu identitas inti. Warna-warna ini merupakan turunan dari warna primer, baik dari nada maupun struktur kode warnanya.</p>
-      <div class="col-span-4 sm:col-span-8 lg:col-span-12">
-      <div class="col-span-2 sm:col-span-2 lg:col-span-3 flex gap-4 sm:gap-6 lg:gap-8">
 
-        <div class="flex-1 group">
-          <div class="bg-[#006633] aspect-square rounded-md p-4 place-content-end hover-active-translate">
+        <p class="col-span-4 sm:col-span-8 lg:col-span-12">Media Nawacita Indonesia mengusung sembilan warna utama yang terdiri dari empat warna primer dan lima warna sekunder. Palet ini dirancang untuk merepresentasikan karakter, identitas, serta nilai visual perusahaan secara konsisten di berbagai media. Komposisi warna ini menjadi satu-satunya acuan dalam pengembangan identitas visual, dan penggunaannya dapat disesuaikan dengan kebutuhan serta karakteristik media yang digunakan.</p>
+
+        <!-- WARNA PRIMER -->
+        <div class="col-span-4 sm:col-span-8 lg:col-span-3">
+          <h3>Warna Primer</h3>
+          <p> Empat warna primer menjadi fondasi utama dari identitas visual MNI.
+              Biru dan Oranye sebagai warna khas brand, didampingi Putih dan Hitam sebagai warna netral.
+              Kombinasi ini digunakan untuk, menjaga kejelasan identitas perusahaan di berbagai media.</p>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-9 gap-1 sm:gap-6 lg:gap-8 flex">
+
+          <div class="bg-[#003366] flex-1 aspect-4/5 p-3 place-content-end hover-active-border group">
+            <h4 class="text-[#f9f9f9]">Blue</h4>
+            <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#003366</h5>
+            <div class="hover-active-hiddentoblock">
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">HEX</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: #003366</h5>
+              </div>
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">RGB</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: R0 G51 B102</h5>
+              </div>
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">CMYK</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: C100 M87 Y33 K23</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#ff6600] flex-1 aspect-4/5 p-3 place-content-end hover-active-border group">
+            <h4 class="text-[#f9f9f9]">Orange</h4>
+            <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#ff6600</h5>
+            <div class="hover-active-hiddentoblock">
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">HEX</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: #ff6600</h5>
+              </div>
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">RGB</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: R255 G102 B0</h5>
+              </div>
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">CMYK</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: C0 M74 Y100 K0</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#f9f9f9] flex-1 aspect-4/5 p-3 place-content-end hover-active-border group">
+            <h4>White</h4>
+            <h5 class="hover-active-blocktohidden">#F9F9F9</h5>
+            <div class="hover-active-hiddentoblock">
+              <div>
+                <h5 class="inline-block w-7">HEX</h5>
+                <h5 class="inline-block">: #F9F9F9</h5>
+              </div>
+              <div>
+                <h5 class="inline-block w-7">RGB</h5>
+                <h5 class="inline-block">: R249 G249 B249</h5>
+              </div>
+              <div>
+                <h5 class="inline-block w-7">CMYK</h5>
+                <h5 class="inline-block">: C2 M1 Y1 K0</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[#060606] flex-1 aspect-4/5 p-3 place-content-end hover-active-border group">
+            <h4 class="text-[#f9f9f9]">Black</h4>
+            <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#060606</h5>
+            <div class="hover-active-hiddentoblock">
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">HEX</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: #060606</h5>
+              </div>
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">RGB</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: R6 G6 B6</h5>
+              </div>
+              <div>
+                <h5 class="inline-block text-[#f9f9f9] w-7">CMYK</h5>
+                <h5 class="inline-block text-[#f9f9f9]">: C74 M68 67 K88</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- WARNA SEKUNDER -->
+        <div class="col-span-4 sm:col-span-8 lg:col-span-3">
+          <h3>Warna Sekunder</h3>
+          <p>Warna sekunder dirancang untuk memperkaya ekspresi visual tanpa mengganggu identitas inti. Warna-warna ini merupakan turunan dari warna primer, baik dari nada maupun struktur kode warnanya.</p>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-9 gap-1 sm:gap-6 lg:gap-8 flex">
+
+          <div class="bg-[#006633] flex-1 aspect-square p-3 place-content-end hover-active-border group">
             <h4 class="text-[#f9f9f9]">Green</h4>
             <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#006633</h5>
             <div class="hover-active-hiddentoblock">
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">HEX</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">HEX</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: #006633</h5>
               </div>
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">RGB</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">RGB</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: R0 G102 B51</h5>
               </div>
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">CMYK</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">CMYK</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: C90 M34 Y100 K27</h5>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="flex-1 group">
-          <div class="bg-[#ff9900] aspect-square rounded-md p-4 place-content-end hover-active-translate">
+          
+          <div class="bg-[#ff9900] flex-1 aspect-square p-3 place-content-end hover-active-border group">
             <h4 class="text-[#f9f9f9]">Yellow</h4>
             <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#ff9900</h5>
             <div class="hover-active-hiddentoblock">
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">HEX</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">HEX</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: #ff9900</h5>
               </div>
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">RGB</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">RGB</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: R255 G153 B0</h5>
               </div>
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">CMYK</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">CMYK</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: C0 M47 Y100 K0</h5>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="flex-1 group">
-          <div class="bg-[#990000] aspect-square rounded-md p-4 place-content-end hover-active-translate">
+          <div class="bg-[#990000] flex-1 aspect-square p-3 place-content-end hover-active-border group">
             <h4 class="text-[#f9f9f9]">Red</h4>
             <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#990000</h5>
             <div class="hover-active-hiddentoblock">
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">HEX</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">HEX</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: #990000</h5>
               </div>
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">RGB</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">RGB</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: R153 G0 B0</h5>
               </div>
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">CMYK</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">CMYK</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: C24 M100 Y100 K25</h5>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="flex-1 group">
-          <div class="bg-[#ffeedd] aspect-square rounded-md p-4 place-content-end hover-active-translate">
+          <div class="bg-[#ffeedd] flex-1 aspect-square p-3 place-content-end hover-active-border group">
             <h4>Cream</h4>
-            <h5 class="hover-active-block">#FFEEDD</h5>
+            <h5 class="hover-active-blocktohidden">#FFEEDD</h5>
             <div class="hover-active-hiddentoblock">
               <div>
-                <h5 class="inline-block w-10">HEX</h5>
+                <h5 class="inline-block w-7">HEX</h5>
                 <h5 class="inline-block">: #FFEEDD</h5>
               </div>
               <div>
-                <h5 class="inline-block w-10">RGB</h5>
+                <h5 class="inline-block w-7">RGB</h5>
                 <h5 class="inline-block">: R255 G238 B221</h5>
               </div>
               <div>
-                <h5 class="inline-block w-10">CMYK</h5>
+                <h5 class="inline-block w-7">CMYK</h5>
                 <h5 class="inline-block">: C0 M6 Y11 K0</h5>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="flex-1 group">
-          <div class="bg-[#663300] aspect-square rounded-md p-4 place-content-end transition hover-active-translate">
+          
+          <div class="bg-[#663300] flex-1 aspect-square p-3 place-content-end hover-active-border group">
             <h4 class="text-[#f9f9f9]">Brown</h4>
             <h5 class="hover-active-blocktohidden text-[#f9f9f9]">#663300</h5>
             <div class="hover-active-hiddentoblock">
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">HEX</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">HEX</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: #663300</h5>
               </div>
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">RGB</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">RGB</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: R102 G51 B0</h5>
               </div>
               <div>
-                <h5 class="inline-block text-[#f9f9f9] w-10">CMYK</h5>
+                <h5 class="inline-block text-[#f9f9f9] w-7">CMYK</h5>
                 <h5 class="inline-block text-[#f9f9f9]">: C38 M75 Y100 K48</h5>
               </div>
             </div>
           </div>
+
         </div>
-
-      </div>
-
-      </div>
 
     </div>
 
     <div  id="viTypography"
           class=" grid col-span-1 border-[#060606]
                   grid-cols-4 sm:grid-cols-8 lg:grid-cols-12
-                  gap-4 sm:gap-6 lg:gap-8
-                  pt-4 sm:pt-6 lg:pt-8
-                  border-t-4 sm:border-t-6 lg:border-t-8">
+                  gap-4 sm:gap-6 lg:gap-8">
 
-        <h2 class="col-span-4 sm:col-span-8 lg:col-span-12">Tipografi.</h2>
-        <div class="col-span-1 sm:col-span-8 lg:col-span-8 text-9xl tracking-tighter lg:leading-none text-[#003366]" id="changeFont">
-          <div class="font-normal">Reguler</div>
-          <div class="font-medium">Medium</div>
-          <div class="font-semibold">SemiBold</div>
-          <div class="font-bold">Bold</div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center gap-4 sm:gap-6 lg:gap-8">
+          <h2>Tipografi</h2>
+          <span class="h-px flex-1 bg-[#060606]/20"></span>
         </div>
-        <div class="col-span-1 sm:col-span-8 lg:col-span-4 hover-active-border"></div>
+
+        <div class="col-span-4 sm:col-span-8 lg:col-span-3">
+          <h3>Jenis Font</h3>
+          <p>Macam-macam <i>font</i> yang digunakan untuk menjaga konsistensi visual MNI. Semua jenis <i>font</i> dapat diakses dari <strong><i>Google Fonts</i></strong> yang mudah diterapkan di berbagai media.</p>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-9 flex flex-col sm:flex-row lg:flex-row gap-4 sm:gap-6 lg:gap-8">
+  
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+
+            <div class="  col-span-2 sm:col-span-5 lg:col-span-5
+                          p-3 aspect-square h-full w-full overflow-hidden
+                          bg-[#003366] text-[#f9f9f9] font-[Poppins]
+                          text-sm sm:text-2xl lg:text-2xl xl:text-3xl">
+
+              <div class="font-normal">Regular</div>
+              <div class="font-medium">Medium</div>
+              <div class="font-semibold">SemiBold</div>
+              <div class="font-bold">Bold</div>
+            </div>
+
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <h4>Poppins</h4>
+              <p>Font Utama</p>
+            </div>
+          </div>
+
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+
+            <div class="  col-span-2 sm:col-span-5 lg:col-span-5
+                          p-3 aspect-square h-full w-full overflow-hidden
+                          bg-[#ff6600] text-[#f9f9f9] font-[Inter]
+                          text-sm sm:text-2xl lg:text-2xl xl:text-3xl">
+
+              <div class="font-normal">Regular</div>
+              <div class="font-medium">Medium</div>
+              <div class="font-semibold">SemiBold</div>
+              <div class="font-bold">Bold</div>
+            </div>
+
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <h4>Inter</h4>
+              <p>Font Alternatif</p>
+            </div>
+          </div>
+
+          <div class="flex-1 hover-active-border grid grid-cols-5">
+
+            <div class="  col-span-2 sm:col-span-5 lg:col-span-5
+                          p-3 aspect-square h-full w-full overflow-hidden
+                          bg-[#060606] text-[#f9f9f9] font-[STIX_Two_Text]
+                          text-sm sm:text-2xl lg:text-2xl xl:text-3xl">
+
+              <div class="font-normal">Regular</div>
+              <div class="font-medium">Medium</div>
+              <div class="font-semibold">SemiBold</div>
+              <div class="font-bold">Bold</div>
+            </div>
+
+            <div class="col-span-3 sm:col-span-5 lg:col-span-5 p-3">
+              <h4>STIX Two Text</h4>
+              <p>Font Pendukung</p>
+            </div>
+          </div>
+
+        </div>
+        
+    </div>
+
+    <div  id="viGraphicAssets"
+          class=" grid col-span-1 border-[#060606]
+                  grid-cols-4 sm:grid-cols-8 lg:grid-cols-12
+                  gap-4 sm:gap-6 lg:gap-8">
+
+        <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center gap-4 sm:gap-6 lg:gap-8">
+          <h2>Assets Grafis</h2>
+          <span class="h-px flex-1 bg-[#060606]/20"></span>
+        </div>
+
+        <!-- Ikonografi -->
+        <div class="col-span-4 sm:col-span-8 lg:col-span-3">
+          <h3>Ikonografi</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-9 grid grid-cols-12 gap-1 sm:gap-2 lg:gap-3">
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM720,450h72v342h-342v-72h219.09l-406.55-406.55,50.91-50.91,406.55,406.55v-219.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] rotate-90 object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM720,450h72v342h-342v-72h219.09l-406.55-406.55,50.91-50.91,406.55,406.55v-219.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] rotate-180 object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM720,450h72v342h-342v-72h219.09l-406.55-406.55,50.91-50.91,406.55,406.55v-219.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] rotate-270 object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM720,450h72v342h-342v-72h219.09l-406.55-406.55,50.91-50.91,406.55,406.55v-219.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] rotate-315 object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM720,450h72v342h-342v-72h219.09l-406.55-406.55,50.91-50.91,406.55,406.55v-219.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] rotate-45 object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM720,450h72v342h-342v-72h219.09l-406.55-406.55,50.91-50.91,406.55,406.55v-219.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] rotate-135 object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM720,450h72v342h-342v-72h219.09l-406.55-406.55,50.91-50.91,406.55,406.55v-219.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] rotate-225 object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM720,450h72v342h-342v-72h219.09l-406.55-406.55,50.91-50.91,406.55,406.55v-219.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78h0ZM785.58,291.99c-29.92-29.05-65.46-51.64-106.63-67.78-41.17-16.13-84.48-24.21-135.71-24.21s-97.9,8.45-140.02,25.32c-42.13,16.89-78.4,40.48-108.79,70.76-30.41,30.29-53.74,66.04-70.01,107.25-16.28,41.22-24.41,86.39-24.41,135.55s8.13,94.48,24.41,135.93c16.27,41.47,39.49,77.58,69.65,108.37,30.16,30.78,66.06,54.61,107.71,71.5,41.64,16.87,87.83,25.32,138.58,25.32l-.02.02c26.32,0,53.86-2.98,82.58-8.94s54.08-14.65,76.11-26.07l-19.39-59.58c-22.02,11.42-45.24,19.74-69.65,24.95-24.41,5.21-47.64,7.82-69.65,7.82-41.64,0-79.23-6.83-112.73-20.48-33.52-13.66-62.36-32.77-86.53-57.35-24.18-24.58-42.72-54-55.65-88.26s-19.39-72.99-19.39-113.21,6.58-77.33,19.75-111.35c13.16-34.01,31.96-63.43,56.37-88.26,24.41-24.82,53.6-44.06,87.6-57.72,33.98-13.65,72.77-20.48,113.45-20.48s77.91,6.33,111.66,18.99,62.94,30.79,87.6,54.37c24.65,23.58,43.56,51.76,56.73,84.53,13.16,32.77,19.75,69.02,19.75,108.74,0,28.8-2.28,53.38-6.82,73.73-4.55,20.37-11.37,35.75-20.46,46.18-9.1,10.43-20.11,15.64-33.03,15.64-10.05,0-18.79-3.84-26.21-11.54-7.43-7.7-11.13-20.97-11.13-39.85v-253.23h-79.7v49.11c-10.25-12.69-22.21-23.23-35.9-31.62-23.94-14.64-50.98-21.97-84.01-21.97s-62.59,7.95-88.68,23.83c-26.09,15.9-46.56,38.11-61.39,66.66-14.84,28.56-22.26,60.7-22.26,97.94s7.54,70.14,22.62,98.69c15.08,28.56,35.54,50.9,61.39,67.03,25.85,16.15,55.29,24.21,88.32,24.21h0c33.03-.01,61.51-7.33,85.45-21.98,17.43-10.66,31.92-24.97,43.51-42.87,4.33,14.85,11.23,27.3,20.75,37.29,17.47,18.38,41.54,27.56,70.73,27.56s53.97-8.19,74.32-24.58c20.34-16.39,36.01-40.09,47.03-71.13,11.01-31.02,16.52-67.89,16.52-110.6,0-47.66-8.25-91.35-24.77-131.08-16.51-39.71-39.74-74.1-69.65-103.15h0ZM629.04,605.91c-9.34,17.87-21.9,31.41-37.7,40.59-15.8,9.19-33.99,13.78-54.57,13.78h0c-21.07-.01-39.62-4.85-55.65-14.53-16.04-9.68-28.49-23.2-37.34-40.59-8.86-17.37-13.28-38.72-13.28-62.56s4.42-44.43,13.28-61.82c8.85-17.38,21.3-30.78,37.34-40.22,16.03-9.43,35.07-14.15,55.65-14.15s38.77,4.6,54.57,13.78c15.8,9.19,28.37,22.33,37.7,39.47s14,38.6,14,62.94-4.66,45.44-14,63.31Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM723.9,288h-72l-19.95,126h-144l19.95-126h-72l-19.95,126h-124.05l-11.4,72h124.05l-17.1,108h-124.05l-11.4,72h124.05l-19.95,126h72l19.95-126h144l-19.95,126h72l19.95-126h124.05l11.4-72h-124.05l17.1-108h124.05l11.4-72h-124.05l19.95-126ZM603.45,594h-144l17.1-108h144l-17.1,108Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM870.92,870.92c-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78ZM776.24,445.18l-164.23,94.82,164.23,94.82-36,62.35-164.24-94.83v189.65h-72v-189.64l-164.23,94.82-36-62.35,164.24-94.83-164.24-94.83,36-62.35,164.23,94.82v-189.64h72v189.65l164.24-94.83,36,62.35Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0ZM407.76,422.77c12.12-23.4,27.95-41.65,47.49-54.72,19.51-13.07,39.29-24.5,59.35-34.3l-20.57-45.74c-17.95,6.53-38.53,16.08-61.72,28.59-23.23,12.53-46.17,29.4-68.85,50.64-22.7,21.24-41.7,47.38-56.98,78.42-10.38,21.06-17.24,44.74-20.58,71.06v203.29h203.29v-203.29h-99.62c0-39.21,6.05-70.5,18.2-93.93v-.02ZM687.28,422.77c12.12-23.4,27.95-41.65,47.49-54.72,19.51-13.07,39.29-24.5,59.35-34.3l-20.57-45.74c-17.95,6.53-38.53,16.08-61.72,28.59-23.23,12.53-46.17,29.4-68.85,50.64-22.7,21.24-41.7,47.38-56.98,78.42-10.38,21.06-17.24,44.74-20.58,71.06v203.29h203.29v-203.29h-99.62c0-39.21,6.05-70.5,18.2-93.93v-.02Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0ZM200,540c0-187.78,152.22-340,340-340s340,152.22,340,340-152.22,340-340,340-340-152.22-340-340M518.75,245.77c-28.48,8.67-56.74,34.85-80.2,78.84-7.73,14.63-14.37,29.8-19.89,45.39h100.09v-124.23h0ZM373.83,370c7.09-22.57,16.19-44.46,27.2-65.41,7.4-13.87,15.88-27.13,25.37-39.65-52.65,21.85-97.95,58.3-130.56,105.06h77.99ZM349.09,518.75c1.27-37.27,5.87-73.01,13.26-106.25h-91.21c-15.81,33.38-25.26,69.41-27.88,106.25h105.83,0ZM406,412.5c-8.36,34.84-13.17,70.44-14.36,106.25h127.12v-106.25h-112.76ZM561.25,412.5v106.25h127.07c-1.18-35.81-5.98-71.41-14.32-106.25h-112.75ZM391.68,561.25c1.18,35.81,5.98,71.41,14.32,106.25h112.75v-106.25h-127.07ZM561.25,561.25v106.25h112.75c7.95-32.51,13-68.34,14.37-106.25h-127.12ZM418.66,710c5.89,16.43,12.52,31.56,19.89,45.39,23.46,43.99,51.76,70.12,80.2,78.84v-124.23h-100.09ZM426.4,815.06c-9.49-12.53-17.98-25.79-25.37-39.65-11.01-20.94-20.11-42.83-27.2-65.41h-77.99c32.55,46.81,77.87,83.27,130.56,105.06M362.35,667.5c-7.67-34.93-12.11-70.5-13.26-106.25h-105.83c2.64,37.83,12.37,73.65,27.88,106.25h91.21ZM653.6,815.06c52.69-21.79,98.01-58.25,130.56-105.06h-77.99c-7.09,22.57-16.19,44.46-27.2,65.41-7.4,13.87-15.88,27.13-25.37,39.65M561.25,710v124.23c28.48-8.67,56.74-34.85,80.2-78.84,7.37-13.8,14-28.93,19.89-45.39h-100.09ZM717.65,667.5h91.2c15.51-32.6,25.24-68.42,27.88-106.25h-105.82c-1.15,35.75-5.59,71.32-13.26,106.25M836.74,518.75c-2.62-36.84-12.07-72.87-27.88-106.25h-91.2c7.39,33.24,11.98,68.98,13.26,106.25h105.82ZM678.98,304.59c10.5,19.72,19.63,41.65,27.2,65.41h77.99c-32.55-46.81-77.87-83.27-130.56-105.06,9.27,12.07,17.77,25.42,25.37,39.65M661.34,370c-5.52-15.59-12.16-30.76-19.89-45.39-23.46-43.99-51.72-70.13-80.2-78.84v124.23h100.09Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0ZM540,225c-85.48,0-96.23.39-129.82,1.89-33.59,1.57-56.46,6.85-76.51,14.65-21.03,7.89-40.08,20.29-55.79,36.34-16.05,15.72-28.46,34.76-36.34,55.79-7.8,20-13.11,42.92-14.65,76.39-1.5,33.67-1.89,44.38-1.89,129.98s.39,96.23,1.89,129.82c1.57,33.55,6.85,56.42,14.65,76.47,8.07,20.71,18.82,38.27,36.34,55.79,17.48,17.52,35.04,28.31,55.75,36.34,20.08,7.8,42.92,13.11,76.47,14.65,33.63,1.5,44.34,1.89,129.9,1.89s96.23-.39,129.86-1.89c33.51-1.57,56.46-6.85,76.51-14.65,21.02-7.89,40.05-20.3,55.76-36.34,17.52-17.52,28.27-35.08,36.34-55.79,7.76-20.04,13.07-42.92,14.65-76.47,1.5-33.59,1.89-44.3,1.89-129.86s-.39-96.27-1.89-129.9c-1.57-33.51-6.89-56.42-14.65-76.43-7.89-21.03-20.29-40.08-36.34-55.79-15.72-16.05-34.76-28.46-55.79-36.34-20.08-7.8-43-13.11-76.51-14.65-33.63-1.5-44.3-1.89-129.9-1.89h.08-.01ZM511.77,281.78h28.27c84.1,0,94.07.28,127.26,1.81,30.71,1.38,47.41,6.54,58.51,10.83,14.69,5.71,25.2,12.56,36.23,23.59,11.02,11.02,17.84,21.5,23.55,36.23,4.33,11.06,9.45,27.76,10.83,58.47,1.54,33.19,1.85,43.15,1.85,127.22s-.32,94.07-1.85,127.26c-1.38,30.71-6.54,47.37-10.83,58.47-5.09,13.66-13.14,26.02-23.59,36.19-11.02,11.02-21.5,17.84-36.23,23.55-11.02,4.33-27.72,9.45-58.47,10.87-33.19,1.5-43.15,1.85-127.26,1.85s-94.11-.35-127.3-1.85c-30.71-1.42-47.37-6.54-58.47-10.87-13.67-5.07-26.04-13.11-36.23-23.55-10.46-10.17-18.53-22.55-23.63-36.23-4.29-11.06-9.45-27.76-10.83-58.47-1.5-33.19-1.81-43.15-1.81-127.3s.32-94.03,1.81-127.22c1.42-30.71,6.54-47.41,10.87-58.51,5.71-14.69,12.56-25.2,23.59-36.23,11.02-11.03,21.5-17.84,36.23-23.55,11.1-4.33,27.76-9.45,58.47-10.87,29.06-1.34,40.32-1.73,99.03-1.77v.08h0ZM708.17,334.07c-20.88,0-37.8,16.92-37.8,37.8s16.92,37.8,37.8,37.8h0c20.88,0,37.8-16.92,37.8-37.8s-16.92-37.8-37.8-37.8M540.04,378.25c-89.34-1.39-162.9,69.9-164.3,159.25-1.39,89.34,69.9,162.9,159.25,164.3,1.68.03,3.37.03,5.05,0,89.34-1.39,160.64-74.95,159.25-164.3-1.36-87.38-71.87-157.88-159.25-159.25M540.04,434.99c58-.02,105.03,46.97,105.06,104.97.02,58-46.97,105.03-104.97,105.06h-.09c-58,0-105.01-47.02-105.01-105.01s47.02-105.01,105.01-105.01"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M576,252h71.28c5.18,25.74,19.44,58.21,44.46,90.43,24.48,31.57,56.95,53.57,100.26,53.57v72c-63.11,0-110.52-29.3-144-65.84v245.84c0,99.41-80.59,180-180,180s-180-80.59-180-180,80.59-180,180-180v72c-59.65,0-108,48.35-108,108s48.35,108,108,108,108-48.35,108-108V252h0ZM540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M542.03,318.72h3.5c32.37.12,196.38,1.3,240.6,13.19,27.21,7.39,48.43,28.68,55.72,55.92,3.98,14.96,6.77,34.77,8.66,55.21l.39,4.1.87,10.24.32,4.1c2.56,35.99,2.87,69.7,2.91,77.06v2.95c-.04,7.64-.39,43.63-3.23,81.12l-.32,4.13-.35,4.1c-1.97,22.52-4.88,44.89-9.25,61.35-7.29,27.23-28.51,48.53-55.72,55.92-45.68,12.29-219.29,13.15-243.35,13.19h-5.59c-12.17,0-62.49-.24-115.26-2.05l-6.69-.24-3.43-.16-6.73-.28-6.73-.28c-43.71-1.93-85.33-5.04-104.51-10.24-27.2-7.38-48.42-28.66-55.72-55.88-4.37-16.42-7.28-38.83-9.25-61.35l-.32-4.13-.32-4.1c-1.95-26.68-3.03-53.42-3.23-80.17v-4.84c.08-8.47.39-37.72,2.52-70.01l.28-4.06.12-2.05.32-4.1.87-10.24.39-4.1c1.89-20.44,4.69-40.28,8.66-55.21,7.29-27.23,28.51-48.53,55.72-55.92,19.18-5.12,60.8-8.27,104.51-10.24l6.69-.28,6.77-.24,3.39-.12,6.73-.28c37.48-1.2,74.97-1.87,112.46-2.01l7.6-.04v.04ZM477.02,445.12v189.72l163.69-94.82-163.69-94.9h0ZM540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M695.25,295.31h82.82l-180.9,207.29,212.83,282.08h-166.62l-130.51-171.11-149.34,171.11h-82.86l193.49-221.74-204.15-267.64h170.88l117.96,156.36,136.45-156.36h-.05ZM666.23,735.01h45.9l-296.22-392.61h-49.21l299.53,392.61ZM540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0ZM971.25,722.14c-23.57,55.72-57.32,105.78-100.32,148.79-43.01,43-93.07,76.75-148.79,100.32-30.2,12.78-61.39,22.25-93.33,28.37-1.43.28-2.86.55-4.29.8-.53.11-1.06.2-1.58.29-.93.17-1.85.33-2.78.48-1.36.24-2.73.47-4.09.69-.05.01-.1.02-.15.03-.91.15-1.83.3-2.75.43-24.03,3.77-48.46,5.66-73.17,5.66s-49.14-1.89-73.17-5.66c-16.29-2.54-32.4-5.95-48.3-10.22-1.59-.42-3.17-.86-4.75-1.3-.66-.19-1.32-.37-1.98-.56-.92-.26-1.83-.52-2.74-.8-1.22-.34-2.44-.7-3.66-1.08-16.09-4.82-31.95-10.54-47.54-17.13-55.72-23.57-105.78-57.32-148.79-100.32-43-43.01-76.75-93.07-100.32-148.79-24.39-57.65-36.75-118.93-36.75-182.14,0-.4,0-.79.01-1.19.15-62.79,12.5-123.66,36.74-180.95,23.57-55.72,57.32-105.78,100.32-148.79,43.01-43,93.07-76.75,148.79-100.32,57.65-24.39,118.93-36.75,182.14-36.75s124.49,12.36,182.14,36.75c55.72,23.57,105.78,57.32,148.79,100.32,43,43.01,76.75,93.07,100.32,148.79,24.23,57.28,36.59,118.15,36.74,180.93.01.4.01.81.01,1.21,0,63.21-12.36,124.49-36.75,182.14ZM651.8,338.99h46.74v-91.71s-42.38-7.28-82.96-7.28c-84.63,0-139.99,51.61-139.99,145.04v82.22h-94.12v107.74h94.04v264.99h115.89v-265.03h86.39l16.4-107.75h-102.75v-69.94c0-29.51,14.37-58.28,60.36-58.28h0Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0ZM576,666h-72l-6-378h84l-6,378ZM504,720h72v72h-72v-72Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0ZM504,720h72v72h-72v-72ZM575.99,666h-72c0-19.42,1-55.31,7.68-77.42,6.48-21.46,17.1-39.82,31.56-54.56,12.55-12.85,27.69-22.95,42.33-32.72,30.55-20.38,44.89-31.85,44.42-48.94v-.99c-.01-50.21-40.24-91.2-89.68-91.37h-.32c-23.98,0-46.52,9.31-63.51,26.24-17.07,17.01-26.47,39.65-26.47,63.76h-72c0-43.38,16.92-84.13,47.65-114.75,30.58-30.48,71.17-47.25,114.33-47.25h.58c88.85.31,161.16,73.34,161.42,162.9.6,26.58-8.79,50.69-27.91,71.69-14.45,15.86-32.56,27.94-48.54,38.6-12.1,8.07-23.53,15.7-30.8,23.15l-.07.07c-6.33,6.45-10.92,14.62-14.06,24.99-2.71,8.97-4.6,32.24-4.6,56.59h-.01Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0ZM288,480h120v120h-120v-120ZM480,480h120v120h-120v-120ZM672,480h120v120h-120v-120Z"/>
+            </svg>
+          </div>
+          <div class="randomColorBox bg-[#f9f9f9] col-span-1 aspect-square flex justify-center items-center overflow-hidden hover-active-border group">
+            <svg class="fill-[#060606] group-hover:fill-[#f9f9f9] group-active:fill-[#f9f9f9] object-cover w-[75%] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+              <path d="M540,72c63.21,0,124.49,12.36,182.14,36.75,55.72,23.57,105.78,57.32,148.78,100.33,43,43,76.76,93.06,100.33,148.78,24.38,57.65,36.75,118.93,36.75,182.14s-12.36,124.49-36.75,182.14c-23.57,55.72-57.32,105.78-100.33,148.78-43,43-93.06,76.76-148.78,100.33-57.65,24.38-118.93,36.75-182.14,36.75s-124.49-12.36-182.14-36.75c-55.72-23.57-105.78-57.32-148.78-100.33-43-43-76.76-93.06-100.33-148.78-24.38-57.65-36.75-118.93-36.75-182.14s12.36-124.49,36.75-182.14c23.57-55.72,57.32-105.78,100.33-148.78,43-43,93.06-76.76,148.78-100.33,57.65-24.38,118.93-36.75,182.14-36.75M540,0C241.77,0,0,241.77,0,540s241.77,540,540,540,540-241.77,540-540S838.23,0,540,0h0ZM616.35,288l-79.8,504h-72.9l79.8-504h72.9ZM761.25,288l-79.8,504h-72.9l79.8-504h72.9ZM471.45,288l-79.8,504h-72.9l79.8-504h72.9Z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Grafik -->
+        <div class="col-span-4 sm:col-span-8 lg:col-span-3">
+          <h3>Grafik</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-9 grid grid-cols-4 gap-4 sm:gap-6 lg:gap-4">
+          <div class="col-span-1 aspect-square hover-active-border"></div>
+          <div class="col-span-1 aspect-square hover-active-border"></div>
+          <div class="col-span-1 aspect-square hover-active-border"></div>
+          <div class="col-span-1 aspect-square hover-active-border"></div>
+          <div class="col-span-1 aspect-square hover-active-border"></div>
+          <div class="col-span-1 aspect-square hover-active-border"></div>
+          <div class="col-span-1 aspect-square hover-active-border"></div>
+          <div class="col-span-1 aspect-square hover-active-border"></div>
+        </div>
+
+        <!-- Tekstur -->
+        <div class="col-span-4 sm:col-span-8 lg:col-span-3">
+          <h3>Tekstur</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="col-span-4 sm:col-span-8 lg:col-span-9 grid grid-cols-3 gap-4 sm:gap-6 lg:gap-4">
+          <div class="col-span-1 aspect-video hover-active-border"></div>
+          <div class="col-span-1 aspect-video hover-active-border"></div>
+          <div class="col-span-1 aspect-video hover-active-border"></div>
+        </div>
+        
+    </div>
+
+    <div  id="vImagery"
+              class=" grid col-span-1 border-[#060606]
+                      grid-cols-4 sm:grid-cols-8 lg:grid-cols-12
+                      gap-1 sm:gap-2 lg:gap-4">
+
+            <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex items-center gap-4 sm:gap-6 lg:gap-8">
+              <h2>Imagery</h2>
+              <span class="h-px flex-1 bg-[#060606]/20"></span>
+            </div>
+
+            <!-- SOCIAL MEDIA -->
+            <div class="col-span-4 sm:col-span-8 lg:col-span-12 flex flex-col justify-center gap-1 sm:gap-2 lg:gap-4 overflow-x-clip">
+              
+              <div class="flex justify-start sliderTrackL">
+
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/footer2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/buruh2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/hardinknas2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/hutjakarta2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/huttni2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/iduladha2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/idulfitri2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/kartini2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/nyepi2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/pancasila2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/paskah2025.webp">
+                  </div>
+                </div>
+                <div class="pr-1 sm:pr-2 lg:pr-4">
+                  <div class="aspect-4/5 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/waisak2025.webp">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="flex justify-start flex-row-reverse sliderTrackR">
+
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/sqaure1.webp">
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/square2.webp">
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/square3.webp">
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/square4.webp">
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/anak2024.webm"></video>
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/buruh2024.webm"></video>
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/hutjakarta2024.webm"></video>
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/iduladha2024.webm"></video>
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/kebangkitannasional2024.webm"></video>
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/kenaikanisa2024.webm"></video>
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/pers2024.webm"></video>
+                  </div>
+                </div>
+                <div class="pl-1 sm:pl-2 lg:pl-4">
+                  <div class="aspect-1/1 h-24 sm:h-30 lg:h-48 hover-active-border">
+                    <video class="w-full h-full object-cover" autoplay loop muted playsinline src="/src/gridProject/MNI/viMNI/05-Imagery/01-socialMedia/waisak2024.webm"></video>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- <div class="col-span-4 sm:col-span-3 lg:col-span-2 place-content-center">
+              <div class="rounded-2xl aspect-1/2 overflow-hidden border-neutral-700 border-2">
+                <div class="w-full h-full"></div>
+              </div>
+            </div> -->
+
+            <div class="col-span-2 sm:col-span-4 lg:col-span-3 hover-active-border carouselX">
+              <div class="carouselInnerX flex flex-row w-full h-full aspect-square transition-transform duration-300 ease-in-out">
+                <div class="aspect-square w-full h-full flex justify-center items-center">
+                  <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/02-mockup/mockupMic.webp">
+                </div>
+                <div class="aspect-square w-full h-full flex justify-center items-center">
+                  <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/02-mockup/mockupMug.webp">
+                </div>
+              </div>
+            </div>
+            <div class="col-span-4 sm:col-span-4 lg:col-span-6 hover-active-border"></div>
+            <div class="col-span-2 sm:col-span-4 lg:col-span-3 hover-active-border carouselY">
+              <div class="carouselInnerY flex flex-col w-full h-full aspect-square transition-transform duration-300 ease-in-out">
+                <div class="aspect-square w-full h-full flex justify-center items-center">
+                  <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/02-mockup/mockupMic.webp">
+                </div>
+                <div class="aspect-square w-full h-full flex justify-center items-center">
+                  <img class="w-full h-full object-cover" src="/src/gridProject/MNI/viMNI/05-Imagery/02-mockup/mockupMug.webp">
+                </div>
+              </div>
+            </div>
+            
     </div>
 
   </div>

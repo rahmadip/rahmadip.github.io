@@ -7,7 +7,7 @@ function updateLogoUtama() {
   const selectedOptionLogoUtama = document.querySelector('input[name="ColorOptionLogoUtama"]:checked').value;
 
 
-  logoUtama.className = 'aspect-16/9 flex justify-center items-center overflow-hidden';
+  logoUtama.className = 'col-span-2 sm:col-span-5 lg:col-span-5 aspect-3/2 h-full w-full overflow-hidden flex justify-center items-center';
 
     if (selectedOptionLogoUtama === 'ColorWhiteLogoUtama') {
       logoUtama.classList.add('bg-[#f9f9f9]');
@@ -41,7 +41,7 @@ function updateLogoAlternatif() {
   const selectedOptionLogoAlternatif = document.querySelector('input[name="ColorOptionLogoAlternatif"]:checked').value;
 
 
-  logoAlternatif.className = 'aspect-16/9 flex justify-center items-center overflow-hidden';
+  logoAlternatif.className = 'col-span-2 sm:col-span-5 lg:col-span-5 aspect-3/2 h-full w-full overflow-hidden flex justify-center items-center';
 
     if (selectedOptionLogoAlternatif === 'ColorWhiteLogoAlternatif') {
       logoAlternatif.classList.add('bg-[#f9f9f9]');
@@ -75,7 +75,7 @@ function updateLogoIkon() {
   const selectedOptionLogoIkon = document.querySelector('input[name="ColorOptionLogoIkon"]:checked').value;
 
 
-  logoIkon.className = 'aspect-16/9 flex justify-center items-center overflow-hidden';
+  logoIkon.className = 'col-span-2 sm:col-span-5 lg:col-span-5 aspect-3/2 h-full w-full overflow-hidden flex justify-center items-center';
 
     if (selectedOptionLogoIkon === 'ColorWhiteLogoIkon') {
       logoIkon.classList.add('bg-[#f9f9f9]');
@@ -178,17 +178,187 @@ function updateLogoKontruksi() {
 
 
 
-// CHANGE FONT
+    
+// INFINITE LOOP
 
-function changeFont(fontName) {
-  document.getElementById('changeFont').style.fontFamily = `'${fontName}', sans-serif`;
+// === SLIDER KIRI (bergerak ke kiri) ===
+const trackL = document.querySelector('.sliderTrackL');
+let offsetL = 0;
+let isPausedL = false;
 
-  document.getElementById('fontName').textContent = fontName;
+trackL.addEventListener('mouseenter', () => isPausedL = true);
+trackL.addEventListener('mouseleave', () => isPausedL = false);
+trackL.addEventListener('touchstart', () => isPausedL = true);
+trackL.addEventListener('touchend', () => isPausedL = false);
 
-  const fontType = fontName === 'STIX Two Text' ? 'Serif' : 'Sans Serif';
-  document.getElementById('fontType').textContent = fontType;
+function loopL() {
+  if (!isPausedL) {
+    offsetL -= 1;
+    trackL.style.transition = 'none';
+    trackL.style.transform = `translateX(${offsetL}px)`;
+
+    const firstL = trackL.children[0];
+    const firstWidthL = firstL.offsetWidth;
+
+    if (Math.abs(offsetL) >= firstWidthL) {
+      trackL.appendChild(firstL);
+      offsetL += firstWidthL;
+      trackL.style.transition = 'none';
+      trackL.style.transform = `translateX(${offsetL}px)`;
+      trackL.appendChild(firstL);
+    }
+  }
+
+  requestAnimationFrame(loopL);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  changeFont('Poppins');
-});
+loopL();
+
+
+// === SLIDER KANAN (bergerak ke kanan) ===
+
+const trackR = document.querySelector('.sliderTrackR');
+let offsetR = 0;
+let isPausedR = false;
+
+trackR.addEventListener('mouseenter', () => isPausedR = true);
+trackR.addEventListener('mouseleave', () => isPausedR = false);
+trackR.addEventListener('touchstart', () => isPausedR = true);
+trackR.addEventListener('touchend', () => isPausedR = false);
+
+function loopR() {
+  if (!isPausedR) {
+    offsetR += 1;
+    trackR.style.transition = 'none';
+    trackR.style.transform = `translateX(${offsetR}px)`;
+
+    const firstR = trackR.children[0];
+    const firstWidthR = firstR.offsetWidth;
+
+    if (Math.abs(offsetR) >= firstWidthR) {
+      trackR.appendChild(firstR);
+      offsetR -= firstWidthR;
+      trackR.style.transition = 'none';
+      trackR.style.transform = `translateX(${offsetR}px)`;
+      trackR.appendChild(firstR);
+    }
+  }
+
+  requestAnimationFrame(loopR);
+}
+
+loopR();
+
+
+// RANDOM COLOR GRAPHIC
+
+  const boxes = document.querySelectorAll('.randomColorBox');
+  const colors = ['#003366', '#ff6600', '#060606', '#006633', '#ff9900', '#990000', '#663300'];
+
+  function getRandomColor() {return colors[Math.floor(Math.random() * colors.length)];}
+
+  boxes.forEach(box => {
+    // Saat hover (mouseenter)
+    box.addEventListener('mouseenter', () => {
+      box.style.backgroundColor = getRandomColor();
+    });
+
+    // Saat klik (active)
+    box.addEventListener('mousedown', () => {
+      box.style.backgroundColor = getRandomColor();
+    });
+
+    // Saat hover berakhir / mouse keluar
+    box.addEventListener('mouseleave', () => {
+      box.style.backgroundColor = '#f9f9f9'; // kembali ke default
+    });
+
+    // Saat mouse dilepas setelah klik
+    box.addEventListener('mouseup', () => {
+      box.style.backgroundColor = getRandomColor();
+    });
+  });
+
+
+
+// AUTOSLIDE CAROUSEL X
+
+(function () {
+  const carouselsX = document.querySelectorAll(".carouselX");
+
+  carouselsX.forEach((carouselX) => {
+    const innerX = carouselX.querySelector(".carouselInnerX");
+    const slidesX = innerX.children;
+    const totalX = slidesX.length;
+    let indexX = 0;
+    let intervalX;
+    let timeoutX;
+
+    const goToSlideX = (iX) => {
+      innerX.style.transform = `translateX(-${iX * 100}%)`;
+    };
+
+    const startX = () => {
+      const delayX = Math.floor(Math.random() * 5000);
+
+      timeoutX = setTimeout(() => {
+        intervalX = setInterval(() => {
+          indexX = (indexX + 1) % totalX;
+          goToSlideX(indexX);
+        }, 3000);
+      }, delayX);
+    };
+
+    const stopX = () => {
+      clearInterval(intervalX);
+      clearTimeout(timeoutX);
+    };
+
+    carouselX.addEventListener("mouseenter", stopX);
+    carouselX.addEventListener("mouseleave", startX);
+
+    startX();
+  });
+})();
+
+
+
+// AUTOSLIDE CAROUSEL Y
+
+(function () {
+  const carouselsY = document.querySelectorAll(".carouselY");
+
+  carouselsY.forEach((carouselY) => {
+    const innerY = carouselY.querySelector(".carouselInnerY");
+    const slidesY = innerY.children;
+    const totalY = slidesY.length;
+    let indexY = 0;
+    let intervalY;
+    let timeoutY;
+
+    const goToSlideY = (iY) => {
+      innerY.style.transform = `translateY(-${iY * 100}%)`;
+    };
+
+    const startY = () => {
+      const delayY = Math.floor(Math.random() * 5000);
+
+      timeoutY = setTimeout(() => {
+        intervalY = setInterval(() => {
+          indexY = (indexY + 1) % totalY;
+          goToSlideY(indexY);
+        }, 3000);
+      }, delayY);
+    };
+
+    const stopY = () => {
+      clearInterval(intervalY);
+      clearTimeout(timeoutY);
+    };
+
+    carouselY.addEventListener("mouseenter", stopY);
+    carouselY.addEventListener("mouseleave", startY);
+
+    startY();
+  });
+})();
