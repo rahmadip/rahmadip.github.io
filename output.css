@@ -626,8 +626,14 @@
   .bg-\[\#990000\] {
     background-color: #990000;
   }
+  .bg-\[\#\] {
+    background-color: #;
+  }
   .bg-\[\#f9f9f9\] {
     background-color: #f9f9f9;
+  }
+  .bg-\[\#f\] {
+    background-color: #f;
   }
   .bg-\[\#ff6600\] {
     background-color: #ff6600;
@@ -643,6 +649,15 @@
   }
   .bg-neutral-950 {
     background-color: var(--color-neutral-950);
+  }
+  .bg-\[url\(\/src\/gridProject\/MNI\/viMNI\/coverviMNI\.\)\] {
+    background-image: url(/src/gridProject/MNI/viMNI/coverviMNI.);
+  }
+  .bg-\[url\(\/src\/gridProject\/MNI\/viMNI\/coverviMNI\.p\)\] {
+    background-image: url(/src/gridProject/MNI/viMNI/coverviMNI.p);
+  }
+  .bg-\[url\(\/src\/gridProject\/MNI\/viMNI\/coverviMNI\.png\)\] {
+    background-image: url(/src/gridProject/MNI/viMNI/coverviMNI.png);
   }
   .bg-\[url\(\/src\/gridProject\/MNI\/viMNI\/coverviMNI\.svg\)\] {
     background-image: url(/src/gridProject/MNI/viMNI/coverviMNI.svg);
