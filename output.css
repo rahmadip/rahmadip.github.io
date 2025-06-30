@@ -341,11 +341,17 @@
   .aspect-2\/1 {
     aspect-ratio: 2/1;
   }
+  .aspect-3\/1 {
+    aspect-ratio: 3/1;
+  }
   .aspect-3\/2 {
     aspect-ratio: 3/2;
   }
   .aspect-4\/5 {
     aspect-ratio: 4/5;
+  }
+  .aspect-5\/4 {
+    aspect-ratio: 5/4;
   }
   .aspect-16\/9 {
     aspect-ratio: 16/9;
@@ -506,6 +512,9 @@
   .grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
+  .grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
   .grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -626,14 +635,8 @@
   .bg-\[\#990000\] {
     background-color: #990000;
   }
-  .bg-\[\#\] {
-    background-color: #;
-  }
   .bg-\[\#f9f9f9\] {
     background-color: #f9f9f9;
-  }
-  .bg-\[\#f\] {
-    background-color: #f;
   }
   .bg-\[\#ff6600\] {
     background-color: #ff6600;
@@ -649,18 +652,6 @@
   }
   .bg-neutral-950 {
     background-color: var(--color-neutral-950);
-  }
-  .bg-\[url\(\/src\/gridProject\/MNI\/viMNI\/coverviMNI\.\)\] {
-    background-image: url(/src/gridProject/MNI/viMNI/coverviMNI.);
-  }
-  .bg-\[url\(\/src\/gridProject\/MNI\/viMNI\/coverviMNI\.p\)\] {
-    background-image: url(/src/gridProject/MNI/viMNI/coverviMNI.p);
-  }
-  .bg-\[url\(\/src\/gridProject\/MNI\/viMNI\/coverviMNI\.png\)\] {
-    background-image: url(/src/gridProject/MNI/viMNI/coverviMNI.png);
-  }
-  .bg-\[url\(\/src\/gridProject\/MNI\/viMNI\/coverviMNI\.svg\)\] {
-    background-image: url(/src/gridProject/MNI/viMNI/coverviMNI.svg);
   }
   .fill-\[\#060606\] {
     fill: #060606;
