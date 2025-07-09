@@ -335,9 +335,6 @@
   .aspect-1\/1 {
     aspect-ratio: 1/1;
   }
-  .aspect-1\/2 {
-    aspect-ratio: 1/2;
-  }
   .aspect-2\/1 {
     aspect-ratio: 2/1;
   }
@@ -578,9 +575,6 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
   }
@@ -591,10 +585,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
   .border-b-0 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 0px;
@@ -604,9 +594,6 @@
   }
   .border-gray-300 {
     border-color: var(--color-gray-300);
-  }
-  .border-neutral-700 {
-    border-color: var(--color-neutral-700);
   }
   .border-neutral-950 {
     border-color: var(--color-neutral-950);
@@ -1010,11 +997,6 @@
       grid-column: span 2 / span 2;
     }
   }
-  .sm\:col-span-3 {
-    @media (width >= 40rem) {
-      grid-column: span 3 / span 3;
-    }
-  }
   .sm\:col-span-4 {
     @media (width >= 40rem) {
       grid-column: span 4 / span 4;
@@ -1175,11 +1157,6 @@
   .md\:gap-12 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 12);
-    }
-  }
-  .lg\:col-span-2 {
-    @media (width >= 64rem) {
-      grid-column: span 2 / span 2;
     }
   }
   .lg\:col-span-3 {
