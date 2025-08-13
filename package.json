@@ -1,0 +1,18 @@
+{
+  "name": "rahmadip",
+  "version": "1.2.0",
+  "description": "rahmadip portfolio",
+  "license": "ISC",
+  "author": "rahmadip",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "tdev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "tbld": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}
