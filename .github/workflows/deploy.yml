@@ -7,6 +7,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: Checkout Repository
@@ -14,7 +16,7 @@ jobs:
 
     - name: Replace Placeholder
       run: |
-        sed -i 's|__ANONPUBLIC__|${{ secrets.SUPABASEANONPUBLIC }}|g' script/initData.js
+        sed -i 's|__ANONPUBLIC__|'"${{ secrets.SUPABASEANONPUBLIC }}"'|g' script/initData.js
 
     - name: Deploy GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
