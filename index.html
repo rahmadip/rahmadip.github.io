@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="deafultHtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="icon" href="./image/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="./image/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
+    <title>rahamdip Portfolio</title>
+</head>
+<body class="deafultBody rahmadipTheme">
+    <header id="header" class="z-90 fixed top-0 right-0 left-0"></header>
+    <div class="w-screen h-[calc(100dvh-4rem)] mt-16">
+        <div class="mx-auto max-w-screen-xl h-full flex flex-col lg:flex-row justify-center lg:justify-between items-center paddingX gap-8">
+            <div>
+                <h2 class="textH2Tagline">Designs that <br><i>Shine.</i> Beyond <br>the <i>Line.</i></h2>
+                <h1 class="textH1Index transitionOpacity paddingY"><i>rahmadip.github.io</i></h1>
+                <div class="flex gap-4 justify-center lg:justify-start">
+                    <a href="./index.html#searchIndex" class="rahmadipRounded paddingX paddingY border font-semibold rahmadipShadow transitionOpacityR bg-neutral-50 text-neutral-950">Project</a>
+                    <a href="./profile/profile.html" class="rahmadipRounded paddingX paddingY border font-semibold rahmadipShadow transitionOpacity transitionColor">Profile</a>
+                </div>
+            </div>
+            <div class="order-first lg:order-last">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" class="rahmadipLogoMini transitionOpacity">
+                    <path d="M941.6,678.83c-70.19,217.16-326.29,341.68-540.43,262.76-112.88-41.56-247.63,23.95-284.65,138.41-114.15-24.56-158.54-167.89-68.48-246.54,56.55-49.49,125.58-83.25,199.34-97.58,73.02-14.17,148.91-8.76,219.5,15.64,37.2,12.86,77.14,15.72,115.47,8.29,77.39-14.48,143.97-71.87,169.18-146.69,12.86-37.2,15.73-77.14,8.29-115.47-5.47-51.11-143.69,8.9-154.17,12.78,84.68-38.17,370.5-166.51,449.33-203.85-185.24,127.55-38.83,173.93-113.37,372.25h-.01ZM25.03,773.42c78.83-37.35,364.65-165.68,449.33-203.85-10.48,3.88-148.7,63.88-154.17,12.78-7.44-38.33-4.57-78.27,8.29-115.47,25.21-74.82,91.79-132.21,169.18-146.69,38.33-7.44,78.27-4.57,115.47,8.29,70.58,24.4,146.48,29.81,219.5,15.64,73.77-14.33,142.79-48.09,199.34-97.58,90.06-78.65,45.66-221.98-68.48-246.54-37.02,114.46-171.77,179.97-284.65,138.41C464.69,59.49,208.6,184.01,138.4,401.17c-74.54,198.33,71.86,244.71-113.37,372.25h0Z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id="searchBar"></div>
+    <div id="gridCanvas"></div>
+    <footer id="footer" class="bottom-0 right-0 left-0"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./components/header.js"></script>
+    <script src="./script/initData.js"></script>
+    <script src="./index.js"></script>
+    <script src="./components/footer.js"></script>
+    <script src="./script/guard.js"></script>
+</body>
+</html>

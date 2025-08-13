@@ -1,0 +1,3 @@
+const projectUrl = 'https://yqftpmmzypdtfxgzcguk.supabase.co';
+const anonPublic = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlxZnRwbW16eXBkdGZ4Z3pjZ3VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4OTYxMTcsImV4cCI6MjA2OTQ3MjExN30.JJt4dR42DnLeyCYEoH8wUmoFXPTX8697kJjCzVaHlls';
+const supabase = window.supabase.createClient(projectUrl, anonPublic);
