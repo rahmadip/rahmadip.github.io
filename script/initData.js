@@ -1,3 +1,3 @@
-const projectUrl = 'https://yqftpmmzypdtfxgzcguk.supabase.co';
-const anonPublic = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlxZnRwbW16eXBkdGZ4Z3pjZ3VrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTM4OTYxMTcsImV4cCI6MjA2OTQ3MjExN30.JJt4dR42DnLeyCYEoH8wUmoFXPTX8697kJjCzVaHlls';
+const projectUrl = 'https://ypetibqlzpzmlxvssejj.supabase.co';
+const anonPublic = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlwZXRpYnFsenB6bWx4dnNzZWpqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU0MzE1MTEsImV4cCI6MjA3MTAwNzUxMX0.At9IjVcOYk6aFn0udMv7SdMaElN3gSrhNLoS8k7jOGI';
 const supabase = window.supabase.createClient(projectUrl, anonPublic);

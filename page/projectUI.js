@@ -34,8 +34,11 @@ const renderMediaAndCarousel = (project) => {
                 mediaElement.className = "lg:max-h-[calc(100dvh-9rem)] w-auto h-auto shrink-0 object-cover";
                 mediaElement.loading = 'lazy';
             } else {
-                console.warn(`Unknown media type for ${projectTitle}: ${mediaUrl}`);
-                return;
+                mediaElement = document.createElement('img');
+                mediaElement.src = mediaUrl;
+                mediaElement.alt = `Media for ${projectTitle}`;
+                mediaElement.className = "lg:max-h-[calc(100dvh-9rem)] w-auto h-auto shrink-0 object-cover";
+                mediaElement.loading = 'lazy';
             }
 
             mediaCanvas.appendChild(mediaElement);
@@ -267,7 +270,7 @@ const renderHeader = (profile) => {
         if (profileInfo) {
             const nameProfile = document.createElement('h2');
             nameProfile.className = 'textH3Title'
-            nameProfile.innerHTML = profile.fullName || 'Name data not found';
+            nameProfile.innerHTML = profile.name || 'Name data not found';
 
             const occupationProfile = document.createElement('p');
             occupationProfile.className = 'textPDesc transitionOpacity';

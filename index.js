@@ -76,11 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     imageElement.className = 'w-full h-full object-cover';
                     projectLink.appendChild(imageElement);
                 } else {
-                    projectLink.innerHTML = project.titleProject || project.title;
-                    console.warn(`Unknown media type for ${project.titleProject || project.title}: ${extension}`);
+                    const webElement = document.createElement('img');
+                    webElement.src = url;
+                    webElement.loading = 'lazy';
+                    webElement.alt = `Thumbnail ${project.titleProject || project.title}`;
+                    webElement.className = 'w-full h-full object-cover';
+                    projectLink.appendChild(webElement);
                 }
             } else {
-                projectLink.innerHTML = project.titleProject || project.title;
+                projectLink.innerHTML = project.titleProject || project.titleHead;
             }
             gridProject.appendChild(projectLink);
         });

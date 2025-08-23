@@ -15,7 +15,7 @@ async function getProjectData(projectId) {
 async function getProfileData() {
     const { data, error } = await supabase
         .from('profile')
-        .select('fullName, photo, occupation')
+        .select('name, photo, occupation')
         .single();
     if (error) {
         mainCanvas.className = "mx-auto max-w-screen-xl h-[calc(100dvh-8rem)] rahmadipTheme flex flex-col justify-center"
