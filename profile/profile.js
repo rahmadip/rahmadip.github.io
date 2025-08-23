@@ -69,7 +69,7 @@ async function loadProfile() {
 
                             const fullName = document.createElement('h1');
                             fullName.id = "fullname";
-                            fullName.innerHTML = dataProfile.fullName || 'Name data not found';
+                            fullName.innerHTML = dataProfile.name || 'Name data not found';
                             fullName.className = "textH1Title";
 
                             const occupation = document.createElement('p');
@@ -91,7 +91,7 @@ async function loadProfile() {
                     const aboutMe = document.createElement('p');
                     if (aboutMe) {
                         aboutMe.id = "aboutMe";
-                        aboutMe.innerHTML = dataProfile.aboutMe || 'Profile data not found';
+                        aboutMe.innerHTML = dataProfile.about || 'Profile data not found';
                         aboutMe.className = "textPDesc paddingX paddingY";
                     }
 
