@@ -16,7 +16,7 @@ jobs:
 
     - name: Replace Placeholder
       run: |
-        sed -i 's|__ANONPUBLIC__|'"${{ secrets.SUPABASEANONPUBLIC }}"'|g' script/initData.js
+        grep -R -l "__ANONPUBLIC__" --include=\*.js . | xargs sed -i 's|__ANONPUBLIC__|'"${{ secrets.SUPABASEANONPUBLIC }}"'|g'
 
     - name: Deploy GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
