@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v5.16.0"><script>
+			const themeStored = localStorage.getItem('theme');
+			const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+			const isDark = themeStored ? themeStored === 'dark' : prefersDark;
+			if (isDark) {document.documentElement.classList.add('dark');}
+		</script><link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: light)"><link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: dark)"><title>rahmadip | error</title><link rel="stylesheet" href="/_astro/error.DpEQ-oHH.css"></head> <body>  <div class="h-dvh w-dvw"> <div class="max-w-7xl mx-auto h-dvh p-8 flex flex-col items-center justify-center text-center gap-4"> <h1>Page not found.</h1> <p class="font-mono max-w-md"><i>An error has occurred. we couldn’t find the page you’re looking for.</i></p> <a href="/" class="hover:text-primary">Go back home</a> </div> </div>  <script type="module">document.addEventListener("contextmenu",function(e){e.preventDefault()});document.addEventListener("copy",function(e){e.preventDefault()});document.addEventListener("selectstart",function(e){e.preventDefault()});document.addEventListener("dragstart",function(e){(e.target.tagName==="IMG"||e.target.tagName==="VIDEO")&&e.preventDefault()});document.addEventListener("DOMContentLoaded",function(){const e=document.createElement("style");e.innerHTML=`
+    * {
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none;   /* Safari */
+      -khtml-user-select: none;    /* Konqueror HTML */
+      -moz-user-select: none;      /* Old versions of Firefox */
+      -ms-user-select: none;       /* Internet Explorer/Edge */
+      user-select: none;           /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+    }
+  `,document.head.appendChild(e)});</script> </body> </html>
