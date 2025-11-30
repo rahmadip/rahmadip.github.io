@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const profile = document.createElement('a');
                 profile.className = 'textPDesc paddingX place-content-center transitionOpacity';
                 profile.innerHTML = 'Profile';
-                profile.href = '../profile/profile.html';
+                profile.href = '../profile';
 
             navigation.append(home,projects,profile);
         footerContainer.append(copyright,navigation);
