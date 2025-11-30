@@ -1,0 +1,1 @@
+import{s as e,f as a}from"./supabase.CavMioOv.js";const n=document.getElementById("banner"),r=document.getElementById("avatar"),t=await e("info","*","type","image","id"),c=a(t,"section","avatar").value||"/public/avatar.svg",s=a(t,"section","banner").value||"/public/banner.webp";n.style.backgroundImage=`url(${s})`;r.src=c;
