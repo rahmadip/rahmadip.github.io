@@ -261,7 +261,7 @@ const renderHeader = (profile) => {
         const photoProfile = document.createElement('img');
         photoProfile.id = 'photoProfile';
         photoProfile.className = 'w-full h-full object-cover transitionBnW';
-        photoProfile.src = profile.photo;
+        photoProfile.src = profile.photo || '/public/avatar.svg';
         photoProfile.alt = "Photo Profile";
         photoProfile.loading = 'lazy';
         photoFrame.appendChild(photoProfile);
@@ -270,11 +270,11 @@ const renderHeader = (profile) => {
         if (profileInfo) {
             const nameProfile = document.createElement('h2');
             nameProfile.className = 'textH3Title'
-            nameProfile.innerHTML = profile.name || 'Name data not found';
+            nameProfile.innerHTML = profile.name || 'Fauzi Rahamdi Primanto';
 
             const occupationProfile = document.createElement('p');
             occupationProfile.className = 'textPDesc transitionOpacity';
-            occupationProfile.innerHTML = profile.occupation || 'Occupation data not found';
+            occupationProfile.innerHTML = profile.occupation || 'Graphic Designer';
 
             profileInfo.append(nameProfile,occupationProfile);
         }

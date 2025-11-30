@@ -14,9 +14,8 @@ async function getProjectData(projectId) {
 
 async function getProfileData() {
     const { data, error } = await supabase
-        .from('profile')
-        .select('name, photo, occupation')
-        .single();
+        .from('info')
+        .select('*');
     if (error) {
         mainCanvas.className = "mx-auto max-w-screen-xl h-[calc(100dvh-8rem)] rahmadipTheme flex flex-col justify-center"
         mainCanvas.innerHTML = `<p class="textH2Tagline">Invalid data <i>${error.message}</i></p>
