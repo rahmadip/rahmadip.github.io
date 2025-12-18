@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadProjects() {
         try {
             gridProject.innerHTML = '<p class="textH2Tagline col-span-3 text-start paddingX">Try to load projects.</p>';
-            const { data, error } = await supabase
+            const { data, error } = await db
                 .from('project')
                 .select('*')
                 .order('uniqueId', { ascending: false });

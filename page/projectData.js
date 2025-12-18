@@ -1,7 +1,7 @@
 const mainCanvas = document.getElementById('mainCanvas');
 
 async function getProjectData(projectId) {
-    const { data: projects, error } = await supabase
+    const { data: projects, error } = await db
         .from('project')
         .select('*');
     if (error) {
@@ -13,7 +13,7 @@ async function getProjectData(projectId) {
 }
 
 async function getProfileData() {
-    const { data, error } = await supabase
+    const { data, error } = await db
         .from('info')
         .select('*');
     if (error) {
