@@ -25,7 +25,7 @@ import Divider from "@/base/Divider.astro"
         projects.forEach((project:any) => {
             const projectA = Object.assign(
                 document.createElement('a'), {
-                    href: `./project/?path=${project.path}`,
+                    href: `/project/?path=${project.path}`,
                     className: 'flex items-center gap-2 py-2',
                     ariaLabel: project.title
                 }
