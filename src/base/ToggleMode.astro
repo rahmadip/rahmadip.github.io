@@ -1,0 +1,47 @@
+---
+
+---
+
+<label for="themeToggle" class="grid place-content-center cursor-pointer">
+    <input type="checkbox" id="themeToggle" class="sr-only peer">
+    <span class="sr-only">Toggle Theme</span>
+    <div class="peer
+        size-8
+        
+        after:size-8
+        after:duration-500
+        after:grid
+        after:place-content-center
+
+        after:-rotate-180
+        after:content-['☀️']
+
+        peer-checked:after:rotate-0
+        peer-checked:after:content-['🌙']
+    ">
+    </div>
+</label>
+
+<script is:inline>
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+
+    function applyTheme(isDark, save = true) {
+        if (isDark) {
+            htmlElement.classList.add('dark');
+            if (save) localStorage.setItem('theme', 'dark');
+        } else {
+            htmlElement.classList.remove('dark');
+            if (save) localStorage.setItem('theme', 'light');
+        }
+    }
+    if (themeToggle) {
+        themeToggle.checked = htmlElement.classList.contains('dark');
+    }
+    if (themeToggle) {
+        themeToggle.addEventListener('change', (e) => {
+            const isDark = e.currentTarget.checked;
+            applyTheme(isDark, true);
+        });
+    }
+</script>

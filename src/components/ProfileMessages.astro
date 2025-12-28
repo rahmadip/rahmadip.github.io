@@ -1,0 +1,107 @@
+---
+import Divider from "../base/Divider.astro";
+---
+
+<section>
+    <div>
+        <h2>Contact me</h2>
+        <p>Send a message to the author</p>
+    </div>
+    
+    <Divider/>
+    <form method="post" id="form" class="flex flex-col gap-4">
+        <div class="flex flex-col gap-2">
+            <label for="sender">Sender</label>
+            <input
+                id="sender"
+                type="text"
+                spellcheck="false"
+                autocorrect="off"
+                autocomplete="off"
+                placeholder="The sender will be anonymous if this field empty."
+                class="border shadow rounded-lg p-2"
+            >
+        </div>
+        <div class="flex flex-col gap-2">
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                required="true"
+                spellcheck="false"
+                autocorrect="off"
+                autocomplete="off"
+                placeholder= "Please include your contact information if you would like your message replied to."
+                class="border shadow rounded-lg p-2 min-h-36"
+            />
+        </div>
+        <div class="h-2 w-full rounded-full border overflow-hidden">
+            <div id="progress" role="progressbar" class="h-full bg-secondary transition-all duration-300" style="width: 0%"></div>
+        </div>
+        <button
+            type="submit"
+            id="send"
+            class="md:py-2"
+        >
+            send
+        </button>
+    </form>
+</section>
+
+<script>
+    const form = document.getElementById("form") as HTMLFormElement;
+    const sender = document.getElementById("sender") as HTMLInputElement;
+    const message = document.getElementById("message") as HTMLTextAreaElement;
+    const progress = document.getElementById("progress");
+    const send = document.getElementById("send") as HTMLButtonElement;
+
+    if (!form || !sender || !message || !progress || !send) {
+        console.error("element missing in the form");
+    } else {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const finalMessage = message.value.trim();
+            if (!finalMessage) return;
+            
+            let finalSender = sender.value.trim();
+            if (!finalSender) {finalSender = "Anonymous";}
+
+            send.innerHTML = "sending . . . ";
+            send.disabled = true;
+
+            progress.style.width = "50%";
+
+            try {
+                const req = await fetch(`https://routes-rahmadip.vercel.app/message`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: finalMessage,
+                        sender: finalSender
+                    })
+                });
+
+                if (!req.ok) {
+                    throw new Error(`${req.status}, ${req.statusText}`);
+                }
+
+                console.log(`${req.status}, ${req.statusText}`);
+                progress.style.width = "100%";
+                send.innerHTML = "your message has been sent";
+            } catch (error) {
+                console.error(error);
+                progress.style.width = "0%";
+                send.innerHTML = "error, try resend";
+            } finally {
+                form.reset();
+                setTimeout(() => {
+                    progress.style.width = "0%";
+                    send.disabled = false;
+                    send.innerHTML = "send";
+                }, 5000);
+            }
+        });
+    }
+</script>

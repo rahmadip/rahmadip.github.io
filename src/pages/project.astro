@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import EmptySpace from '@/base/EmptySpace.astro';
+import ProjectMain from '@/components/ProjectMain';
+import ProjectSide from '@/components/ProjectSide.astro';
+---
+
+<Layout titleHead="rahmadip | Project">
+	<Header />
+    <EmptySpace />
+	<main class="lg:flex-row">
+        <h1 class="sr-only">Project</h1>
+        <div class="flex flex-col gap-2 md:gap-4 w-full lg:flex-2">
+            <ProjectMain client:only />
+        </div>
+        <aside class="flex flex-col gap-2 md:gap-4 w-full lg:flex-1">
+            <ProjectSide />
+        </aside>
+	</main>
+	<Footer /> 
+</Layout>

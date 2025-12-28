@@ -1,0 +1,149 @@
+---
+
+---
+
+<input
+    id="search"
+    type="text"
+    spellcheck="false"
+    autocorrect="off"
+    autocomplete="off"
+    placeholder="Search project"
+    class="rounded-lg p-2 md:p-4 border shadow"
+>
+<div
+    id="contDisplay"
+    class="grid grid-cols-3 lg:grid-cols-4 gap-0.5 lg:gap-2"
+></div>
+
+<script>
+    import { get } from "@/lib/fetch";
+    import Assets from "@/assets/assets.json";
+
+    const search:any = document.getElementById('search');
+    const contDisplay:any = document.getElementById('contDisplay');
+    const log = "col-span-full rounded-lg p-2 md:p-4 border shadow text-3xl font-bold tracking-tight"
+
+    let display:any = [];
+    async function loadProjects() {
+        try {
+            const projects = await get('projects');
+
+            display = projects;
+            displayFunc(display);
+            
+            search.addEventListener('input', () => {
+                searchFunc(search.value);
+            });
+        } catch (e:any) {
+            console.error(e.status, e.error.message);
+            contDisplay.innerHTML = `<span class="${log}">Error to load project.</span>`;
+        }
+    }
+
+    function displayFunc(datas:any) {
+        contDisplay.innerHTML = '';
+
+        if (datas.length === 0) {
+            contDisplay.innerHTML = `<span class="${log}">No project found.</span>`;
+            return;
+        }
+
+        datas.forEach((data:any) => {
+            const projectA = document.createElement('a');
+            projectA.href = `./project.html?path=${data.path}`;
+            projectA.ariaLabel = data.title;
+            projectA.className = 'relative flex group aspect-square overflow-hidden border rounded-lg lg:shadow'
+
+            const loadingContent = Object.assign(document.createElement('span'), {
+                className: "absolute w-full h-full flex justify-center items-center"
+            });
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.setAttribute('viewBox', Assets.logo.viewbox);
+            svg.classList.value = 'size-12 animate-spin fill-foreground';
+
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', Assets.logo.path);
+
+            svg.appendChild(path);
+            loadingContent.appendChild(svg);
+            projectA.append(loadingContent);
+
+            const classElement = 'absolute group-hover:scale-105 group-hover:grayscale group-hover:brightness-5';
+            if (data.thumbnail) {
+                const urlThumbnail = data.thumbnail;
+                const extension = urlThumbnail.split('.').pop().toLowerCase();
+
+                if (['mp4', 'webm'].includes(extension)) {
+                    const videoElement = document.createElement('video');
+                    videoElement.src = urlThumbnail;
+                    videoElement.autoplay = true;
+                    videoElement.loop = true;
+                    videoElement.muted = true;
+                    videoElement.playsInline = true;
+                    videoElement.className = classElement;
+                    videoElement.onload = () => {
+                        loadingContent.classList.add('hidden');
+                    };
+                    const track = document.createElement('track');
+                    track.kind = 'captions';
+                    track.label = 'No captions';
+                    track.default = true;
+                    videoElement.appendChild(track);
+                    projectA.appendChild(videoElement);
+                } else {
+                    const webElement = document.createElement('img');
+                    webElement.src = urlThumbnail;
+                    webElement.alt = `Thumbnail ${data.title}`;
+                    webElement.className = classElement;
+                    webElement.onload = () => {
+                        loadingContent.classList.add('hidden');
+                    };
+                    projectA.appendChild(webElement);
+                }
+            } else {
+                const errorElement = document.createElement('img');
+                errorElement.src = './public/avatar.svg';
+                errorElement.alt = `Thumbnail ${data.title}`;
+                errorElement.className = classElement;
+                errorElement.onload = () => {
+                        loadingContent.classList.add('hidden');
+                    };
+                projectA.appendChild(errorElement);
+            }
+
+            const projectDiv = document.createElement('div');
+            projectDiv.className = 'relative self-end w-full p-4 duration-300 translate-y-30 group-hover:translate-y-0';
+            if (projectDiv) {
+                const projectH = document.createElement('h3');
+                projectH.className = 'uppercase text-chart-3 leading-none font-extrabold';
+                projectH.innerHTML = data.title || 'Title';
+                const projectP = document.createElement('p');
+                projectP.className = 'text-chart-1';
+                projectP.innerHTML = data.type || 'Type';
+                projectDiv.append(projectH,projectP);
+                projectA.append(projectDiv)
+            }
+
+            contDisplay.appendChild(projectA);
+        });
+    }
+
+    function searchFunc(prompt: any) {
+        const cleanPrompt = prompt.toLowerCase();
+        
+        const filtered = display.filter((project: any) => {
+            const inTitle = project.title?.toLowerCase().includes(cleanPrompt);
+            const inType = project.type?.toLowerCase().includes(cleanPrompt);
+            const inTools = Array.isArray(project.tools) && 
+                project.tools.some((tool: any) => String(tool).toLowerCase().includes(cleanPrompt));
+            const inTags = Array.isArray(project.tags) && 
+                project.tags.some((tag: any) => String(tag).toLowerCase().includes(cleanPrompt));
+            return inTitle || inType || inTools || inTags;
+        });
+        displayFunc(filtered);
+    }
+
+    loadProjects();
+</script>

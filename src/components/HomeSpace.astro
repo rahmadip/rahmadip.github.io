@@ -1,0 +1,46 @@
+---
+import { InfiniteSlider } from './motion-primitives/infinite-slider.tsx';
+---
+
+<div id="sliderBase" class="mask-x-from-80% mask-x-to-100%">
+    <InfiniteSlider speed={40} speedOnHover={1} gap={0} className='sliderRoot' client:load />
+</div>
+
+<script>
+    import { get } from "@/lib/fetch";
+
+    const sliderBase:any = document.getElementById('sliderBase')
+    const sliderRoot:any = document.querySelector('.sliderRoot');
+    const sliderContainer = sliderRoot.firstElementChild;
+
+    async function updateSvgIcons() {
+        const dataSvg = await get('space');
+        
+        if (dataSvg && dataSvg.length > 0) {
+            sliderContainer.innerHTML = '';
+            
+            const item = dataSvg.map((item:any) => {
+                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                svg.classList.value = 'h-15 w-auto p-4 mx-2 md:mx-4 fill-foreground cursor-pointer hover:fill-primary';
+                svg.setAttribute('viewBox', item.viewbox);
+                svg.setAttribute('role', 'img');
+
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('d', item.path);
+                svg.appendChild(path);
+                return svg;
+            });
+
+            item.forEach((svg:any) => sliderContainer.appendChild(svg));
+            item.forEach((svg:any) => sliderContainer.appendChild(svg.cloneNode(true)));
+        } else {
+            if (sliderBase) {
+                sliderBase.remove(); 
+            }
+            console.warn('Space component removed because data is empty');
+            return;
+        }
+    }
+
+    setTimeout(updateSvgIcons, 200);
+</script>

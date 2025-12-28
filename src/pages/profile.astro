@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import EmptySpace from '@/base/EmptySpace.astro';
+import ProfileMain from '@/components/ProfileMain.astro';
+import ProfileTools from '@/components/ProfileTools.astro';
+import ProfileMessages from '@/components/ProfileMessages.astro';
+import ProjectSide from '@/components/ProjectSide.astro';
+---
+
+<Layout titleHead="rahmadip | Profile">
+	<Header />
+	<EmptySpace />
+	<main class="lg:flex-row">
+		<h1 class="sr-only">Profile</h1>
+		<div class="flex flex-col gap-2 md:gap-4 w-full lg:flex-2">
+			<ProfileMain />
+			<ProfileTools />
+			<ProfileMessages />
+		</div>
+		<aside class="flex flex-col gap-2 md:gap-4 w-full lg:flex-1">
+			<ProjectSide />
+		</aside>
+	</main>
+	<Footer />
+</Layout>

@@ -1,0 +1,12 @@
+---
+const { path, style, viewbox } = Astro.props
+---
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    class=`${style}`
+    viewBox=`${viewbox}`
+    role="img"
+>
+    <path d={path} />
+</svg>

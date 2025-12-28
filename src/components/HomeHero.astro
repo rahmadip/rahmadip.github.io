@@ -1,0 +1,45 @@
+---
+import assets from '../assets/assets.json';
+import Svg from '../base/Svg.astro';
+import { TextEffectHero, TextLoopHero } from '../components/motion-primitives/text-hero.tsx';
+import { GravityStarsBackground } from './animate-ui/gravity-stars';
+---
+
+<div class="w-dvw z-20">
+    <div class="max-w-7xl mx-auto h-lvh place-content-center">
+        <div class="m-2 p-2 md:m-4 md:p-4 flex justify-between items-center">
+            <div class="flex flex-col gap-2 md:gap-4">
+                <TextEffectHero client:load/>
+                <div class="flex items-center gap-2">
+                    <Svg path={assets.logo.path} viewbox={assets.logo.viewbox} style="size-4 animate-spin fill-foreground"/>
+                    <TextLoopHero client:load/>
+                </div>
+                <div class="flex gap-2 md:gap-4">
+                    <button
+                        class="z-80"
+                        aria-label={assets.href.project.label}
+                        onclick=`window.location.href='${assets.href.project.path}'`
+                    >
+                        {assets.href.project.label}
+                    </button>
+                    <button
+                        class="bg-background text-foreground z-80 hover:bg-secondary hover:text-secondary-foreground"
+                        aria-label={assets.href.profile.label}
+                        onclick=`window.location.href='${assets.href.profile.path}'`
+                    >
+                        {assets.href.profile.label}
+                    </button>
+                </div>
+            </div>
+            <div class="hidden lg:block fill-foreground cursor-pointer z-80">
+                <Svg
+                    path={assets.logo.path}
+                    viewbox={assets.logo.viewbox}
+                    style="size-84 hover:animate-spin opacity-2"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+
+<GravityStarsBackground starsSize={1} glowIntensity={0} className="absolute inset-0 w-dvw h-dvh z-10" client:load/>

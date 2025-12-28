@@ -1,0 +1,70 @@
+---
+import Divider from "@/base/Divider.astro";
+---
+
+<section>
+    <div>
+        <h2>Tools Stack</h2>
+        <p>Tools and stack used to work on a projects.</p>
+    </div>
+    <Divider/>
+    <div id="sectionCont" class="divide-y divide-border -my-2"></div>
+</section>
+
+<script>
+    import Assets from "@/assets/assets.json";
+    import { get, filter } from "@/lib/fetch";
+
+    const dataTools:any = await get('tools');
+    if (dataTools) {
+        const sectionCont = document.getElementById('sectionCont');
+        const sections = new Set(dataTools.map((item:any) => item.section));
+        sections.forEach(section => {
+            const details = Object.assign(
+                document.createElement('details'),{
+                    className: 'group py-2'
+                });
+            const summary = Object.assign(
+                document.createElement('summary'), {
+                    className: 'flex justify-between items-center cursor-pointer'
+                });
+            const h = Object.assign(
+                document.createElement('h3'), {
+                    innerHTML: section
+                }
+            );
+            const svgArrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svgArrow.setAttribute('viewBox', Assets.arrowLeft.viewbox);
+            svgArrow.classList.value = "size-5 md:size-6 fill-foreground shrink-0 group-open:-rotate-45";
+
+            const pathArrow = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            pathArrow.setAttribute('d', Assets.arrowLeft.path);
+
+            const sectionTools = filter(dataTools,'section', section);
+            sectionTools.forEach((tool:any) => {
+                const toolSpan = Object.assign(
+                    document.createElement('span'), {
+                        className:'inline-flex flex-row-reverse border shadow gap-1 p-1 pr-2 my-1 mr-2 rounded-lg items-center cursor-pointer duration-300 font-bold text-sm md:text-base fill-foreground hover:bg-secondary hover:text-secondary-foreground hover:fill-secondary-foreground',
+                        innerHTML: tool.name
+                    }
+                )
+
+                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                svg.setAttribute('viewBox', tool.viewbox);
+                svg.classList.value = 'size-5 md:size-6';
+
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('d', tool.path);
+
+                svg.appendChild(path);
+                toolSpan.append(svg);
+
+                svgArrow.append(pathArrow);
+                summary.append(h,svgArrow);
+                
+                details.append(summary,toolSpan);
+                sectionCont?.append(details);
+            });
+        });
+    }
+</script>

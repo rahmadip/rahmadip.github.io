@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HomeHero from '../components/HomeHero.astro';
+import HomeSpace from '@/components/HomeSpace.astro';
+import HomeProjects from '../components/HomeProjects.astro';
+---
+
+<Layout titleHead="rahmadip Portfolio">
+	<Header />
+    <HomeHero />
+	<main>
+		<HomeSpace />
+		<HomeProjects />
+	</main>
+	<Footer />
+</Layout>

@@ -1,0 +1,33 @@
+---
+const { titleHead = "rahmadip" } = Astro.props
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+
+		<script is:inline>
+			const themeStored = localStorage.getItem('theme');
+			const isDark = themeStored ? themeStored === 'dark' : true;
+			if (isDark) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		</script>
+
+		<link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: light)" />
+		<link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: dark)" />
+		<title>{titleHead}</title>
+	</head>
+	<body>
+		<slot />
+
+		<script src="../script/global.js"></script>
+		<script src="../script/guard.js"></script>
+	</body>
+</html>

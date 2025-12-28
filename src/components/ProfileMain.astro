@@ -1,0 +1,71 @@
+---
+import Divider from '../base/Divider.astro';
+---
+
+<section class='gap-19'>
+    <div id="banner">
+        <div id="avatarContainer">
+            <img id="avatar"/>
+        </div>
+    </div>
+    <div class="flex flex-col gap-4">
+        <div>
+            <h2 id="name"></h2>
+            <p id="occu"></p>
+        </div>
+        <Divider />
+        <p id="abou"></p>
+        <div id="cont"></div>
+    </div>
+</section>
+
+<script>
+    import { get, find, filter } from "@/lib/fetch";
+
+    const dataProfile = await get('rahmadip');
+    if (dataProfile) {
+        const banner:any = document.getElementById('banner');
+        const dataBanner = find(dataProfile, 'section', 'banner').value || '/public/banner.webp';
+        banner.className = '-m-4 bg-background bg-cover bg-center bg-no-repeat flex items-end aspect-3/1'
+        banner.style.backgroundImage = `url(${dataBanner})`;
+
+        const avatarContainer:any = document.getElementById('avatarContainer');
+        avatarContainer.className = 'mx-4 aspect-square size-26 border rounded-full overflow-hidden bg-background flex items-center justify-center translate-y-1/2'
+
+        const avatar:any = document.getElementById('avatar');
+        avatar.src = find(dataProfile, 'section', 'avatar').value || '/public/avatar.svg';
+        avatar.alt = find(dataProfile,'section','name').value || 'Fauzi Rahmadi Primanto';
+
+        const name:any = document.getElementById('name');
+        name.innerHTML = find(dataProfile,'section','name').value || 'Fauzi Rahmadi Primanto';
+
+        const occu:any = document.getElementById('occu');
+        occu.innerHTML = find(dataProfile,'section','occupation').value || 'Graphic Designer';
+
+        const abou:any = document.getElementById('abou');
+        abou.innerHTML = find(dataProfile,'section','about').value || 'About me.';
+
+        const cont:any = document.getElementById('cont');
+        cont.className = 'flex gap-2 md:gap-4';
+        const contacts = filter(dataProfile,'type','contact');
+        contacts.forEach((contact:any) => {
+            const a = document.createElement('a');
+            a.href = contact.value;
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            a.ariaLabel = contact.section;
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            svg.classList.value = 'size-9 fill-foreground border rounded-lg shadow hover:bg-secondary hover:fill-secondary-foreground';
+            svg.setAttribute('viewBox', contact.viewbox);
+            svg.setAttribute('role', 'img');
+
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', contact.path);
+            
+            svg.appendChild(path);
+            a.appendChild(svg);
+            cont.appendChild(a);
+        });
+    }
+</script>

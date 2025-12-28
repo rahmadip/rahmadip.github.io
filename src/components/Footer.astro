@@ -1,0 +1,19 @@
+---
+import { Clock } from "./motion-primitives/clock";
+import ToggleMode from "../base/ToggleMode.astro";
+
+const currentYear = new Date().getFullYear();
+const copyright = `© rahmadip ${currentYear}`;
+---
+
+<footer class="w-dvw bg-transparent">
+    <div class="max-w-7xl mx-auto">
+        <div class="border shadow rounded-lg flex justify-between items-center backdrop-blur-md m-2 p-2 md:m-4 md:p-4">
+            <div>
+                <Clock client:load />
+                <p class="text-xs/relaxed text-foreground">{copyright}</p>
+            </div>
+            <ToggleMode />
+        </div>
+    </div>
+</footer>
