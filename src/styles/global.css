@@ -171,6 +171,10 @@
     * {
         @apply text-foreground border-border outline-ring/50 scroll-smooth focus:outline-none;
         scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    *::-webkit-scrollbar {
+        display: none;
     }
     *:not(div):not(span) {
         @apply duration-300 ease-in-out
@@ -189,6 +193,12 @@
     }
     video, img {
         @apply w-full h-full object-cover place-self-center cursor-pointer;
+    }
+    summary {
+        list-style: none;
+    }
+    summary::-webkit-details-marker {
+        display: none;
     }
     h1 {
         @apply text-4xl md:text-7xl font-bold tracking-tight;
