@@ -27,6 +27,7 @@ import Divider from "@/base/Divider.astro"
                 document.createElement('a'), {
                     href: `/project/?path=${project.path}`,
                     className: 'flex items-center gap-2 py-2',
+                    rel: 'noopener noreferrer',
                     ariaLabel: project.title
                 }
             )
@@ -58,12 +59,14 @@ import Divider from "@/base/Divider.astro"
                     const webElement = document.createElement('img');
                     webElement.src = urlThumbnail;
                     webElement.alt = `Thumbnail ${project.title}`;
+                    webElement.loading = 'lazy';
                     thumbCont.appendChild(webElement);
                 }
             } else {
                 const errorElement = document.createElement('img');
                 errorElement.src = './public/avatar.svg';
                 errorElement.alt = `Thumbnail ${project.title}`;
+                errorElement.loading = 'lazy';
                 thumbCont.appendChild(errorElement);
             }
             const projectCont = Object.assign(

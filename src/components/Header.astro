@@ -6,24 +6,49 @@ import Svg from '../base/Svg.astro';
 <header class="w-dvw bg-transparent fixed top-0 z-99">
     <div class="max-w-7xl mx-auto">
         <div class="border shadow rounded-lg flex justify-between items-center backdrop-blur-md m-2 p-2 md:m-4 md:p-4">
-            <a href={assets.href.home.path} aria-label={assets.href.home.label} class="inline-flex items-center gap-2 ml-1 md:ml-0">
-                <Svg path={assets.logo.path} viewbox={assets.logo.viewbox} style="size-6 lg:size-7 fill-foreground hover:animate-spin"/>
+            <a
+                href={assets.href.home.path}
+                aria-label={assets.href.home.label}
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 ml-1 md:ml-0"
+            >
+                <Svg
+                    path={assets.logo.path}
+                    viewbox={assets.logo.viewbox}
+                    style="size-6 lg:size-7 fill-foreground hover:animate-spin"
+                />
                 rahmadip
             </a>
             <nav class="hidden md:flex gap-8">
-                <a href={assets.href.home.path} aria-label={assets.href.home.label} class="hover:text-primary">
+                <a
+                    href={assets.href.home.path}
+                    aria-label={assets.href.home.label}
+                    rel="noopener noreferrer"
+                    class="hover:text-primary"
+                >
                     {assets.href.home.label}
                 </a>
-                <a href={assets.href.project.path} aria-label={assets.href.project.label} class="hover:text-primary">
+                <a
+                    href={assets.href.project.path}
+                    aria-label={assets.href.project.label}
+                    rel="noopener noreferrer"
+                    class="hover:text-primary"
+                >
                     {assets.href.project.label}
                 </a>
-                <a href={assets.href.profile.path} aria-label={assets.href.profile.label} rel="noopener noreferrer author" class="hover:text-primary">
+                <a
+                    href={assets.href.profile.path}
+                    aria-label={assets.href.profile.label}
+                    rel="noopener noreferrer author"
+                    class="hover:text-primary"
+                >
                     {assets.href.profile.label}
                 </a>
             </nav>
             <button
                 popovertarget="navbar"
                 type="button"
+                aria-label="button navbar"
                 class="backdrop-blur-md md:hidden fill-foreground bg-transparent"
                 onclick="
                 this.classList.toggle('bg-transparent');
@@ -41,13 +66,28 @@ import Svg from '../base/Svg.astro';
 <div popover id="navbar" class="w-dvw bg-transparent fixed top-17 md:hidden">
     <div class="max-w-7xl mx-auto">
         <nav class="m-2 px-4 border shadow rounded-lg flex flex-col divide-y backdrop-blur-md">
-            <a href={assets.href.home.path} aria-label={assets.href.home.label} class="py-4">
+            <a
+                href={assets.href.home.path}
+                aria-label={assets.href.home.label}
+                rel="noopener noreferrer"
+                class="py-4"
+            >
                 {assets.href.home.label}
             </a>
-            <a href={assets.href.project.path} aria-label={assets.href.project.label} class="py-4">
+            <a
+                href={assets.href.project.path}
+                aria-label={assets.href.project.label}
+                rel="noopener noreferrer"
+                class="py-4"
+            >
                 {assets.href.project.label}
             </a>
-            <a href={assets.href.profile.path} aria-label={assets.href.profile.label} rel="noopener noreferrer author" class="py-4">
+            <a
+                href={assets.href.profile.path}
+                aria-label={assets.href.profile.label}
+                rel="noopener noreferrer author"
+                class="py-4"
+            >
                 {assets.href.profile.label}
             </a>
         </nav>

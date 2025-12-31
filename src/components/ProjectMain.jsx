@@ -65,6 +65,7 @@ export function ProjectContent({ project }) {
                         layoutId={`media-${content}`}
                         src={ content }
                         alt={ project.title }
+                        loading="eager"
                         onClick={() => setSelectedImage({ src: content, type: 'image' })}
                         className={ classMedia }
                     />
@@ -81,6 +82,7 @@ export function ProjectContent({ project }) {
                                 <motion.img
                                     layoutId={`media-${selectedImage.src}`}
                                     src={selectedImage.src}
+                                    loading="lazy"
                                     className="relative max-w-full max-h-[90vh] z-101 object-contain duration-0 rounded-md"
                                     onClick={() => setSelectedImage(null)}
                                 />
@@ -129,6 +131,7 @@ export function ProjectContent({ project }) {
                                             layoutId={`media-${content}`}
                                             src={content}
                                             alt={`${project.title} ${slide + 1}`}
+                                            loading="eager"
                                             onClick={() => setSelectedImage({ src: content, type: 'image' })}
                                             className="duration-0"
                                         />
@@ -173,6 +176,7 @@ export function ProjectContent({ project }) {
                                     <img
                                         src={content}
                                         alt={`${project.title} ${slide + 1}`}
+                                        loading="eager"
                                         className={ classButton }
                                     />
                                 </button>
@@ -204,6 +208,7 @@ export function ProjectContent({ project }) {
                                 <motion.img
                                     layoutId={`media-${selectedImage.src}`}
                                     src={selectedImage.src}
+                                    loading="lazy"
                                     className="relative max-w-full max-h-[90vh] z-101 object-contain duration-0 rounded-md"
                                     onClick={() => setSelectedImage(null)}
                                 />

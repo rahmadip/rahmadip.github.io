@@ -5,7 +5,7 @@ import Divider from '../base/Divider.astro';
 <section class='gap-19'>
     <div id="banner">
         <div id="avatarContainer">
-            <img id="avatar"/>
+            <img id="avatar" loading="eager"/>
         </div>
     </div>
     <div class="flex flex-col gap-4">
@@ -52,7 +52,7 @@ import Divider from '../base/Divider.astro';
             const a = document.createElement('a');
             a.href = contact.value;
             a.target = '_blank';
-            a.rel = 'noopener noreferrer';
+            a.rel = 'noopener noreferrer noopener noreferrer';
             a.ariaLabel = contact.section;
 
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');

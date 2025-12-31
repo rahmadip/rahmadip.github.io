@@ -17,7 +17,7 @@ export function Clock() {
   }, []);
 
   return (
-    <div className='flex items-center gap-0.5 font-mono text-foreground text-xs'>
+    <div className='flex items-center gap-0.5 text-foreground text-xs'>
       <SlidingNumber value={hours} padStart={true} />
       <span className='text-foreground'>:</span>
       <SlidingNumber value={minutes} padStart={true} />

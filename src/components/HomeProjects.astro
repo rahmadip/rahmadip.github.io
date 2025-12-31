@@ -52,8 +52,9 @@
         datas.forEach((data:any) => {
             const projectA = document.createElement('a');
             projectA.href = `./project/?path=${data.path}`;
+            projectA.rel = 'noopener noreferrer';
             projectA.ariaLabel = data.title;
-            projectA.className = 'relative flex group aspect-square overflow-hidden border rounded-lg lg:shadow'
+            projectA.className = 'relative flex group aspect-square overflow-hidden border rounded-lg lg:shadow';
 
             const loadingContent = Object.assign(document.createElement('span'), {
                 className: "absolute w-full h-full flex justify-center items-center"
@@ -83,6 +84,7 @@
                     videoElement.muted = true;
                     videoElement.playsInline = true;
                     videoElement.className = classElement;
+                    videoElement.crossOrigin = 'anonymous';
                     videoElement.onload = () => {
                         loadingContent.classList.add('hidden');
                     };
@@ -97,6 +99,7 @@
                     webElement.src = urlThumbnail;
                     webElement.alt = `Thumbnail ${data.title}`;
                     webElement.className = classElement;
+                    webElement.crossOrigin = 'anonymous';
                     webElement.onload = () => {
                         loadingContent.classList.add('hidden');
                     };
@@ -106,7 +109,9 @@
                 const errorElement = document.createElement('img');
                 errorElement.src = './public/avatar.svg';
                 errorElement.alt = `Thumbnail ${data.title}`;
+                errorElement.loading = 'lazy';
                 errorElement.className = classElement;
+                errorElement.crossOrigin = 'anonymous';
                 errorElement.onload = () => {
                         loadingContent.classList.add('hidden');
                     };

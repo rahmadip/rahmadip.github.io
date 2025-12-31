@@ -1,5 +1,5 @@
 ---
-const { titleHead = "rahmadip" } = Astro.props
+const { titleHead = "rahmadip", metaDesc="Rahmadip Portfolio" } = Astro.props
 import "../styles/global.css";
 ---
 
@@ -9,6 +9,11 @@ import "../styles/global.css";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={ metaDesc } />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
 		<script is:inline>
 			const themeStored = localStorage.getItem('theme');
@@ -22,12 +27,21 @@ import "../styles/global.css";
 
 		<link rel="icon" type="image/svg+xml" href="/favicon-dark.svg" media="(prefers-color-scheme: light)" />
 		<link rel="icon" type="image/svg+xml" href="/favicon-light.svg" media="(prefers-color-scheme: dark)" />
-		<title>{titleHead}</title>
+		<title>{ titleHead }</title>
 	</head>
 	<body>
 		<slot />
 
-		<script src="../script/global.js"></script>
-		<script src="../script/guard.js"></script>
+		<script>
+			document.addEventListener('contextmenu', function(e) {e.preventDefault();});
+			document.addEventListener('copy', function(e) {e.preventDefault();});
+			document.addEventListener('selectstart', function(e) {e.preventDefault();});
+			document.addEventListener('dragstart', (e) => {
+				const target = e.target as HTMLElement;
+				if (target && (target.tagName === 'IMG' || target.tagName === 'VIDEO')) {
+					e.preventDefault();
+				}
+			});
+		</script>
 	</body>
 </html>

@@ -35,7 +35,13 @@ import Divider from "../base/Divider.astro";
             />
         </div>
         <div class="h-2 w-full rounded-full border overflow-hidden">
-            <div id="progress" role="progressbar" class="h-full bg-secondary transition-all duration-300" style="width: 0%"></div>
+            <div
+                id="progress"
+                role="progressbar"
+                aria-label="Progress Bar Status Messages"
+                class="h-full bg-secondary transition-all duration-300"
+                style="width: 0%"
+            ></div>
         </div>
         <button
             type="submit"
