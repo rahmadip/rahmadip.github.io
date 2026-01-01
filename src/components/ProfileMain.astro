@@ -3,10 +3,9 @@ import Divider from '../base/Divider.astro';
 ---
 
 <section class='gap-19'>
-    <div id="banner">
-        <div id="avatarContainer">
-            <img id="avatar" loading="eager"/>
-        </div>
+    <div id="headProfile">
+        <div id="bannerContainer"></div>
+        <div id="avatarContainer"></div>
     </div>
     <div class="flex flex-col gap-4">
         <div>
@@ -24,17 +23,52 @@ import Divider from '../base/Divider.astro';
 
     const dataProfile = await get('rahmadip');
     if (dataProfile) {
-        const banner:any = document.getElementById('banner');
-        const dataBanner = find(dataProfile, 'section', 'banner').value || '/public/banner.webp';
-        banner.className = '-m-4 bg-background bg-cover bg-center bg-no-repeat flex items-end aspect-3/1'
-        banner.style.backgroundImage = `url(${dataBanner})`;
+        const headProfile:any = document.getElementById('headProfile');
+        headProfile.className = '-m-4 flex flex-col justify-end';
 
-        const avatarContainer:any = document.getElementById('avatarContainer');
-        avatarContainer.className = 'mx-4 aspect-square size-26 border rounded-full overflow-hidden bg-background flex items-center justify-center translate-y-1/2'
+        const bannerContainer = document.getElementById('bannerContainer');
+        if (bannerContainer) {
+            bannerContainer.className = 'aspect-3/1 flex justify-center items-center overflow-hidden border-b';
 
-        const avatar:any = document.getElementById('avatar');
-        avatar.src = find(dataProfile, 'section', 'avatar').value || '/public/avatar.svg';
-        avatar.alt = find(dataProfile,'section','name').value || 'Fauzi Rahmadi Primanto';
+            const banner =  document.createElement('img');
+
+            const dataBanner = find(dataProfile, 'section', 'banner').value;
+            if (dataBanner) {
+                banner.src = dataBanner;
+            } else {
+                banner.src = '/banner.webp';
+            }
+
+            banner.alt = 'banner rahmadip';
+            banner.loading = 'eager';
+            banner.fetchPriority = 'high';
+            banner.crossOrigin = 'anonymous';
+            banner.className = 'min-w-full min-h-full'
+
+            bannerContainer.appendChild(banner);
+        }
+        
+        const avatarContainer = document.getElementById('avatarContainer');
+        if (avatarContainer) {
+            avatarContainer.className = 'aspect-square size-26 flex justify-center items-center overflow-hidden mx-4 rounded-full border translate-y-1/2 absolute bg-background';
+
+            const avatar = document.createElement('img');
+
+            const dataAvatar = find(dataProfile, 'section', 'avatar').value;
+            if (dataAvatar) {
+                avatar.src = dataAvatar;
+            } else {
+                avatar.src = '/avatar.svg'
+            }
+
+            avatar.alt = 'avatar rahmadip';
+            avatar.loading = 'eager';
+            avatar.fetchPriority = 'high';
+            avatar.crossOrigin = 'anonymous';
+            avatar.className = 'min-w-full min-h-full'
+
+            avatarContainer.appendChild(avatar);
+        }
 
         const name:any = document.getElementById('name');
         name.innerHTML = find(dataProfile,'section','name').value || 'Fauzi Rahmadi Primanto';
@@ -52,7 +86,7 @@ import Divider from '../base/Divider.astro';
             const a = document.createElement('a');
             a.href = contact.value;
             a.target = '_blank';
-            a.rel = 'noopener noreferrer noopener noreferrer';
+            a.rel = 'noopener noreferrer';
             a.ariaLabel = contact.section;
 
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
