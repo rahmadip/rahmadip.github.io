@@ -3,18 +3,44 @@ import Divider from '../base/Divider.astro';
 ---
 
 <section class='gap-19'>
-    <div id="headProfile">
-        <div id="bannerContainer"></div>
-        <div id="avatarContainer"></div>
+    <div id="headProfile" class="-m-4 flex flex-col justify-end">
+        <div
+            id="bannerContainer"
+            class="aspect-3/1 flex justify-center items-center overflow-hidden border-b"
+        >
+            <img
+                id="banner"
+                src="/banner.webp"
+                alt="banner rahmadip"
+                loading="eager"
+                fetchpriority="high"
+                crossorigin="anonymous"
+                class="min-w-full min-h-full"
+            >
+        </div>
+        <div
+            id="avatarContainer"
+            class="aspect-square size-26 flex justify-center items-center overflow-hidden mx-4 rounded-full border translate-y-1/2 absolute bg-background"
+        >
+            <img
+                id="avatar"
+                src="/avatar.svg"
+                alt="avatar rahmadip"
+                loading="eager"
+                fetchpriority="high"
+                crossorigin="anonymous"
+                class="min-w-full min-h-full"
+            >
+        </div>
     </div>
     <div class="flex flex-col gap-4">
         <div>
-            <h2 id="name"></h2>
-            <p id="occu"></p>
+            <h2 id="name">Fauzi Rahmadi Primanto</h2>
+            <p id="occu">Graphic Designer</p>
         </div>
         <Divider />
         <p id="abou"></p>
-        <div id="cont"></div>
+        <div id="cont" class="flex gap-2 md:gap-4"></div>
     </div>
 </section>
 
@@ -23,64 +49,28 @@ import Divider from '../base/Divider.astro';
 
     const dataProfile = await get('rahmadip');
     if (dataProfile) {
-        const headProfile:any = document.getElementById('headProfile');
-        headProfile.className = '-m-4 flex flex-col justify-end';
-
-        const bannerContainer = document.getElementById('bannerContainer');
-        if (bannerContainer) {
-            bannerContainer.className = 'aspect-3/1 flex justify-center items-center overflow-hidden border-b';
-
-            const banner =  document.createElement('img');
-
-            const dataBanner = find(dataProfile, 'section', 'banner').value;
-            if (dataBanner) {
-                banner.src = dataBanner;
-            } else {
-                banner.src = '/banner.webp';
-            }
-
-            banner.alt = 'banner rahmadip';
-            banner.loading = 'eager';
-            banner.fetchPriority = 'high';
-            banner.crossOrigin = 'anonymous';
-            banner.className = 'min-w-full min-h-full'
-
-            bannerContainer.appendChild(banner);
+        const banner:any = document.getElementById('banner');
+        const dataBanner = find(dataProfile, 'section', 'banner').value;
+        if (banner && dataBanner) {
+            banner.src = dataBanner;
         }
-        
-        const avatarContainer = document.getElementById('avatarContainer');
-        if (avatarContainer) {
-            avatarContainer.className = 'aspect-square size-26 flex justify-center items-center overflow-hidden mx-4 rounded-full border translate-y-1/2 absolute bg-background';
 
-            const avatar = document.createElement('img');
-
-            const dataAvatar = find(dataProfile, 'section', 'avatar').value;
-            if (dataAvatar) {
-                avatar.src = dataAvatar;
-            } else {
-                avatar.src = '/avatar.svg'
-            }
-
-            avatar.alt = 'avatar rahmadip';
-            avatar.loading = 'eager';
-            avatar.fetchPriority = 'high';
-            avatar.crossOrigin = 'anonymous';
-            avatar.className = 'min-w-full min-h-full'
-
-            avatarContainer.appendChild(avatar);
+        const avatar:any = document.getElementById('avatar');
+        const dataAvatar = find(dataProfile, 'section', 'avatar').value;
+        if (avatar && dataAvatar) {
+            avatar.src = dataAvatar;
         }
 
         const name:any = document.getElementById('name');
-        name.innerHTML = find(dataProfile,'section','name').value || 'Fauzi Rahmadi Primanto';
+        name.innerHTML = find(dataProfile,'section','name').value;
 
         const occu:any = document.getElementById('occu');
-        occu.innerHTML = find(dataProfile,'section','occupation').value || 'Graphic Designer';
+        occu.innerHTML = find(dataProfile,'section','occupation').value;
 
         const abou:any = document.getElementById('abou');
-        abou.innerHTML = find(dataProfile,'section','about').value || 'About me.';
+        abou.innerHTML = find(dataProfile,'section','about').value;
 
         const cont:any = document.getElementById('cont');
-        cont.className = 'flex gap-2 md:gap-4';
         const contacts = filter(dataProfile,'type','contact');
         contacts.forEach((contact:any) => {
             const a = document.createElement('a');
