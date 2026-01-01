@@ -10,11 +10,13 @@ import Divider from '../base/Divider.astro';
         >
             <img
                 id="banner"
-                src="/banner.webp"
+                src="https://ik.imagekit.io/rahmadip/rahmadip/banner.webp?tr=w-600"
                 alt="banner rahmadip"
                 loading="eager"
                 fetchpriority="high"
                 crossorigin="anonymous"
+                width="900" 
+                height="300"
                 class="min-w-full min-h-full"
             >
         </div>
@@ -24,11 +26,13 @@ import Divider from '../base/Divider.astro';
         >
             <img
                 id="avatar"
-                src="/avatar.svg"
+                src="https://ik.imagekit.io/rahmadip/rahmadip/logopp.webp?tr=w-100"
                 alt="avatar rahmadip"
                 loading="eager"
                 fetchpriority="high"
                 crossorigin="anonymous"
+                width="120" 
+                height="120"
                 class="min-w-full min-h-full"
             >
         </div>
@@ -52,13 +56,18 @@ import Divider from '../base/Divider.astro';
         const banner:any = document.getElementById('banner');
         const dataBanner = find(dataProfile, 'section', 'banner').value;
         if (banner && dataBanner) {
-            banner.src = dataBanner;
+            banner.src = `${dataBanner}?tr=w-600`;
+            banner.srcset = `
+                ${dataBanner}?tr=w-300 300w,
+                ${dataBanner}?tr=w-600 600w,
+                ${dataBanner}?tr=w-900 900w
+            `;
         }
 
         const avatar:any = document.getElementById('avatar');
         const dataAvatar = find(dataProfile, 'section', 'avatar').value;
         if (avatar && dataAvatar) {
-            avatar.src = dataAvatar;
+            avatar.src = `${dataAvatar}?tr=w-120`;
         }
 
         const name:any = document.getElementById('name');

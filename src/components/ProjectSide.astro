@@ -42,12 +42,14 @@ import Divider from "@/base/Divider.astro"
 
                 if (['mp4', 'webm'].includes(extension)) {
                     const videoElement = document.createElement('video');
-                    videoElement.src = urlThumbnail;
+                    videoElement.src = `${urlThumbnail}?tr=w-60`;
                     videoElement.autoplay = true;
                     videoElement.loop = true;
                     videoElement.muted = true;
                     videoElement.playsInline = true;
                     videoElement.crossOrigin = 'anonymous';
+                    videoElement.width = 60;
+                    videoElement.height = 60;
 
                     const track = document.createElement('track');
                     track.kind = 'captions';
@@ -58,17 +60,21 @@ import Divider from "@/base/Divider.astro"
                     thumbCont.appendChild(videoElement);
                 } else {
                     const webElement = document.createElement('img');
-                    webElement.src = urlThumbnail;
+                    webElement.src = `${urlThumbnail}?tr=w-60`;
                     webElement.alt = `Thumbnail ${project.title}`;
                     webElement.crossOrigin = 'anonymous';
+                    webElement.width = 60;
+                    webElement.height = 60;
                     webElement.loading = 'lazy';
                     thumbCont.appendChild(webElement);
                 }
             } else {
                 const errorElement = document.createElement('img');
-                errorElement.src = './public/avatar.svg';
+                errorElement.src = 'https://ik.imagekit.io/rahmadip/rahmadip/logopp.webp?tr=w-60';
                 errorElement.alt = `Thumbnail ${project.title}`;
                 errorElement.crossOrigin = 'anonymous';
+                errorElement.width = 60;
+                errorElement.height = 60;
                 errorElement.loading = 'lazy';
                 thumbCont.appendChild(errorElement);
             }
