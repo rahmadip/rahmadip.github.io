@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import Banner from '@/assets/banner.webp'
 import Divider from '../base/Divider.astro';
 ---
 
@@ -8,17 +10,19 @@ import Divider from '../base/Divider.astro';
             id="bannerContainer"
             class="aspect-3/1 flex justify-center items-center overflow-hidden border-b"
         >
-            <img
+            <Image
                 id="banner"
-                src="/placeholder.svg"
+                src={ Banner }
                 alt="banner rahmadip"
                 loading="eager"
                 fetchpriority="high"
                 crossorigin="anonymous"
-                width="900" 
-                height="300"
-                class="min-w-full min-h-full"
-            >
+                width={900} 
+                height={300}
+                widths={[300, 600, 900]}
+                sizes={`(max-width: 900px) 100vw, 900px`}
+                class="min-w-full min-h-full object-cover"
+            />
         </div>
         <div
             id="avatarContainer"
@@ -31,10 +35,10 @@ import Divider from '../base/Divider.astro';
                 loading="eager"
                 fetchpriority="high"
                 crossorigin="anonymous"
-                width="120" 
-                height="120"
-                class="min-w-full min-h-full"
-            >
+                width="180" 
+                height="180"
+                class="min-w-full min-h-full object-cover"
+            />
         </div>
     </div>
     <div class="flex flex-col gap-4">
@@ -53,21 +57,10 @@ import Divider from '../base/Divider.astro';
 
     const dataProfile = await get('rahmadip');
     if (dataProfile) {
-        const banner:any = document.getElementById('banner');
-        const dataBanner = find(dataProfile, 'section', 'banner').value;
-        if (banner && dataBanner) {
-            banner.src = `${dataBanner}?tr=w-600`;
-            banner.srcset = `
-                ${dataBanner}?tr=w-300 300w,
-                ${dataBanner}?tr=w-600 600w,
-                ${dataBanner}?tr=w-900 900w
-            `;
-        }
-
         const avatar:any = document.getElementById('avatar');
         const dataAvatar = find(dataProfile, 'section', 'avatar').value;
         if (avatar && dataAvatar) {
-            avatar.src = `${dataAvatar}?tr=w-120`;
+            avatar.src = `${dataAvatar}?tr=w-180`;
         }
 
         const name:any = document.getElementById('name');
