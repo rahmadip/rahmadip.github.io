@@ -75,29 +75,48 @@
             if (data.thumbnail) {
                 const urlThumbnail = data.thumbnail;
                 const extension = urlThumbnail.split('.').pop().toLowerCase();
+                const smThumbnail = `${urlThumbnail}?tr=w-120`;
+                const mdThumbnail = `${urlThumbnail}?tr=w-240`;
+                const lgThumbnail = `${urlThumbnail}?tr=w-360`;
 
                 if (['mp4', 'webm'].includes(extension)) {
                     const videoElement = document.createElement('video');
-                    videoElement.src = urlThumbnail;
                     videoElement.autoplay = true;
                     videoElement.loop = true;
                     videoElement.muted = true;
                     videoElement.playsInline = true;
                     videoElement.className = classElement;
                     videoElement.crossOrigin = 'anonymous';
-                    videoElement.onload = () => {
+
+                    const smSource = document.createElement('source');
+                    smSource.src = smThumbnail;
+                    smSource.media = "(max-width: 768px)";
+                    const mdSource = document.createElement('source');
+                    mdSource.src = mdThumbnail;
+                    mdSource.media = "(max-width: 1024px)";
+                    const lgSource = document.createElement('source');
+                    lgSource.src = lgThumbnail;
+                    lgSource.media = "(min-width: 1024px)";
+                    videoElement.append(smSource,mdSource,lgSource);
+
+                    videoElement.onloadeddata = () => {
                         loadingContent.classList.add('hidden');
                     };
+
                     const track = document.createElement('track');
                     track.kind = 'captions';
                     track.label = 'No captions';
                     track.default = true;
+
                     videoElement.appendChild(track);
                     projectA.appendChild(videoElement);
                 } else {
                     const webElement = document.createElement('img');
-                    webElement.src = urlThumbnail;
+                    webElement.src = lgThumbnail;
+                    webElement.srcset = `${smThumbnail} 120w, ${mdThumbnail} 240w, ${lgThumbnail} 360w`;
+                    webElement.sizes = '(max-width: 768px) 120px, (max-width: 1024px) 240px, 360px';
                     webElement.alt = `Thumbnail ${data.title}`;
+                    webElement.loading = 'lazy';
                     webElement.className = classElement;
                     webElement.crossOrigin = 'anonymous';
                     webElement.onload = () => {
@@ -107,7 +126,13 @@
                 }
             } else {
                 const errorElement = document.createElement('img');
-                errorElement.src = './public/avatar.svg';
+                const urlThumbnail = 'https://ik.imagekit.io/rahmadip/rahmadip/logopp.webp';
+                const smThumbnail = `${urlThumbnail}?tr=w-120`;
+                const mdThumbnail = `${urlThumbnail}?tr=w-240`;
+                const lgThumbnail = `${urlThumbnail}?tr=w-360`;
+                errorElement.src = lgThumbnail;
+                errorElement.srcset = `${smThumbnail} 120w, ${mdThumbnail} 240w, ${lgThumbnail} 360w`;
+                errorElement.sizes = '(max-width: 768px) 120px, (max-width: 1024px) 240px, 360px';
                 errorElement.alt = `Thumbnail ${data.title}`;
                 errorElement.loading = 'lazy';
                 errorElement.className = classElement;

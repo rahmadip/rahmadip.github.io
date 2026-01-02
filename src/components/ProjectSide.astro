@@ -43,6 +43,7 @@ import Divider from "@/base/Divider.astro"
                 if (['mp4', 'webm'].includes(extension)) {
                     const videoElement = document.createElement('video');
                     videoElement.src = `${urlThumbnail}?tr=w-60`;
+                    videoElement.preload = 'none';
                     videoElement.autoplay = true;
                     videoElement.loop = true;
                     videoElement.muted = true;
