@@ -30,12 +30,18 @@ export function ProjectContent({ project }) {
             return (
                 <section className={ classSection }>
                     <motion.video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className={ classMedia }
+                        crossOrigin={ 'anonymous' }
                         layoutId={`media-${content}`}
                         src={ content }
-                        autoPlay loop muted playsInline
                         onClick={() => setSelectedImage({ src: content, type: 'video' })}
-                        className={ classMedia }
-                    />
+                    >
+                        <track kind={ 'captions' } label={ 'No captions' } default={ true }></track>
+                    </motion.video>
                     <AnimatePresence>
                         {selectedImage && (
                             <div className="fixed inset-0 z-100 flex items-center justify-center p-4">
@@ -47,12 +53,18 @@ export function ProjectContent({ project }) {
                                     className="absolute inset-0 bg-background/90 backdrop-blur-sm"
                                 />
                                 <motion.video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
                                     layoutId={`media-${selectedImage.src}`}
-                                    src={selectedImage.src}
-                                    autoPlay loop muted playsInline
+                                    src={ selectedImage.src }
                                     className="relative max-w-full max-h-[90vh] z-101 object-contain duration-0 rounded-md"
+                                    crossOrigin={ 'anonymous' }
                                     onClick={() => setSelectedImage(null)}
-                                />
+                                >
+                                    <track kind={ 'captions' } label={ 'No captions' } default={ true }></track>
+                                </motion.video>
                             </div>
                         )}
                     </AnimatePresence>
@@ -68,6 +80,8 @@ export function ProjectContent({ project }) {
                         loading="eager"
                         onClick={() => setSelectedImage({ src: content, type: 'image' })}
                         className={ classMedia }
+                        crossOrigin={ 'anonymous' }
+                        fetchPriority={ 'high' }
                     />
                     <AnimatePresence>
                         {selectedImage && (
@@ -84,6 +98,7 @@ export function ProjectContent({ project }) {
                                     src={selectedImage.src}
                                     loading="lazy"
                                     className="relative max-w-full max-h-[90vh] z-101 object-contain duration-0 rounded-md"
+                                    crossOrigin={ 'anonymous' }
                                     onClick={() => setSelectedImage(null)}
                                 />
                             </div>
@@ -116,12 +131,19 @@ export function ProjectContent({ project }) {
                                 return (
                                     <CarouselItem key={content} className={classBasis}>
                                         <motion.video
-                                            layoutId={`media-${content}`}
-                                            src={content}
-                                            autoPlay loop muted playsInline
-                                            onClick={() => setSelectedImage({ src: content, type: 'video' })}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
                                             className="duration-0"
-                                        />
+                                            crossOrigin={ 'anonymous' }
+                                            layoutId={`media-${content}`}
+                                            src={ content }
+                                            onClick={() => setSelectedImage({ src: content, type: 'video' })}
+                                            
+                                        >
+                                            <track kind={ 'captions' } label={ 'No captions' } default={ true }></track>
+                                        </motion.video>
                                     </CarouselItem>
                                 );
                             } else {
@@ -129,11 +151,13 @@ export function ProjectContent({ project }) {
                                     <CarouselItem key={content} className={classBasis}>
                                         <motion.img
                                             layoutId={`media-${content}`}
-                                            src={content}
+                                            src={ content }
                                             alt={`${project.title} ${slide + 1}`}
                                             loading="eager"
                                             onClick={() => setSelectedImage({ src: content, type: 'image' })}
                                             className="duration-0"
+                                            crossOrigin={ 'anonymous' }
+                                            fetchPriority={ 'high' }
                                         />
                                     </CarouselItem>
                                 );
@@ -151,33 +175,41 @@ export function ProjectContent({ project }) {
                         if (['mp4', 'webm'].includes(extension)) {
                             return (
                                 <button
-                                    key={content}
+                                    key={ content }
                                     type='button'
                                     aria-label={`Go to slide ${slide + 1}`}
                                     onClick={() => setIndex(slide)}
                                     className='group p-0 overflow-hidden bg-chart-2'
                                 >
                                     <video
-                                        src={content}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
                                         className={ classButton }
-                                        autoPlay loop muted playsInline
-                                    />
+                                        crossOrigin={ 'anonymous' }
+                                        src={`${content}?tr=h-60`}
+                                    >
+                                        <track kind={ 'captions' } label={ 'No captions' } default={ true }></track>
+                                    </video>
                                 </button>
                             );
                         } else {
                             return (
                                 <button
-                                    key={content}
+                                    key={ content }
                                     type='button'
                                     aria-label={`Go to slide ${slide + 1}`}
                                     onClick={() => setIndex(slide)}
                                     className='group p-0 overflow-hidden bg-chart-2'
                                 >
                                     <img
-                                        src={content}
+                                        src={`${content}?tr=h-60`}
                                         alt={`${project.title} ${slide + 1}`}
                                         loading="eager"
                                         className={ classButton }
+                                        crossOrigin= { 'anonymous' }
+                                        fetchPriority={ 'high' }
                                     />
                                 </button>
                             );
@@ -198,18 +230,25 @@ export function ProjectContent({ project }) {
                             
                             {selectedImage.type === 'video' ? (
                                 <motion.video
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
                                     layoutId={`media-${selectedImage.src}`}
-                                    src={selectedImage.src}
-                                    autoPlay loop muted playsInline
+                                    src={ selectedImage.src }
                                     className="relative max-w-full max-h-[90vh] z-101 object-contain duration-0 rounded-md"
+                                    crossOrigin={ 'anonymous' }
                                     onClick={() => setSelectedImage(null)}
-                                />
+                                >
+                                    <track kind={ 'captions' } label={ 'No captions' } default={ true }></track>
+                                </motion.video>
                             ) : (
                                 <motion.img
                                     layoutId={`media-${selectedImage.src}`}
-                                    src={selectedImage.src}
+                                    src={ selectedImage.src }
                                     loading="lazy"
                                     className="relative max-w-full max-h-[90vh] z-101 object-contain duration-0 rounded-md"
+                                    crossOrigin={ 'anonymous' }
                                     onClick={() => setSelectedImage(null)}
                                 />
                             )}
